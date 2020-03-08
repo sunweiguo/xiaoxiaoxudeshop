@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njupt.swg.mapper.ItemsMapper">
+  <resultMap id="BaseResultMap" type="com.njupt.swg.pojo.Items">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="item_name" jdbcType="VARCHAR" property="itemName" />
+    <result column="cat_id" jdbcType="INTEGER" property="catId" />
+    <result column="root_cat_id" jdbcType="INTEGER" property="rootCatId" />
+    <result column="sell_counts" jdbcType="INTEGER" property="sellCounts" />
+    <result column="on_off_status" jdbcType="INTEGER" property="onOffStatus" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+</mapper>

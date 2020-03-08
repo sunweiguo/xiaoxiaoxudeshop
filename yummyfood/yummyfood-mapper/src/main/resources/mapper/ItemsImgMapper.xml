@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njupt.swg.mapper.ItemsImgMapper">
+  <resultMap id="BaseResultMap" type="com.njupt.swg.pojo.ItemsImg">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="item_id" jdbcType="VARCHAR" property="itemId" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="is_main" jdbcType="INTEGER" property="isMain" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
+  </resultMap>
+</mapper>
