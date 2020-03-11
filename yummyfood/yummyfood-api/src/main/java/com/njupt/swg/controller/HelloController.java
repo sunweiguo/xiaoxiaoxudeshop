@@ -1,6 +1,10 @@
 package com.njupt.swg.controller;
 
+import com.njupt.swg.pojo.Users;
+import com.njupt.swg.service.IUsersService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -11,10 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class HelloController {
+    @Autowired
+    private IUsersService usersService;
 
-    @GetMapping("hello")
-    public String hello(){
-        return "hello world";
+    @GetMapping("/hello/{id}")
+    public Users hello(@PathVariable String id){
+        return usersService.getUserById(id);
     }
 
 }
