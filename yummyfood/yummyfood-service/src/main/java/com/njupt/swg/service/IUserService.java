@@ -8,6 +8,6 @@ import com.njupt.swg.pojo.Users;
  * @CONTACT 317758022@qq.com
  * @DESC
  */
-public interface IUsersService {
-    public Users getUserById(String id);
+public interface IUserService {
+    boolean queryUsernameIsExist(String username);
 }
