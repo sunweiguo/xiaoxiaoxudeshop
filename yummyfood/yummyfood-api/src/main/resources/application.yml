@@ -37,6 +37,8 @@ spring:
 mybatis:
   type-aliases-package: com.njupt.swg.pojo # 所有POJO类所在包路径
   mapper-locations: classpath:mapper/*.xml # mapper映射文件
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 控制台打印sql
 ############################################################
 #
 # mybatis mapper 配置

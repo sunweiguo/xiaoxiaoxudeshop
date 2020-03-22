@@ -1,5 +1,6 @@
 package com.njupt.swg.service;
 
+import com.njupt.swg.bo.UserBO;
 import com.njupt.swg.pojo.Users;
 
 /**
@@ -10,4 +11,10 @@ import com.njupt.swg.pojo.Users;
  */
 public interface IUserService {
     boolean queryUsernameIsExist(String username);
+
+//    用户注册
+    Users createUser(UserBO userBO);
+
+//    用户登录
+    Users queryUserForLogin(String username,String password);
 }
