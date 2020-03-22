@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!-- 通用mapper所在目录，可以结合实际的目录自己调整下这个通用mapper的位置 -->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.imooc.my.mapper.MyMapper"/>
+        </plugin>
+
+        <!--反向工程指向的数据库-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/yummyfood"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        <!-- 对应生成的pojo所在包 -->
+        <javaModelGenerator targetPackage="com.njupt.swg.pojo" targetProject="src/main/java"/>
+
+		<!-- 对应生成的mapper所在目录 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+		<!-- 配置mapper对应的java映射 -->
+        <javaClientGenerator targetPackage="com.njupt.swg.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
+
+        <!-- 数据库表，有多少表就配置多少表 -->
+		<table tableName="carousel"></table>
+        <table tableName="category"></table>
+        <table tableName="items"></table>
+        <table tableName="items_comments"></table>
+
+        <table tableName="items_img"></table>
+        <table tableName="items_param"></table>
+        <table tableName="items_spec"></table>
+        <table tableName="order_items"></table>
+
+        <table tableName="order_status"></table>
+        <table tableName="orders"></table>
+        <table tableName="user_address"></table>
+        <table tableName="users"></table>
+    </context>
+</generatorConfiguration>
