@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njupt.swg.mapper.CategoryMapper">
+  <resultMap id="BaseResultMap" type="com.njupt.swg.pojo.Category">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="father_id" jdbcType="INTEGER" property="fatherId" />
+    <result column="logo" jdbcType="VARCHAR" property="logo" />
+    <result column="slogan" jdbcType="VARCHAR" property="slogan" />
+    <result column="cat_image" jdbcType="VARCHAR" property="catImage" />
+    <result column="bg_color" jdbcType="VARCHAR" property="bgColor" />
+  </resultMap>
+</mapper>
