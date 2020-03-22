@@ -14,4 +14,7 @@ public interface IUserService {
 
 //    用户注册
     Users createUser(UserBO userBO);
+
+//    用户登录
+    Users queryUserForLogin(String username,String password);
 }
