@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njupt.swg.mapper.CategoryMapperCustom">
+
+  <resultMap id="myCategroyVO" type="com.njupt.swg.vo.CategoryVO">
+    <id column="id" property="id" />
+    <result column="name" property="name" />
+    <result column="type" property="type" />
+    <result column="father_id" property="fatherId" />
+    <!--用于定义关联的list集合类型-->
+    <collection property="subCatList" ofType="com.njupt.swg.vo.SubCategoryVO">
+      <id column="subId" property="subId" />
+      <result column="subName" property="subName" />
+      <result column="subType" property="subType" />
+      <result column="subFatherId" property="subFatherId" />
+    </collection>
+  </resultMap>
+
+  <select id="getSubCatList" parameterType="int" resultMap="myCategroyVO">
+    select
+        f.id as id,
+        f.name as `name`,
+        f.type as type,
+        f.father_id as fatherId,
+        c.id as subId,
+        c.name as `subName`,
+        c.type as subType,
+        c.father_id as subFatherId
+    from
+        category f
+    left JOIN
+        category c
+    on f.id = c.father_id
+    where f.father_id = #{rootCatId}
+  </select>
+</mapper>
