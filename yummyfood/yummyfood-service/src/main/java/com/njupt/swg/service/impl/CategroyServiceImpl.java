@@ -5,6 +5,7 @@ import com.njupt.swg.mapper.CategoryMapperCustom;
 import com.njupt.swg.pojo.Category;
 import com.njupt.swg.service.ICategroyService;
 import com.njupt.swg.vo.CategoryVO;
+import com.njupt.swg.vo.NewItemsVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,5 +44,11 @@ public class CategroyServiceImpl implements ICategroyService {
     @Override
     public List<CategoryVO> getSubCatList(Integer rootCatId) {
         return categoryMapperCustom.getSubCatList(rootCatId);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public List<NewItemsVO> getSixNewItemsLazy(Integer rootCatId) {
+        return categoryMapperCustom.getSixNewItemsLazy(rootCatId);
     }
 }

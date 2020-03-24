@@ -33,4 +33,53 @@
     on f.id = c.father_id
     where f.father_id = #{rootCatId}
   </select>
+
+
+    <resultMap id="myNewItemsVO" type="com.njupt.swg.vo.NewItemsVO">
+        <id column="rootCatId" property="rootCatId" />
+        <result column="rootCatName" property="rootCatName" />
+        <result column="slogan" property="slogan" />
+        <result column="catImage" property="catImage" />
+        <result column="bgColor" property="bgColor" />
+        <!--用于定义关联的list集合类型-->
+        <collection property="simpleItemList" ofType="com.njupt.swg.vo.SimpleItemVO">
+            <id column="itemId" property="itemId" />
+            <result column="itemName" property="itemName" />
+            <result column="itemUrl" property="itemUrl" />
+        </collection>
+    </resultMap>
+
+
+    <select id="getSixNewItemsLazy" parameterType="int" resultMap="myNewItemsVO">
+        SELECT
+            f.id as rootCatId,
+            f.`name` as rootCatName,
+            f.slogan as slogan,
+            f.cat_image as catImage,
+            f.bg_color as bgColor,
+            i.id as itemId,
+            i.item_name as itemName,
+            ii.url as itemUrl,
+            i.created_time as createTime
+        FROM
+            category f
+        LEFT JOIN
+            items i
+        ON
+            f.id = i.root_cat_id
+        LEFT JOIN
+            items_img ii
+        ON
+            i.id = ii.item_id
+        WHERE
+            f.type = 1
+        AND
+            ii.is_main = 1
+        AND
+            i.root_cat_id = #{rootCatId}
+        ORDER BY
+            i.created_time
+        DESC
+    </select>
+
 </mapper>
