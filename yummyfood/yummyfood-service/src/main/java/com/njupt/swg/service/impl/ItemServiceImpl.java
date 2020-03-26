@@ -119,7 +119,7 @@ public class ItemServiceImpl implements IItemService {
         //总记录数
         grid.setRecords(pageList.getTotal());
         //每行显示的内容
-        grid.setRows(list);
+        grid.setRows(pageList.getList());
         //总页数
         grid.setTotal(pageList.getPages());
         return grid;
