@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njupt.swg.mapper.ItemsMapperCustom">
+  <select id="queryItemComments" parameterType="map" resultType="com.njupt.swg.vo.ItemCommentVO">
+    SELECT
+        ic.comment_level as commentLevel,
+        ic.content as content,
+        ic.sepc_name as specName,
+        ic.created_time as createTime,
+        u.face as userFace,
+        u.nickname as nickname
+    FROM
+        items_comments ic
+    LEFT JOIN
+        users u
+    ON
+        ic.user_id = u.id
+    WHERE
+        ic.item_id = #{itemId}
+        <if test="level != null and level != ''">
+            AND  ic.comment_level = #{level}
+        </if>
+  </select>
+</mapper>

@@ -1,14 +1,15 @@
 package com.njupt.swg.service.impl;
 
-import com.njupt.swg.mapper.ItemsImgMapper;
-import com.njupt.swg.mapper.ItemsMapper;
-import com.njupt.swg.mapper.ItemsParamMapper;
-import com.njupt.swg.mapper.ItemsSpecMapper;
-import com.njupt.swg.pojo.Items;
-import com.njupt.swg.pojo.ItemsImg;
-import com.njupt.swg.pojo.ItemsParam;
-import com.njupt.swg.pojo.ItemsSpec;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.njupt.swg.enums.CommentLevel;
+import com.njupt.swg.mapper.*;
+import com.njupt.swg.pojo.*;
 import com.njupt.swg.service.IItemService;
+import com.njupt.swg.utils.DesensitizationUtil;
+import com.njupt.swg.utils.PagedGridResult;
+import com.njupt.swg.vo.CommentLevelCountsVO;
+import com.njupt.swg.vo.ItemCommentVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,6 +36,10 @@ public class ItemServiceImpl implements IItemService {
     private ItemsParamMapper itemsParamMapper;
     @Autowired
     private ItemsSpecMapper itemsSpecMapper;
+    @Autowired
+    private ItemsCommentsMapper itemsCommentsMapper;
+    @Autowired
+    private ItemsMapperCustom itemsMapperCustom;
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
@@ -70,5 +75,53 @@ public class ItemServiceImpl implements IItemService {
         criteria.andEqualTo("itemId",itemId);
         ItemsParam itemsParam = itemsParamMapper.selectOneByExample(example);
         return itemsParam;
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public CommentLevelCountsVO queryCommentCounts(String itemId) {
+        Integer goodCounts = getCommentsCounts(itemId, CommentLevel.GOOD.type);
+        Integer commonCounts = getCommentsCounts(itemId,CommentLevel.NORMAL.type);
+        Integer badCounts = getCommentsCounts(itemId,CommentLevel.BAD.type);
+        Integer totalCounts = goodCounts+commonCounts+badCounts;
+        return new CommentLevelCountsVO(totalCounts,goodCounts,commonCounts,badCounts);
+    }
+
+    private Integer getCommentsCounts(String itemId,Integer level){
+        ItemsComments condition = new ItemsComments();
+        condition.setItemId(itemId);
+        if(level != null){
+            condition.setCommentLevel(level);
+        }
+        return itemsCommentsMapper.selectCount(condition);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public PagedGridResult queryPagedComments(String itemId,
+                                                  Integer level,
+                                                  Integer page,
+                                                  Integer pageSize) {
+        PageHelper.startPage(page, pageSize);
+        List<ItemCommentVO> list = itemsMapperCustom.queryItemComments(itemId,level);
+        for(ItemCommentVO vo:list){
+            vo.setNickname(DesensitizationUtil.commonDisplay(vo.getNickname()));
+        }
+        return setterPagedGrid(list,page);
+    }
+
+    private PagedGridResult setterPagedGrid(List<?> list,Integer page){
+        //包含佷多的分页的数据，需要反馈给前端
+        PageInfo<?> pageList = new PageInfo<>(list);
+        PagedGridResult grid = new PagedGridResult();
+        //当前页
+        grid.setPage(page);
+        //总记录数
+        grid.setRecords(pageList.getTotal());
+        //每行显示的内容
+        grid.setRows(list);
+        //总页数
+        grid.setTotal(pageList.getPages());
+        return grid;
     }
 }

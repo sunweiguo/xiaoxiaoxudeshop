@@ -4,6 +4,8 @@ import com.njupt.swg.pojo.Items;
 import com.njupt.swg.pojo.ItemsImg;
 import com.njupt.swg.pojo.ItemsParam;
 import com.njupt.swg.pojo.ItemsSpec;
+import com.njupt.swg.utils.PagedGridResult;
+import com.njupt.swg.vo.CommentLevelCountsVO;
 
 import java.util.List;
 
@@ -21,4 +23,8 @@ public interface IItemService {
     List<ItemsSpec> queryItemSpecList(String itemId);
     //根据商品ID查询商品参数
     ItemsParam queryItemParam(String itemId);
+    //查询商品的好、中、差评数量
+    CommentLevelCountsVO queryCommentCounts(String itemId);
+    //分页展示商品的评价列表
+    PagedGridResult queryPagedComments(String itemId, Integer level, Integer page, Integer pageSize);
 }
