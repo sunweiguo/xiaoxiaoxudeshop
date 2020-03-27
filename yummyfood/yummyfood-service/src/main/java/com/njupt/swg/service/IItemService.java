@@ -27,4 +27,8 @@ public interface IItemService {
     CommentLevelCountsVO queryCommentCounts(String itemId);
     //分页展示商品的评价列表
     PagedGridResult queryPagedComments(String itemId, Integer level, Integer page, Integer pageSize);
+    //搜索商品列表
+    PagedGridResult searchItems(String keywords, String sort, Integer page, Integer pageSize);
+    //携带三级分类搜索商品列表
+    PagedGridResult searchCatItems(Integer catId, String sort, Integer page, Integer pageSize);
 }
