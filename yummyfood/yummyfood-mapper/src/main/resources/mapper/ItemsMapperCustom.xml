@@ -103,4 +103,33 @@
             </otherwise>
         </choose>
     </select>
+
+
+    <select id="getAllNewCartItems" resultType="com.njupt.swg.vo.CartItemVO">
+        SELECT
+	t_items.id AS itemId,
+	t_items.item_name AS itemName,
+	t_items_img.url AS itemImgUrl,
+	t_items_spec.id AS specId,
+	t_items_spec.`name` AS specName,
+	t_items_spec.price_discount AS priceDiscount,
+	t_items_spec.price_normal AS priceNormal
+FROM
+	items_spec t_items_spec
+LEFT JOIN
+	items t_items
+ON
+	t_items_spec.item_id = t_items.id
+LEFT JOIN
+	items_img t_items_img
+ON
+	t_items_img.item_id = t_items.id
+WHERE
+	t_items_img.is_main = 1
+AND
+	t_items_spec.id IN
+        <foreach collection="itemSpecIdList" index="index" item="specId" open="(" separator="," close=")">
+            #{specId}
+        </foreach>
+    </select>
 </mapper>

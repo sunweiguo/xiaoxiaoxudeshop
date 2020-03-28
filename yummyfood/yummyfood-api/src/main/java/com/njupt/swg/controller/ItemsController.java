@@ -11,10 +11,13 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.models.auth.In;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -26,6 +29,7 @@ import java.util.List;
 @Api(value = "商品相关接口",tags = "商品相关接口")
 @RestController
 @RequestMapping("/items")
+@Slf4j
 public class ItemsController {
     @Autowired
     private IItemService itemService;
@@ -107,5 +111,16 @@ public class ItemsController {
             @ApiParam(name = "pageSize",value = "每页显示的数量",required = true)
             @RequestParam(name = "pageSize",defaultValue = "20") Integer pageSize){
         return CommonJsonResult.ok(itemService.searchCatItems(catId,sort,page,pageSize));
+    }
+
+    @ApiOperation(value = "刷新购物车的内容",notes = "刷新购物车的内容",httpMethod = "GET")
+    @GetMapping("/refresh")
+    public CommonJsonResult refresh(
+            @ApiParam(name = "itemSpecIds",value = "购物车中的商品规格ID",required = false)
+            @RequestParam String itemSpecIds){
+        log.info("传入进来的商品规格ID为：{}",itemSpecIds);
+        String[] specIdStrArr = itemSpecIds.split(",");
+        List<String> itemSpecIdList = new ArrayList<>(Arrays.asList(specIdStrArr));
+        return CommonJsonResult.ok(itemService.refreshCartItems(itemSpecIdList));
     }
 }
