@@ -40,7 +40,7 @@
 
     <appender name="rollingFileInfo" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>C:\Users\swg\Desktop\xiaoxuxushop\yummyfoodlogs/yummyfood-info-%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
+            <fileNamePattern>D:\yummyfoodlog/yummyfood-info-%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
             <maxHistory>${maxSaveDays}</maxHistory> <!--max save days -->
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>${maxFileSize}</maxFileSize>
@@ -59,7 +59,7 @@
 
     <appender name="rollingFileError" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>C:\Users\swg\Desktop\xiaoxuxushop\yummyfoodlogs/yummyfood-error-%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
+            <fileNamePattern>D:\yummyfoodlog/yummyfood-error-%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
             <maxHistory>${maxSaveDays}</maxHistory> <!--max save days -->
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>${maxFileSize}</maxFileSize>
