@@ -74,6 +74,9 @@ public class UserController {
         userResult = setNullProperty(userResult);
         CookieUtils.setCookie(request,response, "user",
                 JsonUtils.objectToJson(userResult),true);
+
+        //TODO 生成用户TOKEN，存入redis
+        //TODO 同步购物车数据
         return CommonJsonResult.ok();
     }
 
@@ -99,6 +102,9 @@ public class UserController {
 //        4、设置cookie
         CookieUtils.setCookie(request,response, "user",
                                 JsonUtils.objectToJson(userResult),true);
+
+        //TODO 生成用户TOKEN，存入redis
+        //TODO 同步购物车数据
         return CommonJsonResult.ok(userResult);
     }
 
@@ -113,14 +119,14 @@ public class UserController {
     }
 
 
-    @ApiOperation(value = "用户推出登录",notes = "用户推出登录",httpMethod = "POST")
+    @ApiOperation(value = "用户退出登录",notes = "用户退出登录",httpMethod = "POST")
     @PostMapping("/logout")
     public CommonJsonResult logout(@RequestParam String userId,
                                    HttpServletRequest request,
                                    HttpServletResponse response){
         CookieUtils.deleteCookie(request,response,"user");
 //        TODO 1、清空购物车
-//        TODO 2、清楚分布式会话中的用户数据
+//        TODO 2、清除分布式会话中的用户数据
         return CommonJsonResult.ok();
     }
 }

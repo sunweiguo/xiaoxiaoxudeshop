@@ -32,23 +32,29 @@ public class CategroyServiceImpl implements ICategroyService {
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public List<Category> queryAllRootLevelCat() {
+        log.info("查询所有一级分类开始");
         Example example = new Example(Category.class);
         Example.Criteria criteria = example.createCriteria();
         //type为1的为root分类
         criteria.andEqualTo("type",1);
         List<Category> categoryList = categoryMapper.selectByExample(example);
+        log.info("查询所有一级分类结束，查询到的一级根分类数据为：{}",categoryList);
         return categoryList;
     }
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public List<CategoryVO> getSubCatList(Integer rootCatId) {
-        return categoryMapperCustom.getSubCatList(rootCatId);
+        List<CategoryVO> res = categoryMapperCustom.getSubCatList(rootCatId);
+        log.info("查询一级分类:{}下的所有二级、三级分类数据结束：{}",rootCatId,res);
+        return res;
     }
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public List<NewItemsVO> getSixNewItemsLazy(Integer rootCatId) {
-        return categoryMapperCustom.getSixNewItemsLazy(rootCatId);
+        List<NewItemsVO> res = categoryMapperCustom.getSixNewItemsLazy(rootCatId);
+        log.info("查询一级分类:{}下的最新六个商品数据结束：{}",rootCatId,res);
+        return res;
     }
 }

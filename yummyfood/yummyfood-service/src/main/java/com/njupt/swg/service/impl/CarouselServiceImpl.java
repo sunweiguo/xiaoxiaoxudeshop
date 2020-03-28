@@ -27,12 +27,14 @@ public class CarouselServiceImpl implements ICarouselService {
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public List<Carousel> queryAll(Integer isShow) {
+        log.info("查询轮播图数据列表开始，传入的参数isShow为：{}",isShow);
         Example example = new Example(Carousel.class);
         //按照sort字段排序
         example.orderBy("sort").asc();
         Example.Criteria criteria = example.createCriteria();
         criteria.andEqualTo("isShow",isShow);
         List<Carousel> carouselList = carouselMapper.selectByExample(example);
+        log.info("查询轮播图数据列表结束，查询到的数据为：{}",carouselList);
         return carouselList;
     }
 }
