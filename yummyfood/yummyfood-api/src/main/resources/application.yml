@@ -4,7 +4,6 @@
 #
 ############################################################
 server:
-  port: 8088
   tomcat:
     uri-encoding: UTF-8
   max-http-header-size: 80KB
@@ -14,12 +13,11 @@ server:
 #
 ############################################################
 spring:
+  profiles:
+    active: dev
   datasource: # 数据源的相关配置
     type: com.zaxxer.hikari.HikariDataSource # 数据源类型：HikariCP
     driver-class-name: com.mysql.jdbc.Driver # mysql驱动
-    url: jdbc:mysql://localhost:3306/yummyfood?useUnicode=true&characterEncoding=UTF-8&autoReconnect
-    username: root
-    password: root
     hikari:
       connection-timeout: 30000 # 等待连接池分配连接的最大时长（毫秒），超过这个时长还没可用的连接则发生SQ
       minimum-idle: 5 # 最小连接数
@@ -29,8 +27,6 @@ spring:
       pool-name: DateSourceHikariCP # 连接池名字
       max-lifetime: 1800000 # 连接的生命时长（毫秒），超时而且没被使用则被释放（retired），默认:30分钟
       connection-test-query: SELECT 1
-  application:
-    name: YummyFood
 ############################################################
 #
 # mybatis 配置
@@ -39,8 +35,6 @@ spring:
 mybatis:
   type-aliases-package: com.njupt.swg.pojo # 所有POJO类所在包路径
   mapper-locations: classpath:mapper/*.xml # mapper映射文件
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 控制台打印sql
 ############################################################
 #
 # mybatis mapper 配置

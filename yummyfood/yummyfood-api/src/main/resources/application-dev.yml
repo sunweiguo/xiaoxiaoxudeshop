@@ -1,0 +1,14 @@
+server:
+  port: 8088
+
+spring:
+  datasource:                                           # 数据源的相关配置
+    url: jdbc:mysql://localhost:3306/yummyfood?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    username: root
+    password: root
+  application:
+    name: YummyFood商城项目-单体架构实现
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

@@ -41,5 +41,22 @@ public class ShopcartController {
         return CommonJsonResult.ok();
     }
 
+    @ApiOperation(value = "移除购物车里面的商品",notes = "移除购物车里面的商品",httpMethod = "POST")
+    @PostMapping(value = "/del")
+    public CommonJsonResult del(
+            @ApiParam(name = "userId",value = "用户ID",required = true)
+            @RequestParam String userId,
+            @ApiParam(name = "itemSpecId",value = "前端移除的商品规格ID",required = true)
+            @RequestParam String itemSpecId,
+            HttpServletRequest request,
+            HttpServletResponse response){
+        if(StringUtils.isBlank(userId) || StringUtils.isBlank(itemSpecId)){
+            return CommonJsonResult.errorMsg("用户未登录的情况下，后端啥都不处理，前端的cookie进行记录即可");
+        }
+        log.info("前端移除购物车商品的时候传来的用户ID为：{}，商品规格ID为：{}",userId,itemSpecId);
+        //TODO 前端用户在登录的情况下购物车里移除商品，会同步在后端往redis中更新缓存
+        return CommonJsonResult.ok();
+    }
+
 
 }

@@ -5,6 +5,7 @@ import com.njupt.swg.pojo.ItemsImg;
 import com.njupt.swg.pojo.ItemsParam;
 import com.njupt.swg.pojo.ItemsSpec;
 import com.njupt.swg.utils.PagedGridResult;
+import com.njupt.swg.vo.CartItemVO;
 import com.njupt.swg.vo.CommentLevelCountsVO;
 
 import java.util.List;
@@ -31,4 +32,6 @@ public interface IItemService {
     PagedGridResult searchItems(String keywords, String sort, Integer page, Integer pageSize);
     //携带三级分类搜索商品列表
     PagedGridResult searchCatItems(Integer catId, String sort, Integer page, Integer pageSize);
+
+    List<CartItemVO> refreshCartItems(List<String> itemSpecIdList);
 }
