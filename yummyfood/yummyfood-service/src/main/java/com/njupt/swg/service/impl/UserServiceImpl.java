@@ -34,6 +34,7 @@ public class UserServiceImpl implements IUserService {
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public boolean queryUsernameIsExist(String username) {
+        log.info("根据{}查询用户名是否存在",username);
         Example userExample = new Example(Users.class);
         Example.Criteria userCriteria = userExample.createCriteria();
         userCriteria.andEqualTo("username",username);
@@ -60,6 +61,7 @@ public class UserServiceImpl implements IUserService {
         user.setSex(Sex.secret.type);
         user.setCreatedTime(new Date());
         user.setUpdatedTime(new Date());
+        log.info("注册用的数据为：{}",user);
         usersMapper.insertSelective(user);
         return user;
     }

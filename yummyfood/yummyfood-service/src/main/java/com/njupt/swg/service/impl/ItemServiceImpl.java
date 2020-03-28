@@ -55,6 +55,7 @@ public class ItemServiceImpl implements IItemService {
         Example.Criteria criteria = example.createCriteria();
         criteria.andEqualTo("itemId",itemId);
         List<ItemsImg> itemsImgList = itemsImgMapper.selectByExample(example);
+        log.info("根据商品ID:{}获取此商品下的所有图片数据:{}",itemId,itemsImgList);
         return itemsImgList;
     }
 
@@ -65,6 +66,7 @@ public class ItemServiceImpl implements IItemService {
         Example.Criteria criteria = example.createCriteria();
         criteria.andEqualTo("itemId",itemId);
         List<ItemsSpec> itemsSpecList = itemsSpecMapper.selectByExample(example);
+        log.info("根据商品ID:{}获取此商品下的所有规格数据:{}",itemId,itemsSpecList);
         return itemsSpecList;
     }
 
@@ -75,6 +77,7 @@ public class ItemServiceImpl implements IItemService {
         Example.Criteria criteria = example.createCriteria();
         criteria.andEqualTo("itemId",itemId);
         ItemsParam itemsParam = itemsParamMapper.selectOneByExample(example);
+        log.info("根据商品ID:{}获取此商品参数数据:{}",itemId,itemsParam);
         return itemsParam;
     }
 
@@ -85,6 +88,7 @@ public class ItemServiceImpl implements IItemService {
         Integer commonCounts = getCommentsCounts(itemId,CommentLevel.NORMAL.type);
         Integer badCounts = getCommentsCounts(itemId,CommentLevel.BAD.type);
         Integer totalCounts = goodCounts+commonCounts+badCounts;
+        log.info("查询商品：{}下的评论一共有{}条，其中有{}条好评，{}条中评，{}条差评",itemId,totalCounts,goodCounts,commonCounts,badCounts);
         return new CommentLevelCountsVO(totalCounts,goodCounts,commonCounts,badCounts);
     }
 
@@ -103,11 +107,13 @@ public class ItemServiceImpl implements IItemService {
                                                   Integer level,
                                                   Integer page,
                                                   Integer pageSize) {
+
         PageHelper.startPage(page, pageSize);
         List<ItemCommentVO> list = itemsMapperCustom.queryItemComments(itemId,level);
         for(ItemCommentVO vo:list){
             vo.setNickname(DesensitizationUtil.commonDisplay(vo.getNickname()));
         }
+        log.info("查询商品:{}和评价等级为{}的评论分页数据为：{}",itemId,level,list);
         return setterPagedGrid(list,page);
     }
 
@@ -131,6 +137,7 @@ public class ItemServiceImpl implements IItemService {
     public PagedGridResult searchItems(String keywords, String sort, Integer page, Integer pageSize) {
         PageHelper.startPage(page, pageSize);
         List<SearchItemsVO> list = itemsMapperCustom.searchItems(keywords,sort);
+        log.info("根据关键字：{}和排序规则：{}搜索到的商品列表分页数据为：{}",keywords,sort,list);
         return setterPagedGrid(list,page);
     }
 
