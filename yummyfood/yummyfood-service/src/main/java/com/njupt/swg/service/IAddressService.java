@@ -20,4 +20,6 @@ public interface IAddressService {
     CommonJsonResult deleteAddress(String userId, String addressId);
 
     CommonJsonResult setDefalutAddress(String userId, String addressId);
+
+    UserAddress getSingleAddressByUserIdAndAddressId(String userId,String addressId);
 }
