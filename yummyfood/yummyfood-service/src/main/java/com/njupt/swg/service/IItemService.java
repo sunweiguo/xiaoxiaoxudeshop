@@ -34,4 +34,13 @@ public interface IItemService {
     PagedGridResult searchCatItems(Integer catId, String sort, Integer page, Integer pageSize);
 
     List<CartItemVO> refreshCartItems(List<String> itemSpecIdList);
+
+    //根据id获取单个商品规格对象
+    ItemsSpec quertyItemSepcById(String specId);
+
+    //根据商品ID获取商品主图URL
+    String queryItemMainImgUrlById(String itemId);
+
+    //扣除库存
+    void decreaseItemSpecStock(String specId,Integer buyCounts);
 }

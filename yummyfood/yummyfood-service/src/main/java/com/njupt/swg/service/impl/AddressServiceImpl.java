@@ -16,7 +16,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 import tk.mybatis.mapper.entity.Example;
 
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -65,21 +64,13 @@ public class AddressServiceImpl implements IAddressService {
             }
             userAddress.setCreatedTime(new Date());
             userAddress.setUpdatedTime(new Date());
-            int res = userAddressMapper.insert(userAddress);
-            if(res <= 0){
-                log.error("新增地址失败，地址信息为：{}",addressNewAddBO);
-                return CommonJsonResult.errorMsg("新增地址失败");
-            }
+            userAddressMapper.insert(userAddress);
         }else{
             //表示更新
             UserAddress userAddress = userAddressMapper.selectByPrimaryKey(addressNewAddBO.getAddressId());
             BeanUtils.copyProperties(addressNewAddBO,userAddress);
             userAddress.setUpdatedTime(new Date());
-            int res = userAddressMapper.updateByPrimaryKey(userAddress);
-            if(res <= 0){
-                log.error("更新地址失败，地址信息为：{}",addressNewAddBO);
-                return CommonJsonResult.errorMsg("更新地址失败");
-            }
+            userAddressMapper.updateByPrimaryKey(userAddress);
         }
         return CommonJsonResult.ok();
     }
@@ -91,11 +82,7 @@ public class AddressServiceImpl implements IAddressService {
         Example.Criteria criteria = example.createCriteria();
         criteria.andEqualTo("userId",userId);
         criteria.andEqualTo("id",addressId);
-        int res = userAddressMapper.deleteByExample(example);
-        if(res <= 0){
-            log.error("删除地址失败，用户ID为：{},收货地址ID为：{}",userId,addressId);
-            return CommonJsonResult.errorMsg("删除地址失败");
-        }
+        userAddressMapper.deleteByExample(example);
         return CommonJsonResult.ok();
     }
 
@@ -137,5 +124,15 @@ public class AddressServiceImpl implements IAddressService {
         userAddress.setIsDefault(1);
         userAddressMapper.updateByPrimaryKey(userAddress);
         return CommonJsonResult.ok();
+    }
+
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public UserAddress getSingleAddressByUserIdAndAddressId(String userId, String addressId) {
+        UserAddress singleAddress = new UserAddress();
+        singleAddress.setUserId(userId);
+        singleAddress.setId(addressId);
+        return userAddressMapper.selectOne(singleAddress);
     }
 }

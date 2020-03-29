@@ -3,6 +3,7 @@ package com.njupt.swg.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.njupt.swg.enums.CommentLevel;
+import com.njupt.swg.enums.YesOrNo;
 import com.njupt.swg.mapper.*;
 import com.njupt.swg.pojo.*;
 import com.njupt.swg.service.IItemService;
@@ -142,6 +143,7 @@ public class ItemServiceImpl implements IItemService {
         return setterPagedGrid(list,page);
     }
 
+    @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public PagedGridResult searchCatItems(Integer catId, String sort, Integer page, Integer pageSize) {
         PageHelper.startPage(page, pageSize);
@@ -149,8 +151,38 @@ public class ItemServiceImpl implements IItemService {
         return setterPagedGrid(list,page);
     }
 
+    @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public List<CartItemVO> refreshCartItems(List<String> itemSpecIdList) {
         return itemsMapperCustom.getAllNewCartItems(itemSpecIdList);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public ItemsSpec quertyItemSepcById(String specId) {
+        return itemsSpecMapper.selectByPrimaryKey(specId);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public String queryItemMainImgUrlById(String itemId) {
+        ItemsImg itemsImg = new ItemsImg();
+        itemsImg.setItemId(itemId);
+        itemsImg.setIsMain(YesOrNo.YES.type);
+        ItemsImg res = itemsImgMapper.selectOne(itemsImg);
+        return res != null ? res.getUrl() : "";
+    }
+
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void decreaseItemSpecStock(String specId, Integer buyCounts) {
+        //这里我做了下改造，如果库存不够，给前端一些提示信息
+        ItemsSpec singleSpec = itemsSpecMapper.selectByPrimaryKey(specId);
+        Items singleItems = itemsMapper.selectByPrimaryKey(singleSpec.getItemId());
+        int res = itemsMapperCustom.decreaseItemsSpecStock(buyCounts,specId);
+        if(res != 1){
+            throw new RuntimeException("订单创建失败，由于库存不足不足的商品名称为:【"+singleItems.getItemName()+"】，当前后端库存为：【"+singleSpec.getStock()+"】");
+        }
     }
 }
