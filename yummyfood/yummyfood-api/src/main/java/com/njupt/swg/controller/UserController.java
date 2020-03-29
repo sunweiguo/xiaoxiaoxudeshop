@@ -125,6 +125,8 @@ public class UserController {
                                    HttpServletRequest request,
                                    HttpServletResponse response){
         CookieUtils.deleteCookie(request,response,"user");
+        //删除购物车的cookie
+        CookieUtils.deleteCookie(request,response,"shopcart");
 //        TODO 1、清空购物车
 //        TODO 2、清除分布式会话中的用户数据
         return CommonJsonResult.ok();
