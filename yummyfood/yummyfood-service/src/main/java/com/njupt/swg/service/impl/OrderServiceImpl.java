@@ -8,8 +8,7 @@ import com.njupt.swg.mapper.OrdersMapper;
 import com.njupt.swg.pojo.*;
 import com.njupt.swg.service.IAddressService;
 import com.njupt.swg.service.IOrderService;
-import com.njupt.swg.service.IUserService;
-import com.njupt.swg.utils.CommonJsonResult;
+import com.njupt.swg.utils.DateUtil;
 import com.njupt.swg.vo.SubmitOrderVO;
 import lombok.extern.slf4j.Slf4j;
 import org.n3r.idworker.Sid;
@@ -19,6 +18,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @Author swg.
@@ -122,5 +122,35 @@ public class OrderServiceImpl implements IOrderService {
 
         //前端要用这个orderid
         return orderId;
+    }
+
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public int closeOrder() {
+        //查询所有未付款订单，判断时间是否超时
+        OrderStatus orderStatus = new OrderStatus();
+        orderStatus.setOrderStatus(OrderStatusEnum.WAIT_PAY.type);
+        List<OrderStatus> orderStatusList = orderStatusMapper.select(orderStatus);
+        int count = 0;
+        for(OrderStatus os:orderStatusList){
+            Date createTime = os.getCreatedTime();
+            int days = DateUtil.daysBetween(createTime,new Date());
+            if(days >= 1){
+                //超过一天则关闭订单
+                count++;
+                doCloseOrder(os.getOrderId());
+            }
+        }
+        return count;
+    }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    void doCloseOrder(String orderId) {
+        OrderStatus orderStatus = new OrderStatus();
+        orderStatus.setOrderStatus(OrderStatusEnum.CLOSE.type);
+        orderStatus.setOrderId(orderId);
+        orderStatus.setCloseTime(new Date());
+        orderStatusMapper.updateByPrimaryKeySelective(orderStatus);
     }
 }

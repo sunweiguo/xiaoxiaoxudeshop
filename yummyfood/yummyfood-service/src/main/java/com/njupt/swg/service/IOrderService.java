@@ -11,4 +11,7 @@ import com.njupt.swg.vo.SubmitOrderVO;
 public interface IOrderService {
     //创建订单相关信息
     String createOrder(SubmitOrderVO submitOrderVO);
+
+    //关闭超时未支付订单
+    int closeOrder();
 }

@@ -3,6 +3,7 @@ package com.njupt.swg;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**
@@ -16,6 +17,8 @@ import tk.mybatis.spring.annotation.MapperScan;
 @MapperScan(basePackages = "com.njupt.swg.mapper")
 //扫描所有包和相关组件包
 @ComponentScan(basePackages = {"com.njupt.swg","org.n3r.idworker"})
+//开启定时任务
+@EnableScheduling
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class,args);
