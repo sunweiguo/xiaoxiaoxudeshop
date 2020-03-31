@@ -110,7 +110,7 @@ public class UserController {
 
     private Users setNullProperty(Users userResult){
         userResult.setPassword(null);
-        userResult.setRealname(null);
+        userResult.setMobile(null);
         userResult.setEmail(null);
         userResult.setCreatedTime(null);
         userResult.setUpdatedTime(null);
