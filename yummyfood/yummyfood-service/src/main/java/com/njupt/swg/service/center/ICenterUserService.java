@@ -13,4 +13,7 @@ public interface ICenterUserService {
     Users queryUserById(String userId);
 
     Users update(String userId,CenterUserBO centerUserBO);
+
+    //用户头像更新
+    Users updateFaceUrl(String userId,String faceUrl);
 }
