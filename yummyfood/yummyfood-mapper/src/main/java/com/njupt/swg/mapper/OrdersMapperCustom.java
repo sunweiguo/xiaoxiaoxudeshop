@@ -1,9 +1,11 @@
 package com.njupt.swg.mapper;
 
+import com.njupt.swg.pojo.OrderStatus;
 import com.njupt.swg.vo.MyOrdersVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author swg.
@@ -13,4 +15,8 @@ import java.util.List;
  */
 public interface OrdersMapperCustom {
     List<MyOrdersVO> queryMyOrders(@Param("userId")String userId, @Param("orderStatus") Integer orderStatus);
+
+    Integer getMyOrderStatusCounts(@Param("paramsMap") Map<String, Object> map);
+
+    List<OrderStatus> getMyOrderTrend(@Param("paramsMap") Map<String, Object> map);
 }
