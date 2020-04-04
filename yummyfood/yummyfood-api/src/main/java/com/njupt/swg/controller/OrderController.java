@@ -51,7 +51,7 @@ public class OrderController {
         }
         //2. 创建订单后，移除购物车中已结算的商品
 //        TODO：整合redis后移除购物车已结算的商品，并同步到前端cookie
-//        CookieUtils.setCookie(request,response,"shopcart","",true);
+        CookieUtils.setCookie(request,response,"shopcart","",true);
         //3. TODO 支付
         return CommonJsonResult.ok(orderid);
     }
