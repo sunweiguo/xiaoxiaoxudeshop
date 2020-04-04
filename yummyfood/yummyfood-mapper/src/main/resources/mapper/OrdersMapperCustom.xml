@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njupt.swg.mapper.OrdersMapperCustom">
+
+    <!--coulum对应查询sql语句对应的，property对应的VO属性-->
+<!--  <resultMap id="myOrdersVO" type="com.njupt.swg.vo.MyOrdersVO">
+    <id column="orderId" property="orderId" />
+    <result column="createdTime" property="createdTime" />
+    <result column="payMethod" property="payMethod" />
+    <result column="realPayAmount" property="realPayAmount" />
+    <result column="postAmount" property="postAmount" />
+    <result column="orderStatus" property="orderStatus" />
+    <result column="isComment" property="isComment" />
+    &lt;!&ndash;用于定义关联的list集合类型&ndash;&gt;
+    <collection property="subOrderItemList" ofType="com.njupt.swg.vo.MySubOrderItemVO">
+      <result column="itemId" property="itemId" />
+      <result column="itemName" property="itemName" />
+      <result column="itemImg" property="itemImg" />
+      <result column="itemSpecId" property="itemSpecId" />
+      <result column="itemSpecName" property="itemSpecName" />
+      <result column="buyCounts" property="buyCounts" />
+      <result column="price" property="price" />
+    </collection>
+  </resultMap>-->
+
+    <!--用一条语句查询出来，一对多的关系中，pagehelper查询出来的分页数据有问题，所以不用这种方式了，而是用代码来实现查询，先查询所有的订单，再去拼接组装相关数据-->
+<!--
+  <select id="queryMyOrdersDONTUSE" parameterType="map" resultMap="myOrdersVO">
+    SELECT
+        od.id as orderId,
+        od.created_time as createdTime,
+        od.pay_method as payMethod,
+        od.real_pay_amount as realPayAmount,
+        od.post_amount as postAmount,
+        od.is_comment as isComment,
+        os.order_status as orderStatus,
+        oi.item_id as itemId,
+        oi.item_name as itemName,
+        oi.item_img as itemImg,
+        oi.item_spec_id as itemSpecId,
+        oi.item_spec_name as itemSpecName,
+        oi.buy_counts as buyCounts,
+        oi.price as price
+    FROM
+        orders od
+    LEFT JOIN
+        order_status os
+    on od.id = os.order_id
+    LEFT JOIN
+        order_items oi
+    on od.id = oi.order_id
+    WHERE
+        od.is_delete = 0
+    AND
+        od.user_id = #{userId}
+        <if test="orderStatus != null">
+            and os.order_status = #{orderStatus}
+        </if>
+    ORDER BY od.updated_time desc
+  </select>
+-->
+
+      <resultMap id="myOrdersVO" type="com.njupt.swg.vo.MyOrdersVO">
+        <id column="orderId" property="orderId" />
+        <result column="createdTime" property="createdTime" />
+        <result column="payMethod" property="payMethod" />
+        <result column="realPayAmount" property="realPayAmount" />
+        <result column="postAmount" property="postAmount" />
+        <result column="orderStatus" property="orderStatus" />
+        <result column="isComment" property="isComment" />
+        <!--用于定义关联的list集合类型-->
+          <!--这个select属性，可以自动再去根据colunm里面的属性去查询相关的语句，从而达到查询订单的时候，把订单items自动查询出来的效果，但是pagehelper不会出问题-->
+          <!--个人不喜欢这个方式。。。后续自己改造的话，我会选择用代码来实现，而不是依赖mybatis。。。-->
+        <collection property="subOrderItemList" select="getSubItems" column="orderId" ofType="com.njupt.swg.vo.MySubOrderItemVO">
+          <result column="itemId" property="itemId" />
+          <result column="itemName" property="itemName" />
+          <result column="itemImg" property="itemImg" />
+          <result column="itemSpecId" property="itemSpecId" />
+          <result column="itemSpecName" property="itemSpecName" />
+          <result column="buyCounts" property="buyCounts" />
+          <result column="price" property="price" />
+        </collection>
+      </resultMap>
+
+    <select id="queryMyOrders" parameterType="map" resultMap="myOrdersVO">
+        SELECT
+        od.id as orderId,
+        od.created_time as createdTime,
+        od.pay_method as payMethod,
+        od.real_pay_amount as realPayAmount,
+        od.post_amount as postAmount,
+        od.is_comment as isComment,
+        os.order_status as orderStatus
+        FROM
+        orders od
+        LEFT JOIN
+        order_status os
+        on od.id = os.order_id
+        WHERE
+        od.is_delete = 0
+        AND
+        od.user_id = #{userId}
+        <if test="orderStatus != null">
+            and os.order_status = #{orderStatus}
+        </if>
+        ORDER BY od.updated_time desc
+    </select>
+
+    <select id="getSubItems" parameterType="String" resultType="com.njupt.swg.vo.MySubOrderItemVO">
+        SELECT
+        oi.item_id as itemId,
+        oi.item_name as itemName,
+        oi.item_img as itemImg,
+        oi.item_spec_id as itemSpecId,
+        oi.item_spec_name as itemSpecName,
+        oi.buy_counts as buyCounts,
+        oi.price as price
+        FROM
+        order_items oi
+        WHERE
+        oi.order_id = #{orderId}
+    </select>
+
+
+</mapper>
