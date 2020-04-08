@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+	<title>评价管理</title>
+	<link rel="shortcut icon" href="img/foodie.ico" />
+
+	<link href="AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+	<link href="AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+
+	<link href="css/personal.css" rel="stylesheet" type="text/css">
+	<link href="css/cmstyle.css" rel="stylesheet" type="text/css">
+
+	<!-- 分页css -->
+	<link href="components/VuePaging/zpageNav.css" rel="stylesheet" />
+
+	<script src="AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+	<script src="AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="js/moment.js"></script>
+</head>
+
+<body>
+	<div id="commentList">
+		<div class="nav-table">
+			<div class="long-title"><span class="all-goods" style="font-weight: bold;">用户中心</span></div>
+		</div>
+		<b class="line"></b>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+
+					<div class="user-comment">
+						<!--标题 -->
+						<div class="am-cf am-padding">
+							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">评价管理</strong> /
+								<small>Manage&nbsp;Comment</small></div>
+						</div>
+						<hr />
+
+						<div class="am-tabs am-tabs-d2 am-margin" data-am-tabs="{noSwipe: 1}">
+
+							<div class="am-tabs-bd">
+								<div class="am-tab-panel am-fade am-in am-active" id="tab1">
+
+									<div class="comment-main">
+										<div class="comment-list">
+											<div class="comment-top">
+												<div class="th th-price">
+													<td class="td-inner">评价</td>
+												</div>
+												<div class="th th-item">
+													<td class="td-inner">商品</td>
+												</div>
+											</div>
+
+											<ul class="item-list" v-for="(comment, commentIndex) in myCommentList"
+												style="margin-bottom: 12px;">
+												<li class="td td-item">
+													<div class="item-pic">
+														<a href="javascript:void(0);" class="J_MakePoint">
+															<img :src="comment.itemImg" class="itempic">
+														</a>
+													</div>
+												</li>
+
+												<li class="td td-comment" style="height: 78px;">
+													<div class="item-title">
+														<div class="item-opinion">好评</div>
+														<div class="item-name">
+															<a href="javascript:void(0);">
+																<p class="item-basic-info">{{comment.itemName}}</p>
+															</a>
+														</div>
+													</div>
+													<div class="item-comment">
+														{{comment.content}}
+													</div>
+
+													<div class="item-info">
+														<div>
+															<p class="info-little">
+																<span>规格：{{comment.specName}}</span></p>
+															<p class="info-time">{{comment.createdTime}}</p>
+														</div>
+													</div>
+												</li>
+
+
+											</ul>
+
+											<!-- 分页 start-->
+											<div class="wrap" id="wrap">
+												<zpagenav v-bind:page="page" v-bind:page-size="pageSize"
+													v-bind:total="total" v-bind:max-page="maxPage"
+													v-on:pagehandler="doPaging">
+												</zpagenav>
+											</div>
+											<!-- 分页 end-->
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!--底部-->
+				<div class="footer ">
+					<div class="footer-bd ">
+						<p style="text-align: center;">
+							<em>© 2020 oursnail.cn 苏ICP备20012520号 fossi</em>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<aside class="menu">
+				<ul>
+					<li class="person active">
+						<span style="font-weight: bold;">
+							<a href="index.html" style="font-size: 20px">个人中心</a>
+						</span>
+					</li>
+					<li class="person">
+						<a href="#" style="font-size: 16px;font-weight: bold;">个人资料</a>
+						<ul>
+							<li> <a href="userinfo.html">我的信息</a></li>
+							<!-- <li> <a href="safety.html">安全设置</a></li> -->
+							<li> <a href="address.html">收货地址</a></li>
+						</ul>
+					</li>
+					<li class="person">
+						<a href="#" style="font-size: 16px;font-weight: bold;">我的交易</a>
+						<ul>
+							<li><a href="order.html">订单管理</a></li>
+							<li> <a href="comment.html">我的评价</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+		</div>
+	</div>
+	<script src="components/VuePaging/zpageNav.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		var index = new Vue({
+			el: "#commentList",
+			data: {
+				userIsLogin: false,
+				userInfo: {},
+
+				myCommentList: [], // 评论列表
+				page: 1, // 分页页数
+				pageSize: 10, // 分页每页显示数量
+				maxPage: 1, // 总页数
+				total: 1, // 总记录数
+			},
+			created() {
+				// var me = this;
+				// 通过cookie判断用户是否登录
+				this.judgeUserLoginStatus();
+
+				// 渲染评论列表信息
+				this.renderMyCommentList(this.page, this.pageSize);
+			},
+			methods: {
+				// 分页实现方法 跳转到page页
+				doPaging: function (page) {
+					this.page = page;
+					this.renderMyCommentList(page, this.pageSize);
+				},
+				renderMyCommentList(page, pageSize) {
+					var userInfo = this.userInfo;
+					// 请求后端获得最新数据
+					var serverUrl = app.serverUrl;
+					axios.defaults.withCredentials = true;
+					axios.post(
+							serverUrl + '/mycomments/query?userId=' + userInfo.id +
+							"&page=" + page +
+							"&pageSize=" + pageSize, {}, {
+								headers: {
+									'headerUserId': userInfo.id,
+									'headerUserToken': userInfo.userUniqueToken
+								}
+							})
+						.then(res => {
+							if (res.data.status == 200) {
+								var grid = res.data.data;
+								var myCommentList = grid.rows;
+								this.myCommentList = myCommentList;
+
+								for (var i = 0; i < myCommentList.length; i++) {
+									var date = myCommentList[i].createdTime;
+									var formatedTime = moment(date).format('YYYY年MM月DD日 h:mm:ss');
+									// console.log(formatedTime);
+									myCommentList[i].createdTime = formatedTime;
+								}
+								// console.log(myCommentList);
+								var maxPage = grid.total; // 获得总页数
+								var total = grid.records; // 获得总记录数
+
+								this.maxPage = maxPage;
+								this.total = total;
+
+							} else if (res.data.status == 500) {
+								alert(res.data.msg);
+							}
+						});
+				},
+				// 通过cookie判断用户是否登录
+				judgeUserLoginStatus() {
+					var userCookie = app.getCookie("user");
+					if (
+						userCookie != null &&
+						userCookie != undefined &&
+						userCookie != ""
+					) {
+						var userInfoStr = decodeURIComponent(userCookie);
+						// console.log(userInfoStr);
+						if (
+							userInfoStr != null &&
+							userInfoStr != undefined &&
+							userInfoStr != ""
+						) {
+							var userInfo = JSON.parse(userInfoStr);
+                            // 判断是否是一个对象
+                            if ( typeof(userInfo)  == "object" ) {
+                                this.userIsLogin = true;
+                                // console.log(userInfo);
+                                this.userInfo = userInfo;
+                            } else {
+                                this.userIsLogin = false;
+                                this.userInfo = {};
+                            }
+						}
+					} else {
+						this.userIsLogin = false;
+						this.userInfo = {};
+					}
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

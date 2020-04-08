@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+	<title>YummyFood - 用户中心</title>
+	<link rel="shortcut icon" href="img/foodie.ico" />
+
+	<link href="AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+	<link href="AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+	<link href="css/personal.css" rel="stylesheet" type="text/css">
+	<link href="css/systyle.css" rel="stylesheet" type="text/css">
+
+	<!-- 分页css -->
+	<link href="components/VuePaging/zpageNav.css" rel="stylesheet" />
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<!-- <script src="js/moment.js"></script> -->
+	<script src="js/moment-with-locales.min.js"></script>
+</head>
+
+<body>
+	<div id="center">
+		<div class="nav-table">
+			<div class="long-title"><span class="all-goods" style="font-weight: bold;">用户中心</span></div>
+		</div>
+		<b class="line"></b>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="wrap-left">
+						<div class="wrap-list">
+							<div class="m-user">
+								<!--个人信息 -->
+								<div class="m-bg"></div>
+								<div class="m-userinfo">
+									<div class="m-baseinfo">
+										<a href="userinfo.html">
+											<img :src="userInfo.face">
+										</a>
+										<em class="s-name">({{userInfo.nickname}})</em>
+									</div>
+								</div>
+							</div>
+
+							<!--订单 -->
+							<div class="m-order" style="margin-bottom: 0px;">
+								<div class="s-bar">
+									<i class="s-icon"></i>我的订单
+									<a class="i-load-more-item-shadow" href="order.html">全部订单</a>
+								</div>
+								<ul>
+									<li style="width: 25%;">
+										<a href="order.html"><i>
+											<img src="images/pay.png" /></i>
+											<span>待付款<em class="m-num" v-show="orderStatusCounts.waitPayCounts > 0">{{orderStatusCounts.waitPayCounts}}</em></span>
+										</a>
+									</li>
+									<li style="width: 25%;">
+										<a href="order.html"><i>
+											<img src="images/send.png" /></i>
+											<span>待发货<em class="m-num" v-show="orderStatusCounts.waitDeliverCounts > 0">{{orderStatusCounts.waitDeliverCounts}}</em></span>
+										</a>
+									</li>
+									<li style="width: 25%;">
+										<a href="order.html"><i>
+											<img src="images/receive.png" /></i>
+											<span>待收货<em class="m-num" v-show="orderStatusCounts.waitReceiveCounts > 0">{{orderStatusCounts.waitReceiveCounts}}</em></span>
+										</a>
+									</li>
+									<li style="width: 25%;">
+										<a href="order.html"><i>
+											<img src="images/comment.png" /></i>
+											<span>待评价<em class="m-num" v-show="orderStatusCounts.waitCommentCounts > 0">{{orderStatusCounts.waitCommentCounts}}</em></span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="box-container-bottom" style="margin-bottom: 15px;"></div>
+							<!--物流 -->
+							<div class="m-logistics">
+								<div class="s-bar">
+									<i class="s-icon"></i>订单动向
+								</div>
+								<div class="s-content">
+									<ul class="lg-list">
+
+										<li class="lg-item" v-for="(trend, trendIndex) in orderTrendList" :key="trendIndex">
+											
+											<div class="lg-info" v-show="trend.orderStatus == 20">
+												<p>订单号：[{{trend.orderId}}]</p>
+												<div class="lg-detail-wrap" >
+													<a href="javascript:void(0);" class="lg-detail i-tip-trigger" style="color: #0e90d2;">您已付款，等待发货~</a>
+												</div>
+												<p>付款时间：{{trend.payTime}}</p>
+											</div>
+
+											<div class="lg-info" v-show="trend.orderStatus == 30">
+												<p>订单号：[{{trend.orderId}}]</p>
+												<div class="lg-detail-wrap" >
+													<a href="javascript:void(0);" class="lg-detail i-tip-trigger" style="color: #0e90d2;">商家已发货，请耐心等待噢~</a>
+												</div>
+												<p>发货时间：{{trend.deliverTime}}</p>
+											</div>
+											
+											<div class="lg-info" v-show="trend.orderStatus == 40">
+												<p>订单号：[{{trend.orderId}}]</p>
+												<div class="lg-detail-wrap" >
+													<a href="javascript:void(0);" class="lg-detail i-tip-trigger" style="color: #0e90d2;">该订单交易成功！</a>
+												</div>
+												<p>成功时间：{{trend.successTime}}</p>
+											</div>
+										</li>
+
+									</ul>
+
+									<!-- 分页 start-->
+									<div class="wrap" id="wrap">
+										<zpagenav v-bind:page="page" v-bind:page-size="pageSize" v-bind:total="total" 
+											v-bind:max-page="maxPage"  v-on:pagehandler="doPaging">
+										</zpagenav>
+									</div>
+									<!-- 分页 end-->
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="wrap-right">
+						<!-- 日历-->
+						<div class="day-list">
+							<div class="s-bar">
+								<a class="i-history-trigger s-icon" href="#"></a>小日历
+							</div>
+							<div class="s-care s-care-noweather">
+								<div class="s-date">
+									<em>{{day}}</em>
+									<span>{{weekDay}}</span>
+									<span>{{yearMonth}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--底部-->
+				<div class="footer ">
+					<div class="footer-bd ">
+						<p style="text-align: center;">
+							<em>© 2020 oursnail.cn 苏ICP备20012520号 fossi</em>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<aside class="menu">
+				<ul>
+					<li class="person active">
+						<span style="font-weight: bold;">
+							<a href="index.html" style="font-size: 20px">个人中心</a>
+						</span>
+					</li>
+					<li class="person">
+						<a href="#" style="font-size: 16px;font-weight: bold;">个人资料</a>
+						<ul>
+							<li> <a href="userinfo.html">我的信息</a></li>
+							<!-- <li> <a href="safety.html">安全设置</a></li> -->
+							<li> <a href="address.html">收货地址</a></li>
+						</ul>
+					</li>
+					<li class="person">
+						<a href="#" style="font-size: 16px;font-weight: bold;">我的交易</a>
+						<ul>
+							<li><a href="order.html">订单管理</a></li>
+							<li> <a href="comment.html">我的评价</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+		</div>
+		
+	</div>
+	<script src="components/VuePaging/zpageNav.js"></script>
+	<script type="text/javascript " src="js/app.js"></script>
+	<script type="text/javascript">
+		var index = new Vue({
+			el: "#center",
+			data: {
+				userIsLogin: false,
+				userInfo: {},
+
+				orderStatusCounts: {},
+				orderTrendList: [],
+
+				page: 1, // 分页页数
+				pageSize: 5, // 分页每页显示数量
+				maxPage: 1, // 总页数
+				total: 1, // 总记录数
+
+				yearMonth: "",		// YYYY年MM月
+				day: "",			// 日
+				weekDay: ""			// 星期几
+			},
+			created() {
+				// var me = this;
+				// 通过cookie判断用户是否登录
+				this.judgeUserLoginStatus();
+
+				// 判断用户是否登录
+				var userIsLogin = this.userIsLogin;
+				if (!userIsLogin) {
+					// 用户未登录，则跳转
+					window.location.href = app.shopServerUrl + "login.html?returnUrl=" + app.centerServerUrl;
+				}
+				// console.log(userIsLogin);
+
+				// 渲染订单状态数
+				this.renderOrderStatusCounts();
+
+				// 渲染小日历
+				this.renderCalendar();
+
+				// 订单动向
+				this.renderOrderTrend(this.page, this.pageSize);
+			},
+			methods: {
+				// 分页实现方法 跳转到page页
+                doPaging: function (page) {
+                    this.page = page;
+					this.renderOrderTrend(page, this.pageSize);
+                },
+				renderCalendar () {
+					var yearMonth = moment(new Date()).format('YYYY年MM月');
+					// console.log(yearMonth);
+					var day = moment(new Date()).format('DD');
+					// console.log(day);
+					var localMoment = moment().locale('zh-cn');
+					var weekDay = localMoment.format('dddd');
+					// console.log(weekDay);
+
+					this.yearMonth = yearMonth;
+					this.day = day;
+					this.weekDay = weekDay;
+				},
+				renderOrderTrend(page, pageSize) {
+					var userInfo = this.userInfo;
+					var serverUrl = app.serverUrl;
+					axios.defaults.withCredentials = true;
+					axios.post(
+							serverUrl + '/myorders/trend?userId=' + userInfo.id + 
+							"&page=" + page +
+							"&pageSize=" + pageSize, {}, 
+							{
+								headers: {
+									'headerUserId': userInfo.id,
+									'headerUserToken': userInfo.userUniqueToken
+								}
+							})
+						.then(res => {
+							if (res.data.status == 200) {
+								var grid = res.data.data;
+								var orderTrendList = grid.rows;
+								// console.log(orderTrendList);
+								this.orderTrendList = orderTrendList;
+
+								for (var i = 0; i < orderTrendList.length; i++) {
+									var payTimeTmp = orderTrendList[i].payTime;
+									var formatedPayTime = moment(payTimeTmp).format('YYYY年MM月DD日 h:mm:ss');
+									
+									var deliverTimeTmp = orderTrendList[i].deliverTime;
+									var formatedDeliverTime = moment(deliverTimeTmp).format('YYYY年MM月DD日 h:mm:ss');
+
+									var successTimeTmp = orderTrendList[i].successTime;
+									var formatedSuccessTime = moment(successTimeTmp).format('YYYY年MM月DD日 h:mm:ss');
+
+									orderTrendList[i].payTime = formatedPayTime;
+									orderTrendList[i].deliverTime = formatedDeliverTime;
+									orderTrendList[i].successTime = formatedSuccessTime;
+								}
+
+								var maxPage = grid.total; // 获得总页数
+								var total = grid.records; // 获得总记录数
+
+								this.maxPage = maxPage;
+								this.total = total;
+							} else {
+								alert(res.data.msg);
+								console.log(res.data.msg);
+							}
+						});
+				},
+				renderOrderStatusCounts() {
+					var userInfo = this.userInfo;
+					var serverUrl = app.serverUrl;
+					axios.defaults.withCredentials = true;
+					axios.post(
+							serverUrl + '/myorders/statusCounts?userId=' + userInfo.id, {}, 
+							{
+								headers: {
+									'headerUserId': userInfo.id,
+									'headerUserToken': userInfo.userUniqueToken
+								}
+							})
+						.then(res => {
+							if (res.data.status == 200) {
+								var orderStatusCounts = res.data.data;
+								// console.log(orderStatusCounts);
+								this.orderStatusCounts = orderStatusCounts;
+							} else {
+								alert(res.data.msg);
+								console.log(res.data.msg);
+							}
+						});
+				},
+				// 查询是否支付成功 
+				// 通过cookie判断用户是否登录
+				judgeUserLoginStatus() {
+					var userCookie = app.getCookie("user");
+					if (
+						userCookie != null &&
+						userCookie != undefined &&
+						userCookie != ""
+					) {
+						var userInfoStr = decodeURIComponent(userCookie);
+						// console.log(userInfo);
+						if (
+							userInfoStr != null &&
+							userInfoStr != undefined &&
+							userInfoStr != ""
+						) {
+							var userInfo = JSON.parse(userInfoStr);
+                            // 判断是否是一个对象
+                            if ( typeof(userInfo)  == "object" ) {
+                                this.userIsLogin = true;
+                                // console.log(userInfo);
+                                this.userInfo = userInfo;
+                            } else {
+                                this.userIsLogin = false;
+                                this.userInfo = {};
+                            }
+						}
+					} else {
+						this.userIsLogin = false;
+						this.userInfo = {};
+					}
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

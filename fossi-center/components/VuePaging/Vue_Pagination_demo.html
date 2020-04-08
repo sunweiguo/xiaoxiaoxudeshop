@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="pragram" content="no-cache">
+    <!-- <meta name="author" content="gqz" />
+    <meta name="Keywords" content="Vue_Pagination">
+    <meta name="description" content="www.ganquanzhong.top"> -->
+    <title>Vue2.0分页组件</title>
+	<link rel="icon" sizes="57x57" href="https://cn.vuejs.org/images/icons/apple-icon-57x57.png">
+    <link href="zpageNav.css" rel="stylesheet" />
+</head>
+<body>
+	<center><a href="https://blog.csdn.net/ganquanzhong" target="_blank">Vue_Pagination演示</a></center>
+	
+	<!-- pagination start-->
+    <div class="wrap" id="wrap">
+        <zpagenav v-bind:page="page" v-bind:page-size="pageSize" v-bind:total="total" 
+        	v-bind:max-page="maxPage"  v-on:pagehandler="pageHandler">
+        </zpagenav>
+    </div>
+	<!-- pagination end-->
+	
+    <script src="vue.js"></script>
+    <script src="zpageNav.js"></script>
+
+    <script>
+        var vm = new Vue({
+            el: '#wrap',
+            data: {
+                page: 1,  //显示的是哪一页
+                pageSize: 10, //每一页显示的数据条数
+                total: 150, //记录总数
+                maxPage:9  //最大页数
+            },
+            methods: {
+            	//pagehandler方法 跳转到page页
+                pageHandler: function (page) {
+                	//here you can do custom state update
+                    this.page = page;
+                }
+            },
+			created:function(){
+				//created  表示页面加载完毕，立即执行
+				this.pageHandler(1);
+			}
+        });
+    </script>
+</body>
+</html>

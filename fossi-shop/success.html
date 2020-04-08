@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0 ,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>天天吃货 - 支付成功</title>
+	<link rel="shortcut icon" href="img/foodie.ico" />
+	<link rel="stylesheet" href="css/paysuccess.css" />
+
+	<script src="AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body class="body">
+	<div id="success" class="container">
+		<div class="hd">
+			<div class="hd-main">
+				<div class="ep-hd-info">
+					<div class="ep-logo">
+						<img src="images/logobig.png" alt="慕课网 - 天天吃货" />
+					</div>
+					<div class="ep-order-status">
+						<!-- <h1>订单支付</h1> -->
+						<span class="page-title">订单支付</span>
+					</div>
+				</div>
+				<div class="user-info">
+					<p>账号：{{ userInfo.nickname }}</p>
+				</div>
+			</div>
+		</div>
+		<div class="bd">
+			<div class="bd-main">
+				<div class="paid-info">
+					<div class="first-line">
+						<img src="img/success.png" class="paid-success"></img>
+						<span class="success-words">支付成功！</span>
+					</div>
+					<div class="second-line">
+						<p class="order-words">商品订单：{{orderId}}</p>
+						<p class="order-words">支付金额：<em class="rmb"><i>¥</i>{{orderAmount / 100}}</em></p>
+						<p class="order-words gray-words">若有疑问请与客服联系，我们将会尽快为您提供帮助与服务。</p>
+						<p class="order-words gray-words">客服邮箱：317758022@qq.com</p>
+					</div>
+					<div class="third-line">
+						<button class="go-center" @click="goUserCenter">查看我的订单</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="ft">
+			<div class="ft-main">
+				<div class="copyright">
+					<p style="text-align: center;">
+							<em>© 2020 oursnail.cn 苏ICP备20012520号 fossi</em>
+						</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript " src="js/app.js"></script>
+	<script src="js/jquery.qrcode.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var index = new Vue({
+			el: "#success",
+			data: {
+				userIsLogin: false,
+				userInfo: {},
+
+				orderId: null,
+				orderAmount: 0
+			},
+			created() {
+				// var me = this;
+				// 通过cookie判断用户是否登录
+				this.judgeUserLoginStatus();
+
+				// 获得订单号
+				var orderId = app.getUrlParam("orderId");
+				// 获得支付金额
+				var orderAmount = app.getUrlParam("orderAmount");
+
+				this.orderId = orderId;
+				this.orderAmount = orderAmount;
+			},
+			methods: {
+				goUserCenter() {
+					// 判断用户是否登录
+					var userIsLogin = this.userIsLogin;
+					if (!userIsLogin) {
+						// 用户未登录，则跳转
+						window.location.href = "login.html?returnUrl=" + app.centerServerUrl;
+					} else {
+						window.location.href = app.centerServerUrl;
+					}
+				},
+				// 通过cookie判断用户是否登录
+				judgeUserLoginStatus() {
+					var userCookie = app.getCookie("user");
+					if (
+						userCookie != null &&
+						userCookie != undefined &&
+						userCookie != ""
+					) {
+						var userInfoStr = decodeURIComponent(userCookie);
+						// console.log(userInfo);
+						if (
+							userInfoStr != null &&
+							userInfoStr != undefined &&
+							userInfoStr != ""
+						) {
+							var userInfo = JSON.parse(userInfoStr);
+                            // 判断是否是一个对象
+                            if ( typeof(userInfo)  == "object" ) {
+                                this.userIsLogin = true;
+                                // console.log(userInfo);
+                                this.userInfo = userInfo;
+                            } else {
+                                this.userIsLogin = false;
+                                this.userInfo = {};
+                            }
+						}
+					} else {
+						this.userIsLogin = false;
+						this.userInfo = {};
+					}
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

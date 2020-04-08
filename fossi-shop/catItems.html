@@ -1,0 +1,416 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>搜索页面</title>
+	<link rel="shortcut icon" href="img/foodie.ico" />
+	<link href="AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+	<link href="AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
+	<link href="basic/css/demo.css" rel="stylesheet" type="text/css" />
+	<link href="css/seastyle.css" rel="stylesheet" type="text/css" />
+	<!-- 分页css -->
+	<link href="components/VuePaging/zpageNav.css" rel="stylesheet" />
+	<script type="text/javascript" src="basic/js/jquery-1.7.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+	<div id="search">
+		<!--顶部导航条 -->
+		<div class="am-container header">
+			<ul class="message-l">
+				<div class="topMessage">
+					<div class="menu-hd" v-show="!userIsLogin">
+						<a href="login.html" target="_top" class="h">亲，请登录</a>
+						<a href="register.html" target="_top">免费注册</a>
+					</div>
+					<div class="menu-hd" v-show="userIsLogin">
+						<span style="color: #d2364c">欢迎，{{userInfo.username}}</span>
+					</div>
+				</div>
+			</ul>
+			<ul class="message-r">
+				<div class="topMessage home">
+					<div class="menu-hd"><a href="index.html" target="_top" class="h">商城首页</a></div>
+				</div>
+				<div class="topMessage my-shangcheng">
+					<div class="menu-hd MyShangcheng"><a href="javascript:void(0);" @click="goUserCenter">
+						<i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
+				</div>
+			</ul>
+		</div>
+
+		<!--悬浮搜索框-->
+		<div class="nav white">
+			<!-- <div class="logo"><img src="images/logo.png" /></div> -->
+			<div class="logoBig">
+				<li><a href="index.html"><img src="images/logobig.png" /></a></li>
+			</div>
+
+			<div class="search-bar pr">
+				<a name="index_none_header_sysc" href="#"></a>
+				<form>
+					<input id="searchInput" v-model="keywords" name="index_none_header_sysc" type="text"
+						placeholder="搜索" autocomplete="off">
+					<input id="ai-topsearch" @click="doSearch" class="submit am-btn" value="搜索" index="1">
+				</form>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+		<b class="line"></b>
+		<div class="search">
+			<div class="search-list">
+				<div class="nav-table">
+					<div class="long-title"><span class="all-goods">搜索页面</span></div>
+				</div>
+
+
+				<div class="am-g am-g-fixed">
+					<div class="am-u-sm-12 am-u-md-12">
+						<div class="search-content" style="width: 100%;">
+							<div class="sort">
+								<li :class="[{'first' : sort == 'k'}]" @click="chooseSort('k')"><a title="默认" href="javascript:void(0);">默认排序</a></li>
+								<li :class="[{'first' : sort == 'c'}]" @click="chooseSort('c')"><a title="销量" href="javascript:void(0);">销量排序</a></li>
+								<li :class="[{'first' : sort == 'p'}]" @click="chooseSort('p')"><a title="价格" href="javascript:void(0);">价格优先</a></li>
+							</div>
+							<div class="clear"></div>
+
+							<ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-5 boxes">
+								
+								<li v-for="(item, index) in itemsList" :key="index" @click="showItemDetail(item.itemId)">
+									<div class="i-pic limit">
+										<img :src="item.imgUrl" />
+										<p class="title fl">{{item.itemName}}</p>
+										<p class="price fl">
+											<b>¥</b>
+											<strong>{{item.price / 100}}</strong>
+										</p>
+										<p class="number fl">
+											销量<span>{{item.sellCounts}}</span>
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="clear"></div>
+						<!--分页 -->
+						<!-- <ul class="am-pagination am-pagination-right">
+							<li class="am-disabled"><a href="#">&laquo;</a></li>
+							<li class="am-active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">&raquo;</a></li>
+						</ul> -->
+						<!-- 分页 start-->
+						<div class="wrap" id="wrap">
+							<zpagenav v-bind:page="page" v-bind:page-size="pageSize" v-bind:total="total" 
+								v-bind:max-page="maxPage"  v-on:pagehandler="doPaging">
+							</zpagenav>
+						</div>
+						<!-- 分页 end-->
+
+					</div>
+				</div>
+				<div class="footer ">
+					<div class="footer-bd ">
+						<p style="text-align: center;">
+							<em>© 2020 oursnail.cn 苏ICP备20012520号 fossi</em>
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!--引导 -->
+		<div class="navCir">
+			<li><a href="home.html"><i class="am-icon-home "></i>首页</a></li>
+			<li><a href="sort.html"><i class="am-icon-list"></i>分类</a></li>
+			<li><a href="shopcart.html"><i class="am-icon-shopping-basket"></i>购物车</a></li>
+			<li><a href="person/index.html"><i class="am-icon-user"></i>我的</a></li>
+		</div>
+
+		<!--菜单 -->
+		<div class="tip">
+			<div id="sidebar">
+				<div id="wrap">
+					<div id="prof" class="item ">
+						<a href="# ">
+							<span class="setting "></span>
+						</a>
+						<div class="ibar_login_box status_login " style="height: 150px">
+							<div class="avatar_box ">
+								<p class="avatar_imgbox ">
+									<img v-show="userIsLogin" :src="userInfo.face" />
+									<img v-show="!userIsLogin" src="img/default-face.png" />
+								</p>
+								<ul class="user_info">
+									<li v-show="!userIsLogin">用户未登录</li>
+									<li v-show="userIsLogin">用户昵称：{{userInfo.nickname}}</li>
+									<li v-show="userIsLogin" @click="logout">退出登录</li>
+								</ul>
+							</div>
+							<i class="icon_arrow_white "></i>
+						</div>
+
+					</div>
+					<div id="shopCart " class="item " @click="goToShopcart">
+						<a href="# ">
+							<span class="message "></span>
+						</a>
+						<p>购物车</p>
+						<p class="cart_num ">{{shopcartItemCounts}}</p>
+					</div>
+
+					<div class="quick_toggle ">
+
+						<li class="qtitem ">
+							<a href="#top " class="return_top "><span class="top "></span></a>
+						</li>
+					</div>
+
+					<!--回到顶部 -->
+					<div id="quick_links_pop " class="quick_links_pop hide "></div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script>
+		window.jQuery || document.write('<script src="basic/js/jquery-1.9.min.js"><\/script>');
+	</script>
+	<script type="text/javascript" src="basic/js/quick_links.js"></script>
+
+	<div class="theme-popover-mask"></div>
+	<script src="components/VuePaging/zpageNav.js"></script>
+	<script type="text/javascript " src="js/app.js"></script>
+	<script type="text/javascript">
+		var index = new Vue({
+			el: "#search",
+			data: {
+				keywords: null,
+				sort: "k",
+				page: 1,			// 分页页数
+				pageSize: 20,		// 分页每页显示数量
+				maxPage: 1,			// 总页数
+				total: 1,			// 总记录数
+				itemsList: [],
+
+				searchType: null,	// 搜索类型，catItems：根据分类id搜索；searchItems：根据关键字搜索
+				catId: 0,			// 分类id
+
+				shopcartItemCounts: 0,	// 购物车中商品的数量
+			},
+			created() {
+				// var me = this;
+				// 通过cookie判断用户是否登录
+				this.judgeUserLoginStatus();
+				
+				var page = app.getUrlParam("page");
+				if (page == null || page == undefined || page == '') {
+					page = 1;
+				}
+				this.page = page;
+
+				var pageSize = app.getUrlParam("pageSize");
+				if (pageSize == null || pageSize == undefined || pageSize == '') {
+					pageSize = 20;
+				}
+				this.pageSize = pageSize;
+
+				var searchType = app.getUrlParam("searchType");
+				if (searchType == null || searchType == undefined || searchType == '') {
+					return false;
+				} else if (searchType == "searchItems") {
+					this.searchType = searchType;
+
+					var keywords = app.getUrlParam("keywords");
+					if (keywords == null || keywords == undefined || keywords == '') {
+						return;
+					}
+					this.keywords = keywords;
+
+					this.searchInBackend(keywords, "k", 1, 20);
+				} else if (searchType == "catItems") {
+					this.searchType = searchType;
+					// 从别的页面来的搜索
+					var catId = app.getUrlParam("catId");
+					if (catId == null || catId == undefined || catId == '') {
+						return;
+					}
+					this.catId = catId;
+
+					this.searchCatItemsInBackend(catId, "k", page, pageSize);
+				}
+
+				// 从购物车中拿到商品的数量
+				this.shopcartItemCounts = app.getShopcartItemCounts();
+			},
+			methods: {
+				goUserCenter() {
+					// 判断用户是否登录
+					var userIsLogin = this.userIsLogin;
+					if (!userIsLogin) {
+						// 用户未登录，则跳转
+						window.location.href = "login.html?returnUrl=" + app.centerServerUrl;
+					} else {
+						window.location.href = app.centerServerUrl;
+					}
+				},
+				goToShopcart() {
+					window.location.href = "shopcart.html";
+				},
+				// 分页实现方法 跳转到page页
+                doPaging: function (page) {
+                    this.page = page;
+
+					var searchType = this.searchType;
+					if (searchType == "searchItems") {
+						this.searchInBackend(this.keywords, this.sort, page, this.pageSize);	
+					} else if (searchType == "catItems") {
+						this.searchCatItemsInBackend(this.catId, this.sort, page, this.pageSize);	
+					}
+
+					
+                },
+				showItemDetail(itemId){
+					window.open("item.html?itemId=" + itemId);
+				},
+				chooseSort(sort) {
+					// console.log(sort);
+					this.sort = sort;
+
+					var searchType = this.searchType;
+					if (searchType == "searchItems") {
+						var keywords = this.keywords;
+						// console.log(keywords);
+						if (keywords == null || keywords == undefined || keywords == '') {
+							alert("搜索内容不能为空");
+							return;
+						}
+						this.searchInBackend(keywords, sort, 1, 20);
+					} else if (searchType == "catItems") {
+						var catId = this.catId;
+						// console.log(keywords);
+						if (catId == null || catId == undefined || catId == '') {
+							alert("分类不能为空");
+							return;
+						}
+						this.searchCatItemsInBackend(catId, sort, 1, 20);	
+					}
+				},
+				doSearch() {
+					this.searchType = "searchItems"
+					var keywords = this.keywords;
+					// console.log(keywords);
+					if (keywords == null || keywords == undefined || keywords == '') {
+						alert("搜索内容不能为空");
+						return;
+					}
+					this.searchInBackend(keywords, "k", 1, 20);
+				},
+				searchCatItemsInBackend(catId, sort, page, pageSize) {
+					// debugger;
+					var serverUrl = app.serverUrl;
+					axios.defaults.withCredentials = true;
+					axios.get(serverUrl + '/items/catItems?catId=' + catId + "&sort=" + sort + "&page=" + page + "&pageSize=" + pageSize, {})
+						.then(res => {
+							if (res.data.status == 200) {
+								var grid = res.data.data;
+								var itemsList = grid.rows;
+								this.itemsList = itemsList;
+
+								var maxPage = grid.total;		// 获得总页数
+								var total = grid.records;		// 获得总记录数
+								
+								this.maxPage = maxPage;
+								this.total = total;
+
+								// console.log(itemsList);
+							} else if (res.data.status == 500) {
+								alert(res.data.msg);
+								return;
+							}
+						});
+				},
+				searchInBackend(keywords, sort, page, pageSize) {
+					// debugger;
+					var serverUrl = app.serverUrl;
+					axios.defaults.withCredentials = true;
+					axios.get(serverUrl + '/items/search?keywords=' + keywords + "&sort=" + sort + "&page=" + page + "&pageSize=" + pageSize, {})
+						.then(res => {
+							if (res.data.status == 200) {
+								var grid = res.data.data;
+								var itemsList = grid.rows;
+								this.itemsList = itemsList;
+
+								var maxPage = grid.total;		// 获得总页数
+								var total = grid.records;		// 获得总记录数
+								
+								this.maxPage = maxPage;
+								this.total = total;
+
+								// console.log(itemsList);
+							} else if (res.data.status == 500) {
+								alert(res.data.msg);
+								return;
+							}
+						});
+				},
+				getRequest() {},
+				postRequest() {},
+				// 通过cookie判断用户是否登录
+				judgeUserLoginStatus() {
+					var userCookie = app.getCookie("user");
+					if (userCookie != null && userCookie != undefined && userCookie != '') {
+						var userInfoStr = decodeURIComponent(userCookie);
+						// console.log(userInfo);
+						if (userInfoStr != null && userInfoStr != undefined && userInfoStr != '') {
+							var userInfo = JSON.parse(userInfoStr);
+                            // 判断是否是一个对象
+                            if ( typeof(userInfo)  == "object" ) {
+                                this.userIsLogin = true;
+                                // console.log(userInfo);
+                                this.userInfo = userInfo;
+                            } else {
+                                this.userIsLogin = false;
+                                this.userInfo = {};
+                            }
+						}
+					} else {
+						this.userIsLogin = false;
+						this.userInfo = {};
+					}
+				},
+				logout() {
+					var userId = this.userInfo.id;
+					var serverUrl = app.serverUrl;
+
+					axios.defaults.withCredentials = true;
+					axios.post(serverUrl + '/passport/logout?userId=' + userId, {})
+						.then(res => {
+							if (res.data.status == 200) {
+								window.location.href = "index.html";
+							} else if (res.data.status == 500) {
+								alert(res.data.msg);
+								return;
+							}
+						});
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

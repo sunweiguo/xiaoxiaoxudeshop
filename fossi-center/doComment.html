@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+	<title>发表评论</title>
+	<link rel="shortcut icon" href="img/foodie.ico" />
+
+	<link href="AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+	<link href="AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+
+	<link href="css/personal.css" rel="stylesheet" type="text/css">
+	<link href="css/appstyle.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+	<div id="makeComments">
+		<div class="nav-table">
+			<div class="long-title"><span class="all-goods" style="font-weight: bold;">用户中心</span></div>
+		</div>
+		<b class="line"></b>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+
+					<div class="user-comment">
+						<!--标题 -->
+						<div class="am-cf am-padding">
+							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">发表评论</strong> /
+								<small>Make&nbsp;Comments</small></div>
+						</div>
+						<hr />
+
+						<div class="comment-main">
+
+
+							<div class="comment-list" v-for="(orderItem, index) in orderItemList">
+								<div class="item-pic">
+									<a href="javascript:void(0);" class="J_MakePoint">
+										<img :src="orderItem.itemImg" class="itempic">
+									</a>
+								</div>
+
+								<div class="item-title">
+									<div class="item-name">
+										<a href="javascript:void(0);">
+											<p class="item-basic-info">{{orderItem.itemName}}</p>
+										</a>
+									</div>
+									<div class="item-info">
+										<div class="info-little">
+											<span style="color: gray;font-size:14px;">规格：{{orderItem.itemSpecName}}</span>
+										</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div class="item-comment">
+									<textarea placeholder="您的评价将会对其他小伙伴们提供很大帮助哟~" v-model="orderItem.content" maxlength="64"></textarea>
+								</div>
+								<div class="item-opinion">
+									<li @click="makeComment(orderItem.id, 1)" :id="'good_'+orderItem.id"><i class="op1"></i>好评</li>
+									<li @click="makeComment(orderItem.id, 2)" :id="'normal_'+orderItem.id"><i class="op2"></i>中评</li>
+									<li @click="makeComment(orderItem.id, 3)" :id="'bad_'+orderItem.id"><i class="op3"></i>差评</li>
+								</div>
+							</div>
+
+							<div class="info-btn">
+								<div class="am-btn am-btn-danger" @click="saveComments">发表评论</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!--底部-->
+				<div class="footer ">
+					<div class="footer-bd ">
+						<p style="text-align: center;">
+							<em>© 2020 oursnail.cn 苏ICP备20012520号 fossi</em>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<aside class="menu">
+				<ul>
+					<li class="person active">
+						<span style="font-weight: bold;">
+							<a href="index.html" style="font-size: 20px">个人中心</a>
+						</span>
+					</li>
+					<li class="person">
+						<a href="#" style="font-size: 16px;font-weight: bold;">个人资料</a>
+						<ul>
+							<li> <a href="userinfo.html">我的信息</a></li>
+							<!-- <li> <a href="safety.html">安全设置</a></li> -->
+							<li> <a href="address.html">收货地址</a></li>
+						</ul>
+					</li>
+					<li class="person">
+						<a href="#" style="font-size: 16px;font-weight: bold;">我的交易</a>
+						<ul>
+							<li><a href="order.html">订单管理</a></li>
+							<li> <a href="comment.html">我的评价</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".comment-list .item-opinion li").click(function () {
+				$(this).prevAll().children('i').removeClass("active");
+				$(this).nextAll().children('i').removeClass("active");
+				$(this).children('i').addClass("active");
+			});
+		})
+	</script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript">
+		var index = new Vue({
+			el: "#makeComments",
+			data: {
+				userIsLogin: false,
+				userInfo: {},
+
+				flowerList: [],	// 评价等级list
+				orderItemList: [],
+				
+			},
+			created() {
+				// var me = this;
+				// 通过cookie判断用户是否登录
+				this.judgeUserLoginStatus();
+
+
+				var orderId = app.getUrlParam("orderId");
+				// 如果orderId为空，跳转到错误页面
+				if (orderId == null || orderId == undefined || orderId == '') {
+					app.goErrorPage();
+					return;
+				}
+				this.orderId = orderId;
+				// 渲染评论页内容
+				this.renderItemComment(orderId);
+			},
+			methods: {
+				saveComments() {
+					var orderItemList = this.orderItemList;
+					// console.log(orderItemList);
+
+					// 判断每项元素是否有评论等级
+					// 判断每项元素是否包含评论内容
+					for (var i = 0 ; i < orderItemList.length ; i ++) {
+						var tempItem = orderItemList[i];
+						if (tempItem.commentLevel == "" || tempItem.commentLevel == undefined || tempItem.commentLevel == null) {
+							alert("每个商品都需要一朵小花噢~");
+							return;
+						}
+						if (tempItem.content == "" || tempItem.content == undefined || tempItem.content == null) {
+							alert("每个商品都需要您宝贵的评论噢~");
+							return;
+						}
+					}
+
+					// 保存评论
+					var userInfo = this.userInfo;
+					// 请求后端获得最新数据
+					var serverUrl = app.serverUrl;
+					axios.defaults.withCredentials = true;
+					axios.post(
+							serverUrl + '/mycomments/saveList?userId=' + userInfo.id + "&orderId=" + this.orderId,
+							orderItemList, 
+							{
+								headers: {
+									'headerUserId': userInfo.id,
+									'headerUserToken': userInfo.userUniqueToken
+								}
+							})
+						.then(res => {
+							if (res.data.status == 200) {
+								// var orderItemList = res.data.data;
+								// console.log(orderItemList);
+								alert("评论成功！");
+								window.location.href = "order.html";
+							} else if (res.data.status == 500) {
+								alert(res.data.msg);
+							}
+						});
+				},
+				makeComment(orderItemId, level) {
+					var orderItemList = this.orderItemList;
+					for (var i = 0 ; i < orderItemList.length ; i ++) {
+						var tempId = orderItemList[i].id;
+						if (tempId == orderItemId) {
+							orderItemList[i].commentLevel = level;
+						}
+					}
+					// console.log(orderItemList);
+					this.orderItemList = orderItemList;
+
+					var liId = "";
+					if (level == 1) {
+						liId = "good_" + orderItemId;
+					} else if (level == 2) {
+						liId = "normal_" + orderItemId;
+					} else if (level == 3) {
+						liId = "bad_" + orderItemId;
+					}
+
+					var goodLiId = "good_" + orderItemId;
+					var normalLiId = "normal_" + orderItemId;
+					var badLiId = "bad_" + orderItemId;
+
+					// 判断评价等级，先把所有的颜色去掉，然后再在当前点击的上面标记颜色
+					var goodDomLi = document.getElementById(goodLiId);
+					var normalDomLi = document.getElementById(normalLiId);
+					var badDomLi = document.getElementById(badLiId);
+					goodDomLi.children[0].classList.remove("active");
+					normalDomLi.children[0].classList.remove("active");
+					badDomLi.children[0].classList.remove("active");
+
+					var domLi = document.getElementById(liId);
+					var classList = domLi.children[0].classList;
+					classList.add("active");
+
+					// console.log(domLi.children[0].classList);
+				},
+				renderItemComment(orderId) {
+					var userInfo = this.userInfo;
+					// 请求后端获得最新数据
+					var serverUrl = app.serverUrl;
+					axios.defaults.withCredentials = true;
+					axios.post(
+							serverUrl + '/mycomments/pending?userId=' + userInfo.id + "&orderId=" + orderId, {}, 
+							{
+								headers: {
+									'headerUserId': userInfo.id,
+									'headerUserToken': userInfo.userUniqueToken
+								}
+							})
+						.then(res => {
+							if (res.data.status == 200) {
+								var orderItemList = res.data.data;
+								// console.log(orderItemList);
+								this.orderItemList = orderItemList;
+
+								for (var i = 0 ; i < orderItemList.length ; i ++) {
+									orderItemList[i].commentLevel = 0;
+									orderItemList[i].commentId = 0;
+								}
+
+							} else if (res.data.status == 500) {
+								alert(res.data.msg);
+							}
+						});
+				},
+				// 通过cookie判断用户是否登录
+				judgeUserLoginStatus() {
+					var userCookie = app.getCookie("user");
+					if (
+						userCookie != null &&
+						userCookie != undefined &&
+						userCookie != ""
+					) {
+						var userInfoStr = decodeURIComponent(userCookie);
+						// console.log(userInfoStr);
+						if (
+							userInfoStr != null &&
+							userInfoStr != undefined &&
+							userInfoStr != ""
+						) {
+							var userInfo = JSON.parse(userInfoStr);
+                            // 判断是否是一个对象
+                            if ( typeof(userInfo)  == "object" ) {
+                                this.userIsLogin = true;
+                                // console.log(userInfo);
+                                this.userInfo = userInfo;
+                            } else {
+                                this.userIsLogin = false;
+                                this.userInfo = {};
+                            }
+						}
+					} else {
+						this.userIsLogin = false;
+						this.userInfo = {};
+					}
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

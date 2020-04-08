@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+	<title>天天吃货 - 订单管理</title>
+	<link rel="shortcut icon" href="img/foodie.ico" />
+
+	<link href="AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+	<link href="AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+
+	<link href="css/personal.css" rel="stylesheet" type="text/css">
+	<link href="css/orstyle.css" rel="stylesheet" type="text/css">
+
+	<!-- 分页css -->
+	<link href="components/VuePaging/zpageNav.css" rel="stylesheet" />
+
+	<script src="AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+	<script src="AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="js/moment.js"></script>
+</head>
+
+<body>
+	<div id="myOrders">
+		<div class="nav-table">
+			<div class="long-title"><span class="all-goods" style="font-weight: bold;">用户中心</span></div>
+		</div>
+		<b class="line"></b>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+
+					<div class="user-order">
+
+						<!--标题 -->
+						<div class="am-cf am-padding">
+							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">订单管理</strong> /
+								<small>Order</small></div>
+						</div>
+						<hr />
+
+						<div class="am-tabs am-tabs-d2 am-margin">
+						<!-- <div class="am-tabs am-tabs-d2 am-margin" data-am-tabs="{noSwipe: 1}"> -->
+
+							<ul class="am-avg-sm-5 am-tabs-nav am-nav am-nav-tabs">
+								<li :class="[{'am-active':orderStatus==''}]" @click="queryOrdersByStatus()"><a href="#tab1">所有订单</a></li>
+								<li :class="[{'am-active':orderStatus==10}]" @click="queryOrdersByStatus(10)"><a href="#tab2" >待付款</a></li>
+								<li :class="[{'am-active':orderStatus==20}]" @click="queryOrdersByStatus(20)"><a href="#tab3">待发货</a></li>
+								<li :class="[{'am-active':orderStatus==30}]" @click="queryOrdersByStatus(30)"><a href="#tab4">待收货</a></li>
+								<li :class="[{'am-active':orderStatus==40}]" @click="queryOrdersByStatus(40)"><a href="#tab5">已完成</a></li>
+							</ul>
+
+							<div class="am-tabs-bd">
+								<div class="am-tab-panel am-fade am-in am-active" id="tab1">
+									<div class="order-top">
+										<div class="th th-item">
+											<td class="td-inner">商品</td>
+										</div>
+										<div class="th th-price">
+											<td class="td-inner">单价</td>
+										</div>
+										<div class="th th-number">
+											<td class="td-inner">数量</td>
+										</div>
+										<div class="th th-operation">
+											<td class="td-inner">支付方式</td>
+										</div>
+										<div class="th th-amount">
+											<td class="td-inner">合计</td>
+										</div>
+										<div class="th th-status">
+											<td class="td-inner">交易状态</td>
+										</div>
+										<div class="th th-change">
+											<td class="td-inner">交易操作</td>
+										</div>
+									</div>
+
+									<div class="order-main">
+										<div class="order-list">
+
+											<!--交易成功-->
+											<div class="order-status5" v-for="(order, ordersIndex) in myOrderList">
+												<div class="order-title">
+													<div class="dd-num">订单编号：<a href="javascript:void(0);">{{order.orderId}}</a></div>
+													<span>成交时间：{{order.createdTime}}</span>
+												</div>
+												<div class="order-content">
+													<div class="order-left">
+														
+														<ul class="item-list" v-for="(subItem, subIndex) in order.subOrderItemList">
+															<li class="td td-item">
+																<div class="item-pic">
+																	<a :href="shopServerUrl + 'item.html?itemId=' + subItem.itemId" target="_blank" class="J_MakePoint">
+																		<img :src="subItem.itemImg" class="itempic J_ItemImg">
+																	</a>
+																</div>
+																<div class="item-info">
+																	<div class="item-basic-info">
+																		<a :href="shopServerUrl + 'item.html?itemId=' + subItem.itemId" target="_blank">
+																			<p>{{subItem.itemName}}</p>
+																			<p class="info-little">
+																				规格：{{subItem.itemSpecName}}
+																			</p>
+																		</a>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-price">
+																<div class="item-price">
+																	￥{{subItem.price / 100 }}
+																</div>
+															</li>
+															<li class="td td-number">
+																<div class="item-number">
+																	<span>×</span>{{subItem.buyCounts}}
+																</div>
+															</li>
+															<!-- <li class="td td-operation">
+																<div class="item-operation">
+																	<img v-show="order.payMethod == 1" src="img/wxpay.png" style="margin-top: 20px; width: 96px; height: 24px;"/>
+																	<img v-show="order.payMethod == 2" src="img/alipay.png" style="margin-top: 20px; width: 66px; height: 24px;"/>
+																</div>
+															</li> -->
+														</ul>
+
+													</div>
+													<div class="order-right" style="width: 45%; margin-top: 0px;">
+														<li class="td " style="width: 25%;">
+															<div class="item-operation">
+																<img v-show="order.payMethod == 1" src="img/wxpay.png" style="margin-top: 0px; width: 96px; height: 24px;"/>
+																<img v-show="order.payMethod == 2" src="img/alipay.png" style="margin-top: 0px; width: 66px; height: 24px;"/>
+															</div>
+														</li>
+														<li class="td td-amount" style="width: 25%;">
+															<div class="item-amount">
+																合计：{{order.realPayAmount/100}}元
+																<p>含运费：<span>{{order.postAmount == 0 ? '包邮' : order.postAmount/100+'元'}}</span></p>
+															</div>
+														</li>
+														<div class="move-right">
+															<li class="td td-status" style="width: 25%;">
+																<div class="">
+																	
+																	<p v-show="order.orderStatus == 10" class="Mystatus">等待付款</p>
+																	<p v-show="order.orderStatus == 20" class="Mystatus">买家已付款</p>
+																	<p v-show="order.orderStatus == 30" class="Mystatus">商家已发货</p>
+																	<p v-show="order.orderStatus == 40" class="Mystatus">交易成功</p>
+																	<p v-show="order.orderStatus == 50" class="Mystatus">交易关闭</p>
+
+																</div>
+															</li>
+															<li class="td td-change" style="width: 25%;">
+
+																<div v-show="order.orderStatus == 10" @click="goPay(order.orderId, order.payMethod, order.realPayAmount)" class="am-btn am-btn-danger anniu">
+																	一键支付
+																</div>
+																<p v-show="order.orderStatus == 20" class="Mystatus">拣货中</p>
+																<div v-show="order.orderStatus == 30" @click="confirmReceive(order.orderId)" class="am-btn am-btn-danger anniu">
+																	确认收货
+																</div>
+																<div v-show="order.isComment == 0 && order.orderStatus == 40" @click="commentItems(order.orderId)" class="am-btn am-btn-danger anniu">
+																	评价商品
+																</div>
+																<div v-show="order.isComment == 1 && order.orderStatus == 40" class="Mystatus">
+																	已评价
+																</div>
+																<div v-show="order.orderStatus == 50" @click="deleteOrder(order.orderId)" class="am-btn am-btn-danger anniu">
+																	删除订单
+																</div>
+
+															</li>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<!-- 分页 start-->
+							<div class="wrap" id="wrap">
+								<zpagenav v-bind:page="page" v-bind:page-size="pageSize" v-bind:total="total" 
+									v-bind:max-page="maxPage"  v-on:pagehandler="doPaging">
+								</zpagenav>
+							</div>
+							<!-- 分页 end-->
+
+						</div>
+					</div>
+				</div>
+				<!--底部-->
+				<div class="footer ">
+					<div class="footer-bd ">
+						<p style="text-align: center;">
+							<em>© 2020 oursnail.cn 苏ICP备20012520号 fossi</em>
+						</p>
+					</div>
+				</div>
+			</div>
+			<aside class="menu">
+				<ul>
+					<li class="person active">
+						<span style="font-weight: bold;">
+							<a href="index.html" style="font-size: 20px">个人中心</a>
+						</span>
+					</li>
+					<li class="person">
+						<a href="#" style="font-size: 16px;font-weight: bold;">个人资料</a>
+						<ul>
+							<li> <a href="userinfo.html">我的信息</a></li>
+							<!-- <li> <a href="safety.html">安全设置</a></li> -->
+							<li> <a href="address.html">收货地址</a></li>
+						</ul>
+					</li>
+					<li class="person">
+						<a href="#" style="font-size: 16px;font-weight: bold;">我的交易</a>
+						<ul>
+							<li><a href="order.html">订单管理</a></li>
+							<li> <a href="comment.html">我的评价</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+		</div>
+	</div>
+	<script src="components/VuePaging/zpageNav.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		var index = new Vue({
+			el: "#myOrders",
+			data: {
+				userIsLogin: false,
+				userInfo: {},
+
+				shopServerUrl: "",		// 门户网站地址
+
+				addressList: {},
+
+				myOrderList: [], // 订单列表
+				orderStatus: "", // 订单状态
+				page: 1, // 分页页数
+				pageSize: 10, // 分页每页显示数量
+				maxPage: 1, // 总页数
+				total: 1, // 总记录数
+			},
+			created() {
+				// var me = this;
+				// 通过cookie判断用户是否登录
+				this.judgeUserLoginStatus();
+
+				this.shopServerUrl = app.shopServerUrl;
+
+				// 渲染订单列表信息
+				this.renderOrderList(this.orderStatus, this.page, this.pageSize);
+			},
+			methods: {
+				deleteOrder(orderId) {
+					var confirm = window.confirm("确认删除吗？");
+					if (!confirm) {
+						return false;
+					}
+
+					var userInfo = this.userInfo;
+					// 请求后端获得最新数据
+					var serverUrl = app.serverUrl;
+					axios.defaults.withCredentials = true;
+					axios.post(
+							serverUrl + '/myorders/delete?userId=' + userInfo.id + "&orderId=" + orderId, {}, 
+							{
+								headers: {
+									'headerUserId': userInfo.id,
+									'headerUserToken': userInfo.userUniqueToken
+								}
+							})
+						.then(res => {
+							if (res.data.status == 200) {
+								this.renderOrderList(this.orderStatus, this.page, this.pageSize);
+							} else if (res.data.status == 500) {
+								alert(res.data.msg);
+							}
+						});
+				},
+				commentItems(orderId) {
+					window.location.href = "doComment.html?orderId=" + orderId;
+				},
+				confirmReceive(orderId) {
+
+					var confirm = window.confirm("确认收货吗？");
+					if (!confirm) {
+						return false;
+					}
+
+					var userInfo = this.userInfo;
+					// 请求后端获得最新数据
+					var serverUrl = app.serverUrl;
+					axios.defaults.withCredentials = true;
+					axios.post(
+							serverUrl + '/myorders/confirmReceive?userId=' + userInfo.id + "&orderId=" + orderId, {}, 
+							{
+								headers: {
+									'headerUserId': userInfo.id,
+									'headerUserToken': userInfo.userUniqueToken
+								}
+							})
+						.then(res => {
+							if (res.data.status == 200) {
+								this.renderOrderList(this.orderStatus, this.page, this.pageSize);
+							} else if (res.data.status == 500) {
+								alert(res.data.msg);
+							}
+						});
+				},
+				goPay(orderId, payMethod, totalAmount) {
+					// console.log(orderId);
+					// console.log(payMethod);
+					// 判断是否微信还是支付宝支付
+					if (payMethod == 1) {
+						// 微信支付则跳转到微信支付页面，并且获得支付二维码
+						window.location.href = app.shopServerUrl + "wxpay.html?orderId=" + orderId;
+					} else if (payMethod == 2) {
+						// 支付宝支付直接跳转
+						window.location.href = app.shopServerUrl + "alipay.html?orderId=" + orderId + "&amount=" + totalAmount;
+						window.open(app.shopServerUrl + "alipayTempTransit.html?orderId=" + orderId);
+					} else {
+						alert("目前只支持微信或支付宝支付！");
+					}
+				},
+				queryOrdersByStatus(status) {
+					if (status == null || status =="" || status == undefined) {
+						status = "";
+					}
+
+					this.orderStatus = status;
+					this.page = 1;
+					this.renderOrderList(status, 1, this.pageSize);
+				},
+				// 分页实现方法 跳转到page页
+                doPaging: function (page) {
+                    this.page = page;
+					this.renderOrderList(this.orderStatus, page, this.pageSize);
+                },
+				renderOrderList(orderStatus, page, pageSize) {
+					var userInfo = this.userInfo;
+					// 请求后端获得最新数据
+					var serverUrl = app.serverUrl;
+					axios.defaults.withCredentials = true;
+					axios.post(
+							serverUrl + '/myorders/query?userId=' + userInfo.id + "&orderStatus=" + orderStatus +
+							"&page=" + page +
+							"&pageSize=" + pageSize, {}, {
+								headers: {
+									'headerUserId': userInfo.id,
+									'headerUserToken': userInfo.userUniqueToken
+								}
+							})
+						.then(res => {
+							if (res.data.status == 200) {
+								var grid = res.data.data;
+								var myOrderList = grid.rows;
+								this.myOrderList = myOrderList;
+
+								for (var i = 0; i < myOrderList.length; i++) {
+									var date = myOrderList[i].createdTime;
+									var formatedTime = moment(date).format('YYYY年MM月DD日 h:mm:ss');
+									// console.log(formatedTime);
+									myOrderList[i].createdTime = formatedTime;
+								}
+								console.log(myOrderList);
+
+								var maxPage = grid.total; // 获得总页数
+								var total = grid.records; // 获得总记录数
+
+								this.maxPage = maxPage;
+								this.total = total;
+
+							} else if (res.data.status == 500) {
+								alert(res.data.msg);
+							}
+						});
+				},
+				// 通过cookie判断用户是否登录
+				judgeUserLoginStatus() {
+					var userCookie = app.getCookie("user");
+					if (
+						userCookie != null &&
+						userCookie != undefined &&
+						userCookie != ""
+					) {
+						var userInfoStr = decodeURIComponent(userCookie);
+						// console.log(userInfoStr);
+						if (
+							userInfoStr != null &&
+							userInfoStr != undefined &&
+							userInfoStr != ""
+						) {
+							var userInfo = JSON.parse(userInfoStr);
+                            // 判断是否是一个对象
+                            if ( typeof(userInfo)  == "object" ) {
+                                this.userIsLogin = true;
+                                // console.log(userInfo);
+                                this.userInfo = userInfo;
+                            } else {
+                                this.userIsLogin = false;
+                                this.userInfo = {};
+                            }
+						}
+					} else {
+						this.userIsLogin = false;
+						this.userInfo = {};
+					}
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>
