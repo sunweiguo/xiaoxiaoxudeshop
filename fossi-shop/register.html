@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>yummyfood - 注册</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+		<link rel="shortcut icon" href="img/foodie.ico"/>
+		
+		<link rel="stylesheet" href="AmazeUI-2.4.2/assets/css/amazeui.min.css" />
+		<link href="css/dlstyle.css" rel="stylesheet" type="text/css">
+		<script src="AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+
+	<body>
+		<div class="login-boxtitle">
+			<a href="index.html"><img alt="" src="images/logobig.png" /></a>
+		</div>
+
+		<div class="res-banner">
+			<div class="res-main">
+				<div class="login-banner-bg">
+					<span></span>
+					<img src="img/registpage.png"/>
+				</div>
+				<div class="login-box">
+
+						<div class="am-tabs" id="doc-my-tabs">
+							<ul class="am-tabs-nav am-nav am-nav-tabs am-nav-justify">
+								<li class="am-active"><a href="">用户注册</a></li>
+								<!-- <li><a href=""></a></li> -->
+								<!-- <li><a href="">手机号注册</a></li> -->
+							</ul>
+
+							<div class="am-tabs-bd" id="regist">
+								<div class="am-tab-panel am-active">
+									<form method="post">
+										
+										<div class="user-email">
+											<label for="username"><i class="am-icon-envelope-o"></i></label>
+											<input id="username" v-model="username" placeholder="请输入用户名">
+										</div>
+										<div v-show="errUsernameIsShow" style="padding: 10px;font-size: 12px;color: red;">
+											{{errUsername}}
+										</div>										
+										<div class="user-pass">
+											<label for="password"><i class="am-icon-lock"></i></label>
+											<input type="password" id="password" v-model="password" placeholder="设置密码">
+										</div>										
+										<div class="user-pass">
+											<label for="confirmPassword"><i class="am-icon-lock"></i></label>
+											<input type="password" id="confirmPassword" v-model="confirmPassword" placeholder="确认密码">
+										</div>
+									
+										<div class="login-links">
+											<a :href="'login.html?returnUrl=' + returnUrl" class="am-fr">已有账号？去登录</a>
+											<br />
+										</div>
+										<div class="am-cf">
+											<input type="button" name="" value="注册" @click="registUser" class="am-btn am-btn-primary am-btn-sm am-fl">
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="footer ">
+			<div class="footer-bd ">
+				<p style="text-align: center;">
+					<em>© 2020 oursnail.cn 苏ICP备20012520号 fossi</em>
+				</p>
+			</div>
+		</div>
+			
+		<script type="text/javascript " src="js/app.js"></script>
+		<script type="text/javascript">
+			var index = new Vue({
+				el: "#regist",
+				data: {
+					username: null,
+					password: null,
+					confirmPassword: null,
+
+					errUsername: null,
+					errUsernameIsShow: false,
+
+					returnUrl: ""
+				},
+				created() {
+
+					// 注册成功后会跳原来页面
+					var returnUrl = app.getUrlParam("returnUrl");
+					if (returnUrl != null && returnUrl != undefined && returnUrl != '') {
+						this.returnUrl = returnUrl;
+					}
+				},
+				watch: {
+					username: function() {
+						var serverUrl = app.serverUrl;
+						var username = this.username;
+						// console.log(this.username);
+						axios.get(serverUrl + '/passport/usernameIsExist?username=' + username, {})
+							.then(res => {
+								if (res.data.status == 200) {
+									this.errUsername = null;
+									this.errUsernameIsShow = false;
+									return;
+								} else if (res.data.status == 500) {
+									this.errUsername = res.data.msg;
+									this.errUsernameIsShow = true;
+									return;
+								}
+							});
+					}
+				},
+				methods: {
+					getRequest() {
+					},
+					postRequest() {							
+					},
+					// usernameIsExist() {
+					// 	console.log(this.username);
+					// },
+					registUser() {
+
+						if (this.username == null || this.username == undefined || this.username =='') {
+							alert("用户名不能为空");
+							return;
+						} else if (this.password == null || this.password == undefined || this.password =='') {
+							alert("密码不能为空");
+							return;
+						} else if (this.password.length < 6) {
+							alert("密码不能少于6位");
+							return;
+						} else if (this.confirmPassword == null || this.confirmPassword == undefined || this.confirmPassword =='') {
+							alert("确认密码不能为空");
+							return;
+						} else if (this.confirmPassword != this.password) {
+							alert("密码与确认密码不一致");
+							return;
+						}
+
+						var userBO = {
+							username: this.username,
+							password: this.password,
+							confirmPassword: this.confirmPassword
+						};
+						// console.log(userBO);
+
+						var serverUrl = app.serverUrl;
+						var returnUrl = this.returnUrl;
+						// form提交
+						axios.defaults.withCredentials = true;
+						// console.log(axios.defaults);
+						axios.post(serverUrl + '/passport/regist', userBO)
+							.then(res => {
+								if (res.data.status == 200) {
+									var user = res.data;
+									// console.log(user);
+									// window.location.href = app.ctx + "/index.html";
+									// window.location.href = "index.html";
+
+									if (returnUrl != null && returnUrl != undefined && returnUrl != '') {
+										window.location.href = returnUrl;
+									} else {
+										window.location.href = "index.html";
+									}
+
+								} else if (res.data.status == 500) {
+									alert(res.data.msg);
+									return;
+								}
+							});
+					}
+				}
+			});
+		</script>
+	</body>
+
+</html>

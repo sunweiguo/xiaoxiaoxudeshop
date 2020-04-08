@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>购物车页面</title>
+		<link rel="shortcut icon" href="img/foodie.ico"/>
+
+		<link href="AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+		<link href="basic/css/demo.css" rel="stylesheet" type="text/css" />
+		<link href="css/cartstyle.css" rel="stylesheet" type="text/css" />
+		<link href="css/optstyle.css" rel="stylesheet" type="text/css" />
+		<link href="css/lee.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+
+	<body>
+		<div id="shopcart">
+			<!--顶部导航条 -->
+			<div class="am-container header">
+				<ul class="message-l">
+					<div class="topMessage">
+						<div class="menu-hd" v-show="!userIsLogin">
+							<a href="login.html" target="_top" class="h">亲，请登录</a>
+							<a href="register.html" target="_top">免费注册</a>
+						</div>
+						<div class="menu-hd" v-show="userIsLogin">
+							<span style="color: #d2364c">欢迎，{{userInfo.username}}</span>
+						</div>
+					</div>
+				</ul>
+				<ul class="message-r">
+					<div class="topMessage home">
+						<div class="menu-hd"><a href="index.html" target="_top" class="h">商城首页</a></div>
+					</div>
+					<div class="topMessage my-shangcheng">
+						<div class="menu-hd MyShangcheng"><a href="javascript:void(0);" @click="goUserCenter">
+							<i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
+					</div>
+				</ul>
+			</div>
+
+			<!--悬浮搜索框-->
+			<div class="nav white">
+				<!-- <div class="logo"><img src="images/logo.png" /></div> -->
+				<div class="logoBig">
+					<li><a href="index.html"><img src="images/logobig.png" /></a></li>
+				</div>
+				<div class="search-bar pr">
+					<a name="index_none_header_sysc" href="#"></a>
+					<form>
+						<input id="searchInput" v-model="keywords" name="index_none_header_sysc" type="text"
+							placeholder="搜索" autocomplete="off">
+						<input id="ai-topsearch" @click="doSearch" class="submit am-btn" value="搜索" index="1">
+					</form>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<!--购物车 -->
+			<div class="concent" >
+
+				<div class="cart-attention" v-show="!userIsLogin" style="margin-top: 10px">
+					<i style="margin-right: 10px;"><img src="img/omg.png" class="img-ico"></i>
+					您还没有登录！登录后购物车的商品将同步保存到您账号中
+					<button class="login-quick" @click="goLogin">立即登录</button>
+				</div>
+
+				<div id="cartTable" style="margin-top: 30px">
+					<div class="cart-table-th">
+						<div class="wp">
+							<div class="th th-chk">
+								<div id="J_SelectAll1" class="select-all J_SelectAll"></div>
+							</div>
+							<div class="th th-item">
+								<div class="td-inner">商品信息</div>
+							</div>
+							<div class="th th-price">
+								<div class="td-inner">单价</div>
+							</div>
+							<div class="th th-amount">
+								<div class="td-inner">数量</div>
+							</div>
+							<div class="th th-sum">
+								<div class="td-inner">金额</div>
+							</div>
+							<div class="th th-op">
+								<div class="td-inner">操作</div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+
+					<tr class="item-list">
+						<div class="bundle bundle-last">
+							<div class="clear"></div>
+							<div class="bundle-main">
+
+								<ul class="item-content clearfix" v-for="(cartItem, sidx) in shopcartList">
+									<li class="td td-chk">
+										<div class="cart-checkbox ">
+											<input class="check" v-model="specIds" :value="cartItem.specId" type="checkbox">
+										</div>
+									</li>
+									<li class="td td-item" style="width: 50%">
+										<div class="item-pic">
+											<a :href="'item.html?itemId=' + cartItem.itemId" target="_blank" class="J_MakePoint">
+												<img :src="cartItem.itemImgUrl" class="itempic J_ItemImg" style="width: 80px; height: 80px;"></a>
+										</div>
+										<div class="item-info">
+											<div class="item-basic-info">
+												<a :href="'item.html?itemId=' + cartItem.itemId" target="_blank" class="item-title J_MakePoint">{{cartItem.itemName}}</a>
+												<div class="item-props" style="margin-top: 5px;">
+													<span class="sku-line">规格：{{cartItem.specName}}</span>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="td td-price">
+										<div class="item-price price-promo-promo">
+											<div class="price-content">
+												<div class="price-line">
+													<em class="price-original">{{cartItem.priceNormal / 100}}</em>
+												</div>
+												<div class="price-line">
+													<em class="J_Price price-now" tabindex="0">{{cartItem.priceDiscount / 100}}</em>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="td td-amount">
+										<div class="amount-wrapper ">
+											<div class="item-amount ">
+												<div class="sl">
+													{{cartItem.buyCounts}}
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="td td-sum">
+										<div class="td-inner">
+											<em tabindex="0" class="J_ItemSum number">{{cartItem.priceDiscount / 100 * cartItem.buyCounts}}</em>
+										</div>
+									</li>
+									<li class="td td-op">
+										<div class="td-inner">
+											<a href="javascript:void(0);" @click="delFromCart(cartItem.specId)" data-point-url="#" class="delete">删除</a>
+										</div>
+									</li>
+								</ul>
+								
+							</div>
+						</div>
+					</tr>
+
+					<!-- {{specIds}} -->
+
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+
+				<div class="float-bar-wrapper">
+					<div id="J_SelectAll2" class="select-all J_SelectAll">
+						<div class="cart-checkbox">
+							<input class="check-all check" name="select-all" v-model="allChecked" type="checkbox" @click="checkedAll">
+						</div>
+						<span>全选</span>
+					</div>
+					<div class="float-bar-right">
+						<div class="amount-sum">
+							<span class="txt">已选商品</span>
+							<em id="J_SelectedItemsCount">{{allSelectedCounts}}</em><span class="txt">件</span>
+							<div class="arrow-box">
+								<span class="selected-items-arrow"></span>
+								<span class="arrow"></span>
+							</div>
+						</div>
+						<div class="price-sum">
+							<span class="txt">合计:</span>
+							<strong class="price">¥<em id="J_Total">{{totalAmount / 100}}</em>元</strong>
+						</div>
+						<div class="btn-area" @click="goPay">
+							<a href="javascript:void(0);" id="J_Go" class="submit-btn submit-btn-disabled">
+								<span>结&nbsp;算</span>
+							</a>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="footer ">
+					<div class="footer-bd">
+					<p style="text-align: center;">
+						<em>© 2020 oursnail.cn 苏ICP备20012520号 fossi</em>
+					</p>
+				</div>
+				</div>
+			</div>
+
+			<!--操作页面-->
+
+			<div class="theme-popover-mask"></div>
+		</div>
+		<script type="text/javascript " src="js/app.js"></script>
+		<script type="text/javascript">
+			var index = new Vue({
+				el: "#shopcart",
+				data: {
+					userIsLogin: false,
+					userInfo: {},
+
+					keywords: null,
+
+					shopcartList: [],
+					specIds: [],	// 选中的那些商品规格
+					allChecked: false,	// chkbox是否全部选中
+
+					allSelectedCounts: 0,	// 购物车中选则的几项
+					totalAmount: 0,			// 购物车中选则的几项商品总价
+				},
+				created() {
+					// var me = this;
+					// 通过cookie判断用户是否登录
+					this.judgeUserLoginStatus();
+					
+					// 从购物车中拿到商品的数量
+					this.shopcartItemCounts = app.getShopcartItemCounts();
+
+					// 渲染购物车商品数据到页面
+					this.renderShopcart();
+				},
+				watch: { //深度 watcher
+					'specIds': {
+						handler: function(val, oldVal) {
+							if (val.length === this.shopcartList.length) {
+								this.allChecked = true;
+							} else {
+								this.allChecked = false;
+							}
+							this.reCalItemsCountsAndAmount();
+						},
+						deep: true
+					}
+				},
+				methods: {
+					goUserCenter() {
+					// 判断用户是否登录
+					var userIsLogin = this.userIsLogin;
+					if (!userIsLogin) {
+						// 用户未登录，则跳转
+						window.location.href = "login.html?returnUrl=" + app.centerServerUrl;
+					} else {
+						window.location.href = app.centerServerUrl;
+					}
+				},
+					// 前往结算页面
+					goPay() {
+						var shopcartList = app.getShopcartList();
+						if (shopcartList.length <= 0) {
+							alert("购物车中没有商品，无法结算");
+							return;
+						}
+
+						var selectedItemSpecIds = this.specIds;
+						if (selectedItemSpecIds.length <= 0) {
+							alert("请至少在购物车中选择一个商品后再结算");
+							return;
+						}
+
+						// 判断是否登录
+						var userIsLogin = this.userIsLogin;
+						if (userIsLogin) {
+							var specIdsStr = selectedItemSpecIds.toString();
+							window.location.href = "pay.html?selectedItemSpecIds=" + specIdsStr;
+						} else {
+							var bool = window.confirm("请登录/注册后再进行结算操作噢~！");
+							if (!bool) {
+								return;
+							} else {
+								this.goLogin();
+							}
+						}
+					},
+					// 从购物车中删除商品
+					delFromCart(specId) {
+						// console.log(specId);
+
+						var bool = window.confirm("确认从购物车中移除该商品吗？");
+						if (!bool) {
+							return;
+						}
+						
+						// 删除cookie中的商品
+						var shopcartList = app.getShopcartList();
+						for (var i = 0 ; i < shopcartList.length ; i ++) {
+							var tmpItem = shopcartList[i];
+							if (tmpItem.specId == specId) {
+								shopcartList.splice(i, 1);
+								break;
+							}
+						}
+						// 重新放入cookie，更新一下
+						app.setCookie("shopcart", JSON.stringify(shopcartList));
+						this.shopcartList = shopcartList;
+
+						// 清除选中项
+						var specIds = this.specIds;
+						for (var i = 0 ; i < specIds.length ; i++) {
+							var tmpSpecId = specIds[i];
+							if (specId == tmpSpecId) {
+								specIds.splice(i, 1);
+							}
+						}
+						this.reCalItemsCountsAndAmount();
+
+						// 如果用户是已经登录状态，需要再把redis中的购物车商品删除
+						var userIsLogin = this.userIsLogin;
+						if (userIsLogin) {
+							var userInfo = this.userInfo;
+							var serverUrl = app.serverUrl;
+							axios.defaults.withCredentials = true;
+							axios.post(
+									serverUrl + '/shopcart/del?userId=' + userInfo.id + '&itemSpecId=' + specId, 
+									{}, 
+									{
+										headers: {
+											'headerUserId': userInfo.id,
+											'headerUserToken': userInfo.userUniqueToken
+										}
+									})
+									.then(res => {
+										if (res.data.status == 200) {
+											
+										} else if (res.data.status == 500) {
+											alert(res.data.msg);
+										}
+									});
+						}
+
+					},
+					// 重新计算购物车中选中的件数以及总价格
+					reCalItemsCountsAndAmount() {
+						var specIds = this.specIds;
+						if (specIds == null || specIds == '' || specIds == undefined || specIds.length == 0) {
+							this.allSelectedCounts = 0;
+							this.totalAmount = 0;
+						} else {
+							// 把specIds和cookie中的购物车进行对比
+							this.allSelectedCounts = specIds.length;
+
+							var shopcartList = app.getShopcartList();
+
+							var totalAmount = 0;
+							// debugger;
+							for (var i = 0 ; i < shopcartList.length ; i ++) {
+								var tmpItem = shopcartList[i];
+
+								for (var j = 0 ; j < specIds.length ; j ++) {
+									var selectSpecId = specIds[j];
+									if (tmpItem.specId == selectSpecId) {
+										totalAmount += tmpItem.priceDiscount * tmpItem.buyCounts;
+									}
+								}
+							}
+							this.totalAmount = totalAmount;
+						}
+					},
+					// 全选与反选
+					checkedAll() {
+						var _this = this;
+						// console.log(_this.specIds);
+						// console.log(_this.allChecked);
+						if (_this.allChecked) { //实现反选
+							_this.specIds = [];
+						} else { //实现全选
+							_this.specIds = [];
+							this.shopcartList.forEach(function(item, index) {
+								_this.specIds.push(item.specId);
+							});
+						}
+						this.reCalItemsCountsAndAmount();
+					},
+					renderShopcart() {
+						var shopcartList = app.getShopcartList();
+
+						// console.log(shopcartList);
+						// this.shopcartList = shopcartList;
+
+						if (shopcartList.length <= 0) {
+							return;
+						}
+
+						// 刷新购物车中价格，以防长时间未登录网址，价格发生变动
+						// 拼接规格ids
+						var itemSpecIds = "";
+						for (var i = 0 ; i < shopcartList.length ; i ++) {
+							var tmpSpecId = shopcartList[i].specId;
+							itemSpecIds += tmpSpecId;
+							if (i < shopcartList.length-1) {
+								itemSpecIds += ",";
+							}
+						}
+						// 1001，2002，3003，4004
+
+						// 请求后端获得最新数据
+						var serverUrl = app.serverUrl;
+							axios.defaults.withCredentials = true;
+							axios.get(
+									serverUrl + '/items/refresh?itemSpecIds=' + itemSpecIds, 
+									{},)
+									.then(res => {
+										if (res.data.status == 200) {
+											var newItemList = res.data.data;
+											// 删除现有购物车cookie
+											app.deleteCookie("shopcart");
+											// console.log(newItemList);
+											// 拿到最新商品数据以后，重新组合成购物车数据
+											for (var i = 0 ; i < newItemList.length ; i ++) {
+												var tmpNewItem = newItemList[i];
+												var tmpNewItemSpecId = tmpNewItem.specId;
+												var buyCounts = this.getBuyCountsFromCookieShopcartList(shopcartList, tmpNewItemSpecId);
+												// console.log(buyCounts);
+
+												// 构建购物车商品对象
+												var shopcartItem = new app.ShopcartItem(tmpNewItem.itemId, 
+																						tmpNewItem.itemImgUrl,
+																						tmpNewItem.itemName, 
+																						tmpNewItem.specId, 
+																						tmpNewItem.specName, 
+																						buyCounts, 
+																						tmpNewItem.priceDiscount, 
+																						tmpNewItem.priceNormal);
+												// 添加商品至购物车list
+												app.addItemToShopcart(shopcartItem);
+											}
+											// 重新获取cookie中的商品list渲染到页面
+											shopcartList = app.getShopcartList();
+											// console.log(shopcartList);
+											this.shopcartList = shopcartList;	
+										} else if (res.data.status == 500) {
+											alert(res.data.msg);
+										}
+									});
+						
+
+					},
+					getBuyCountsFromCookieShopcartList(shopcartList, specId) {
+						for (var i = 0 ; i < shopcartList.length ; i ++) {
+							var tmpSpecId = shopcartList[i].specId;
+							if (tmpSpecId == specId) {
+								return shopcartList[i].buyCounts;
+							}
+						}
+					},
+					goToShopcart() {
+						window.location.href = "shopcart.html";
+					},
+					doSearch() {
+						var keywords = this.keywords;
+						// console.log(keywords);
+						if (keywords == null || keywords == undefined || keywords == '') {
+							alert("搜索内容不能为空");
+							return;
+						}
+						// window.location.href = "search.html?keywords=" + keywords;
+						window.open("search.html?keywords=" + keywords);
+					},
+					goLogin() {
+						window.location.href = "login.html?returnUrl=shopcart.html";
+					},
+					// 打开商品详情页面
+					showItemDetail(itemId){
+						window.open("item.html?itemId=" + itemId);
+					},
+					// 通过cookie判断用户是否登录
+					judgeUserLoginStatus() {
+						var userCookie = app.getCookie("user");
+						if (userCookie != null && userCookie != undefined && userCookie != '') {
+							var userInfoStr = decodeURIComponent(userCookie);
+							// console.log(userInfo);
+							if (userInfoStr != null && userInfoStr != undefined && userInfoStr != '') {
+								var userInfo = JSON.parse(userInfoStr);
+								// 判断是否是一个对象
+								if ( typeof(userInfo)  == "object" ) {
+									this.userIsLogin = true;
+									// console.log(userInfo);
+									this.userInfo = userInfo;
+								} else {
+									this.userIsLogin = false;
+									this.userInfo = {};
+								}
+							}
+						} else {
+							this.userIsLogin = false;
+							this.userInfo = {};
+						}
+					}
+				}
+			});
+		</script>
+	</body>
+
+</html>

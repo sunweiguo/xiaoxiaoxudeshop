@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+		<title>天天吃货 - 我的信息</title>
+		<link rel="shortcut icon" href="img/foodie.ico" />
+
+		<link href="AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+
+		<link href="css/personal.css" rel="stylesheet" type="text/css">
+		<link href="css/infstyle.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<!-- <link href="https://unpkg.com/v-calendar/lib/v-calendar.min.css" rel="stylesheet" type="text/css"> -->
+
+		<script src="AmazeUI-2.4.2/assets/js/jquery.min.js" type="text/javascript"></script>
+		<script src="AmazeUI-2.4.2/assets/js/amazeui.js" type="text/javascript"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="js/moment-with-locales.min.js"></script>
+	</head>
+
+	<body>
+
+			<form enctype="multipart/form-data">
+
+			</form>
+
+		<div id="userInfo">
+            <div class="nav-table">
+				<div class="long-title"><span class="all-goods" style="font-weight: bold;">用户中心</span></div>
+			</div>
+			<b class="line"></b>
+			<div class="center">
+				<div class="col-main">
+					<div class="main-wrap">
+
+						<div class="user-info">
+							<!--标题 -->
+							<div class="am-cf am-padding">
+								<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">个人资料</strong> / <small>Personal&nbsp;information</small></div>
+							</div>
+							<hr/>
+
+							<!--头像 -->
+							<div class="user-infoPic">
+
+								<div class="filePic">
+									<input type="file" id="userFace" @change="uploadFace" class="inputPic" allowexts="jpeg,jpg,png,gif" accept="image/gif,image/jpeg,image/jpg,image/png">
+									<img class="am-circle am-img-thumbnail" :src="userInfo.face" alt="" />
+								</div>
+
+								<p class="am-form-help">头像</p>
+
+								<div class="info-m">
+									<div style="margin-top: 20px;"><b>用户名：<i>{{userInfo.username}}</i></b></div>
+								</div>
+							</div>
+
+							<!--个人信息 -->
+							<div class="info-main" style="padding-bottom: 50px;">
+								<form class="am-form am-form-horizontal">
+
+									<div class="am-form-group">
+										<label for="user-name2" class="am-form-label">昵称</label>
+										<div class="am-form-content">
+											<input type="text" v-model="userInfoMore.nickname" placeholder="nickname" maxlength="12">
+										</div>
+									</div>
+
+									<div class="am-form-group">
+										<label for="user-name" class="am-form-label">真实姓名</label>
+										<div class="am-form-content">
+											<input type="text" v-model="userInfoMore.realname" placeholder="name" maxlength="12">
+										</div>
+									</div>
+
+									<div class="am-form-group">
+										<label class="am-form-label">性别</label>
+										<div class="am-form-content sex">
+											<label class="am-radio-inline">
+												<span v-if="userInfoMore.sex == 1">
+													<input type="radio" name="usersex"  v-model="userInfoMore.sex" value="1" data-am-ucheck checked/> 男
+												</span>
+												<span v-else>
+													<input type="radio" name="usersex" v-model="userInfoMore.sex" value="1" data-am-ucheck/> 男
+												</span>
+											</label>
+											<label class="am-radio-inline">
+												<span v-if="userInfoMore.sex == 0">
+													<input type="radio" name="usersex" v-model="userInfoMore.sex" value="0" data-am-ucheck checked/> 女
+												</span>
+												<span v-else>
+													<input type="radio" name="usersex" v-model="userInfoMore.sex" value="0" data-am-ucheck> 女
+												</span>
+											</label>
+											<label class="am-radio-inline">
+												<span v-if="userInfoMore.sex == 2">
+													<input type="radio" name="usersex" v-model="userInfoMore.sex" value="2" data-am-ucheck checked/> 保密
+												</span>
+												<span v-else>
+													<input type="radio" name="usersex" v-model="userInfoMore.sex" value="2" data-am-ucheck> 保密
+												</span>
+											</label>
+										</div>
+									</div>
+
+									<div class="am-form-group">
+										<label for="user-birth" class="am-form-label">生日</label>
+										<div class="am-form-content birth">
+											<input type="text" id="datepicker" size="30">
+										</div>
+								
+									</div>
+									<div class="am-form-group">
+										<label for="user-phone" class="am-form-label">手机</label>
+										<div class="am-form-content">
+											<input id="user-phone" v-model="userInfoMore.mobile" placeholder="mobile" type="tel" maxlength="11">
+
+										</div>
+									</div>
+									<div class="am-form-group">
+										<label for="user-email" class="am-form-label">电子邮件</label>
+										<div class="am-form-content">
+											<input id="user-email" v-model="userInfoMore.email" placeholder="email" type="email">
+
+										</div>
+									</div>
+									<div class="info-btn">
+										<div class="am-btn am-btn-danger" @click="saveUserInfo">保存修改</div>
+									</div>
+
+								</form>
+							</div>
+
+						</div>
+
+					</div>
+					<!--底部-->
+					<div class="footer ">
+						<div class="footer-bd ">
+							<p style="text-align: center;">
+								<em>© 2020 oursnail.cn 苏ICP备20012520号 fossi</em>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<aside class="menu">
+				<ul>
+					<li class="person active">
+						<span style="font-weight: bold;">
+							<a href="index.html" style="font-size: 20px">个人中心</a>
+						</span>
+					</li>
+					<li class="person">
+						<a href="#" style="font-size: 16px;font-weight: bold;">个人资料</a>
+						<ul>
+							<li> <a href="userinfo.html">我的信息</a></li>
+							<!-- <li> <a href="safety.html">安全设置</a></li> -->
+							<li> <a href="address.html">收货地址</a></li>
+						</ul>
+					</li>
+					<li class="person">
+						<a href="#" style="font-size: 16px;font-weight: bold;">我的交易</a>
+						<ul>
+							<li><a href="order.html">订单管理</a></li>
+							<li> <a href="comment.html">我的评价</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+			</div>
+		</div>
+
+		<!-- <form enctype="multipart/form-data"></form> -->
+
+		<script type="text/javascript" src="js/app.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+			$( function() {
+				$( "#datepicker" ).datepicker({
+					dateFormat: "yy-mm-dd",
+					monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+					dayNamesMin: ['日', '一', '二', '三', '四', '五', '六']
+				});
+			} );
+		</script>
+		<script type="text/javascript">
+			var index = new Vue({
+				el: "#userInfo",
+				data: {
+					userIsLogin: false,
+					userInfo: {},
+
+					userInfoMore: {},
+					userFace: null,		// 用户头像
+
+				},
+				created() {
+					// var me = this;
+					// 通过cookie判断用户是否登录
+					this.judgeUserLoginStatus();
+
+					// 渲染用户信息
+					this.renderUserInfo();
+				},
+				methods: {
+					uploadFace(e) {
+						// let $target = e.target || e.srcElement;
+						// let file = $target.files[0];
+					
+						let f = document.getElementById('userFace').files[0];
+						// console.log(f);
+						let multiForm = new FormData() ; 		//创建一个form对象
+						multiForm.append('file', f, f.name);  	//append 向form表单添加数据
+
+						var userInfo = this.userInfo;
+						// console.log(userInfo);
+						// 请求后端获得最新数据
+						var serverUrl = app.serverUrl;
+						axios.defaults.withCredentials = true;
+						axios.post(
+								serverUrl + '/userInfo/uploadFace?userId=' + userInfo.id, 
+								multiForm, 
+								{
+									headers: {
+										'Content-Type': 'multipart/form-data',
+										'headerUserId': userInfo.id,
+										'headerUserToken': userInfo.userUniqueToken
+									}
+								})
+							.then(res => {
+								if (res.data.status == 200) {
+									// var userInfoMore = res.data.data;
+									// console.log(userInfoMore);
+									alert("头像上传成功!");
+
+									window.location.reload();
+								} else {
+									alert(res.data.msg);
+									console.log(res.data.msg);
+								}
+							});
+					},
+					saveUserInfo() {
+						var userInfoMore = this.userInfoMore;
+
+						var nickname = userInfoMore.nickname;
+						if (nickname == null || nickname == "" || nickname == undefined) {
+							alert("昵称不能为空");
+							return;
+						}
+						if (nickname.length > 12) {
+							alert("昵称长度不能超过12位");
+							return;
+						}
+
+						var realname = userInfoMore.realname;
+						if (realname != null && realname != "" && realname != undefined) {
+							if (realname.length > 12) {
+								alert("真实姓名长度不能超过12位");
+								return;
+							}
+						}
+
+						var mobile = userInfoMore.mobile;
+						if (mobile != null && mobile != "" && mobile != undefined) {
+							if (mobile.length != 11) {
+								alert("手机号长度为11位");
+								return;
+							}
+							var checkMobile = app.checkMobile(mobile);
+							if (!checkMobile) {
+								alert('请输入有效的手机号码！');
+								return;
+							}
+						}
+						
+						var email = userInfoMore.email;
+						if (email != null && email != "" && email != undefined) {
+							var checkEmail = app.checkEmail(email);
+							if (!checkEmail) {
+								alert('请输入有效的邮箱地址！');
+								return;
+							}
+						}
+						
+
+						// console.log(this.userInfoMore);
+						var birthday = $("#datepicker").val();
+						userInfoMore.birthday = birthday;
+						// console.log(userInfoMore);
+
+						var userInfo = this.userInfo;
+						// console.log(userInfo);
+						// 请求后端获得最新数据
+						var serverUrl = app.serverUrl;
+						axios.defaults.withCredentials = true;
+						axios.post(
+								serverUrl + '/userInfo/update?userId=' + userInfo.id, 
+								userInfoMore, 
+								{
+									headers: {
+										'headerUserId': userInfo.id,
+										'headerUserToken': userInfo.userUniqueToken
+									}
+								})
+							.then(res => {
+								if (res.data.status == 200) {
+									// var userInfoMore = res.data.data;
+									// console.log(userInfoMore);
+									alert("用户信息修改成功!");
+
+									window.location.reload();
+								} else {
+									alert(res.data.msg);
+									console.log(res.data.msg);
+								}
+							});
+					},
+					renderUserInfo() {
+						var userInfo = this.userInfo;
+						// console.log(userInfo);
+						// 请求后端获得最新数据
+						var serverUrl = app.serverUrl;
+						axios.defaults.withCredentials = true;
+						axios.get(
+								serverUrl + '/center/userInfo?userId=' + userInfo.id, {}, 
+								{
+									headers: {
+										'headerUserId': userInfo.id,
+										'headerUserToken': userInfo.userUniqueToken
+									}
+								})
+							.then(res => {
+								if (res.data.status == 200) {
+									var userInfoMore = res.data.data;
+									// console.log(userInfoMore);
+									this.userInfoMore = userInfoMore;
+
+									var datepicker = moment(userInfoMore.birthday).format('YYYY-MM-DD');
+									$("#datepicker").attr("value", datepicker);
+								} else {
+									alert(res.data.msg);
+									console.log(res.data.msg);
+								}
+							});
+					},
+					// 查询是否支付成功 
+					// 通过cookie判断用户是否登录
+					judgeUserLoginStatus() {
+						var userCookie = app.getCookie("user");
+						if (
+							userCookie != null &&
+							userCookie != undefined &&
+							userCookie != ""
+						) {
+							var userInfoStr = decodeURIComponent(userCookie);
+							// console.log(userInfoStr);
+							if (
+								userInfoStr != null &&
+								userInfoStr != undefined &&
+								userInfoStr != ""
+							) {
+								var userInfo = JSON.parse(userInfoStr);
+								// 判断是否是一个对象
+								if ( typeof(userInfo)  == "object" ) {
+									this.userIsLogin = true;
+									// console.log(userInfo);
+									this.userInfo = userInfo;
+								} else {
+									this.userIsLogin = false;
+									this.userInfo = {};
+								}
+							}
+						} else {
+							this.userIsLogin = false;
+							this.userInfo = {};
+						}
+					}
+				}
+			});
+		</script>
+	</body>
+
+</html>

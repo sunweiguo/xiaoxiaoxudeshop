@@ -1,0 +1,59 @@
+﻿.zpagenav {
+	text-align: center;
+	-webkit-user-select: none;
+}
+
+.zpagenav {
+	font-family: arial;
+	color: #48576a;
+}
+
+.zpagenav ul {
+	display: inline-block;
+	margin: 20px 20px;
+	padding: 0;
+}
+
+.zpagenav ul li {
+	display: inline-block;
+	margin: 0;
+	padding: 0 4px;
+	border: 1px solid #d1dbe5;
+	border-right: 0;
+	background: #fff;
+	font-size: 13px;
+	min-width: 28px;
+	height: 28px;
+	line-height: 28px;
+	cursor: pointer;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.zpagenav ul li:last-child {
+	border-right: 1px solid #d1dbe5;
+}
+
+.zpagenav ul li:hover {
+	color: #20a0ff;
+}
+
+.zpagenav ul li.active {
+	border-color: #20a0ff;
+	background-color: #20a0ff;
+	color: #fff;
+	cursor: default;
+}
+
+.zpagenav ul li.active:hover {
+	color: #fff;
+}
+
+.zpagenav ul li.disabled {
+	cursor: not-allowed;
+	color: #e4e4e4;
+}
+
+.zpagenav ul li.dot {
+	cursor: default;
+}

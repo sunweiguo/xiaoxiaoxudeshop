@@ -1,0 +1,421 @@
+.body {
+    height: 100%;
+    background-color: #efefef;
+    font: 12px/1 "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    outline: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+/* background: #efefef; */
+
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100%;
+    height: auto!important;
+    position: relative;
+    background: #efefef;
+}
+
+
+.hd {
+    height: 60px;
+    color: #000;
+    background-color: #fff;
+}
+
+.hd-main {
+    width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.ep-hd-info {
+    float: left;
+    height: 100%;
+    font-size: 0;
+}
+
+.ep-logo {
+    /* padding-top: 14px; */
+}
+
+.ep-logo img {
+    height: 60px;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.ep-order-status {
+    margin: 16px 0 0 20px;
+    padding-left: 20px;
+    border-left: 1px solid #f0f0f0;
+    line-height: 26px;
+    font-size: 16px;
+}
+
+.ep-logo, .ep-order-status {
+    float: left;
+}
+
+.user-info {
+    float: right;
+    margin-top: 20px;
+}
+
+.page-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+.bd {
+    padding: 40px 0 200px;
+}
+
+.bd-main {
+    width: 1080px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.ep-wrapper {
+    position: relative;
+    margin-left: 0;
+}
+
+.bd-main-container {
+    padding: 50px 270px 330px 250px;
+}
+
+.ep-order-detail {
+    padding: 10px 0 20px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.ep-order-tit {
+    position: relative;
+}
+
+.ep-order-detail .ep-order-con {
+    padding-left: 72px;
+}
+
+.ep-order-con.show {
+    display: block;
+}
+
+.ep-dl-list, .ep-order-con {
+    font-size: 14px;
+}
+
+.ep-order-tit dl {
+    padding-bottom: 12px;
+}
+
+.ep-order-tit dt {
+    float: left;
+    color: #000;
+    font-weight: 700;
+}
+
+.ep-order-tit dt, .ep-order-tit dd {
+    font-size: 14px;
+}
+
+.ep-order-tit dd {
+    color: #707070;
+}
+
+.ep-order-tit span {
+    font-size: 14px;
+}
+
+.ep-order-tit>span {
+    font-size: 15px;
+    color: #000;
+    font-weight: 700;
+}
+
+.ep-order-tit .rmb {
+    margin: 0 8px 0 4px;
+}
+
+.ep-order-tit>span>em {
+    color: #0ac265;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.ep-order-tit .rmb i {
+    font-size: 18px;
+}
+
+i, cite, em, var, address, dfn {
+    font-style: normal;
+}
+
+.ep-pay-method {
+    padding-top: 20px;
+}
+
+.ep-pay-method dl {
+    zoom: 1;
+    clear: both;
+}
+
+.ep-pay-method dt {
+    float: none;
+}
+
+.ep-pay-methods dt {
+    line-height: 44px;
+}
+
+.ep-pay-method dt {
+    color: #000;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.ep-pay-method dd {
+    padding-left: 0;
+    float: none;
+}
+
+.ep-pay-method-list-tit {
+    margin-bottom: 25px;
+}
+
+.ep-pay-method-list-tit ul {
+    zoom: 1;
+    clear: both;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    /* margin-block-start: 1em; */
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.ep-pay-method-list-tit li.selected {
+    line-height: 40px;
+    *height: 42px;
+    *width: 128px;
+    border: 2px solid #3879d1;
+}
+
+.ep-pay-method-list-tit li {
+    transition: border-color .1s ease-in,color .1s ease-in;
+}
+
+.ep-pay-method-list-tit li {
+    position: relative;
+    font-size: 0;
+    display: block;
+    float: left;
+    width: 130px;
+    height: 44px;
+    line-height: 42px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #dedede;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+.ep-pay-method-list-tit li .ep-icon {
+    margin-right: 4px;
+}
+
+.ep-pay-method-list-tit li span {
+    display: inline-block;
+    color: #707070;
+    font-size: 14px;
+    line-height: 25px;
+    vertical-align: middle;
+}
+
+.ep-icon-wxpay {
+    width: 22px;
+    height: 19px;
+    background-position: 0 -50px;
+}
+
+
+.ep-pay-method-list-tit li .ep-pay-method-name {
+    transition: color .1s ease-in;
+}
+
+.ep-pay-method-list-tit li span {
+    display: inline-block;
+    color: #707070;
+    font-size: 14px;
+    line-height: 25px;
+    vertical-align: middle;
+}
+
+.ep-pay-method-list-tit li.selected .ep-icon-selected {
+    transform-origin: 100% 100%;
+    animation: iconScale .1s linear;
+}
+.ep-pay-method-list-tit li.selected .ep-icon-selected {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+}
+.ep-pay-method-list-tit li .ep-icon {
+    margin-right: 4px;
+}
+.ep-icon-selected {
+    width: 20px;
+    height: 20px;
+    background-position: -25px 0;
+}
+.ep-icon {
+    background-image: url(../img/ep_new_sprites.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+i, cite, em, var, address, dfn {
+    font-style: normal;
+}
+
+.pay-method {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.pay-words {
+    margin-top: 10px;
+}
+
+.clearfix {
+    zoom: 1;
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.ep-wxpay-qrcode-wrap {
+    width: 196px;
+    height: 196px;
+    margin-bottom: 10px;
+}
+
+.ep-wxpay-qrcode-notice {
+    height: 30px;
+    line-height: 30px;
+    background-color: #00c800;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ep-wxpay-qrcode-tip {
+    margin-left: 40px;
+    margin-top: -10px;
+}
+
+.pay-channel {
+    margin-top: 10px;
+}
+
+
+
+
+.ft {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    clear: both;
+    padding-top: 16px;
+}
+
+.ft-main {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.copyright {
+    padding-bottom: 80px;
+    color: #bbb;
+}
+
+.copyright p {
+    text-align: center;
+    padding: 6px 0;
+}
+
+
+/* ========== */
+.paid-info {
+    /* padding: 50px; */
+}
+.paid-success {
+    width: 20px;
+    height: 20px;
+}
+
+.success-words {
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.first-line {
+    display: flex;
+    flex-direction: row;
+
+    padding: 45px 0 45px 100px;
+
+    background-color: #f5fef2;
+}
+
+.second-line {
+    padding: 25px 0 25px 100px;
+}
+
+.order-words {
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.gray-words {
+    color: #a5a0a0;
+}
+
+.third-line {
+    padding: 0 0 50px 100px;
+}
+
+.go-center {
+    width: 150px;
+    height: 50px;
+    font-size: 14px;
+    color: white;
+    background-color: #5991d8;
+}

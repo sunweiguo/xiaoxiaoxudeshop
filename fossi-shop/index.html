@@ -1,0 +1,628 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>YummyFood在线购物平台 - 首页</title>
+
+	<link rel="shortcut icon" href="img/foodie.ico"/>
+
+	<link href="AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+	<link href="AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
+	<link href="basic/css/demo.css" rel="stylesheet" type="text/css" />
+	<link href="css/hmstyle.css" rel="stylesheet" type="text/css" />
+	<link href="css/skin.css" rel="stylesheet" type="text/css" />
+	<link href="css/lee.css" rel="stylesheet" type="text/css" />
+	<!-- <link href="components/mloading/jquery.mloading.css" rel="stylesheet" type="text/css" /> -->
+
+	<script src="AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+	<!-- <script src="AmazeUI-2.4.2/assets/js/amazeui.js"></script> -->
+	<script src="AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+<div class="attention">本电商购物平台为演示网站，仅供学习和交流。所有交易金额均为0.01元，并且不会真实发货！</div>
+
+<!-- <div id="index" @scroll="handleScroll"> -->
+<div id="index">
+
+	<div class="hmtop">
+		<!--顶部导航条 -->
+		<div class="am-container header">
+			<ul class="message-l">
+				<div class="topMessage">
+					<div class="menu-hd" v-show="!userIsLogin">
+						<a href="login.html" target="_top" class="h" style="text-decoration:underline;color: green">亲，请登录</a>&nbsp;|&nbsp;
+						<a href="register.html" target="_top" style="text-decoration:underline;color: green">免费注册</a>
+					</div>
+					<div class="menu-hd" v-show="userIsLogin">
+						<span style="color: #d2364c">欢迎，{{userInfo.username}}</span>
+					</div>
+				</div>
+			</ul>
+			<ul class="message-r">
+				<div class="topMessage home">
+					<div class="menu-hd"><a href="index.html" target="_top" class="h">商城首页</a></div>
+				</div>
+				<div class="topMessage my-shangcheng">
+					<div class="menu-hd MyShangcheng"><a href="javascript:void(0);" @click="goUserCenter">
+						<i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
+				</div>
+			</ul>
+		</div>
+
+		<!--悬浮搜索框-->
+		<div class="nav white">
+			<!-- <div class="logo"><img src="images/logo.png" /></div> -->
+			<div class="logoBig">
+				<li><img src="images/logobig.png" /></li>
+			</div>
+			<div class="search-bar pr">
+				<a name="index_none_header_sysc" href="#"></a>
+				<form>
+					<input id="searchInput" v-model="keywords" name="index_none_header_sysc" type="text"
+						placeholder="搜索" autocomplete="off">
+					<input id="ai-topsearch" @click="doSearch" class="submit am-btn" value="搜索" index="1">
+				</form>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="index444">
+		<div class="banner" style="top: 213px;">
+			<!--轮播 -->
+			<div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
+				<ul class="am-slides">
+					<li class="banner1"><a></a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="shopNav">
+			<div class="slideall">
+
+				<div class="long-title"><span class="all-goods">全部分类</span></div>
+				<div class="nav-cont">
+					<ul>
+						<!-- <li class="index"><a href="index.html">本站首页</a></li> -->
+						<li class="qc"><a href="https://sunweiguo.github.io/" target="_blank">个人博客</a></li>
+						<li class="qc"><a href="https://github.com/sunweiguo/xiaoxiaoxudeshop" target="_blank">代码仓库</a></li>
+					</ul>
+				</div>
+
+				<!--侧边导航 -->
+				<div id="nav" class="navfull">
+					<div class="area clearfix">
+						<div class="category-content" id="guide_2">
+
+							<div class="category">
+								<ul class="category-list" id="js_climit_li"></ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="shopMainbg">
+		<div class="shopMain" id="shopmain">
+
+			<div class="am-g am-g-fixed recommendation">
+			</div>
+			<div class="clear "></div>
+			<!--热门活动 -->
+
+			<div v-for="(rootCat, rootIndex) in sixNewItemsList">
+				<!--甜点-->
+				<div class="am-container ">
+					<div class="shopTitle ">
+						<h4>{{rootCat.rootCatName}}</h4>
+						<h3>{{rootCat.slogan}}</h3>
+					</div>
+				</div>
+				<div class="am-g am-g-fixed floodFour">
+					<div class="am-u-sm-5 am-u-md-4 text-one list" :style="'background-color:' + rootCat.bgColor">
+						<a href="javascript:void(0);">
+							<img :src="rootCat.catImage"/>
+						</a>
+						<div class="triangle-topright"></div>
+					</div>
+					<div class="am-u-sm-7 am-u-md-4 text-two sug">
+						<div class="outer-con ">
+							<div class="title ">
+								{{rootCat.simpleItemList[0].itemName}}
+							</div>
+						</div>
+						<a :href="'item.html?itemId=' + rootCat.simpleItemList[0].itemId" target="_blank"><img :src="rootCat.simpleItemList[0].itemUrl" style="width: 170px; height: 170px;"/></a>
+					</div>
+					<div class="am-u-sm-7 am-u-md-4 text-two">
+						<div class="outer-con ">
+							<div class="title ">
+								{{rootCat.simpleItemList[1].itemName}}
+							</div>
+						</div>
+						<a :href="'item.html?itemId=' + rootCat.simpleItemList[1].itemId" target="_blank"><img :src="rootCat.simpleItemList[1].itemUrl" style="width: 170px; height: 170px;"/></a>
+					</div>
+					<div class="am-u-sm-3 am-u-md-2 text-three big" >
+						<div class="outer-con " >
+							<div class="title ">
+								{{rootCat.simpleItemList[2].itemName}}
+							</div>
+						</div>
+						<a :href="'item.html?itemId=' + rootCat.simpleItemList[2].itemId" target="_blank"><img :src="rootCat.simpleItemList[2].itemUrl" style="width: 170px; height: 170px;"/></a>
+					</div>
+					<div class="am-u-sm-3 am-u-md-2 text-three sug">
+						<div class="outer-con ">
+							<div class="title ">
+								{{rootCat.simpleItemList[3].itemName}}
+							</div>
+						</div>
+						<a :href="'item.html?itemId=' + rootCat.simpleItemList[3].itemId" target="_blank"><img :src="rootCat.simpleItemList[3].itemUrl" style="width: 170px; height: 170px;"/></a>
+					</div>
+					<div class="am-u-sm-3 am-u-md-2 text-three ">
+						<div class="outer-con ">
+							<div class="title ">
+								{{rootCat.simpleItemList[4].itemName}}
+							</div>
+						</div>
+						<a :href="'item.html?itemId=' + rootCat.simpleItemList[4].itemId" target="_blank"><img :src="rootCat.simpleItemList[4].itemUrl" style="width: 170px; height: 170px;"/></a>
+					</div>
+					<div class="am-u-sm-3 am-u-md-2 text-three last big ">
+						<div class="outer-con ">
+							<div class="title ">
+								{{rootCat.simpleItemList[5].itemName}}
+							</div>
+						</div>
+						<a :href="'item.html?itemId=' + rootCat.simpleItemList[5].itemId" target="_blank"><img :src="rootCat.simpleItemList[5].itemUrl" style="width: 170px; height: 170px;"/></a>
+					</div>
+				</div>
+				<div class="clear "></div>
+			</div>
+			
+			<div class="footer ">
+				<!-- <div class="footer-hd ">
+					<p>
+						<a href="https://www.imooc.com/" target="_blank">慕课网</a>
+						<b>|</b>
+						<a href="https://coding.imooc.com/class/217.html" target="_blank">分布式架构仿抖音短视频</a>
+						<b>|</b>
+						<a href="https://coding.imooc.com/class/261.html" target="_blank">Netty仿微信聊天</a>
+						<b>|</b>
+						<a href="https://coding.imooc.com/class/201.html" target="_blank">Zookeeper与dubbo入门</a>
+						<b>|</b>
+						<a href="https://coding.imooc.com/class/293.html" target="_blank">支付宝小程序</a>
+					</p>
+				</div> -->
+				<div class="footer-bd">
+					<p style="text-align: center;">
+						<em>© 2020 oursnail.cn 苏ICP备20012520号 fossi</em>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!--菜单 -->
+	<div class="tip">
+		<div id="sidebar">
+			<div id="wrap">
+				<div id="prof" class="item ">
+					<a href="# ">
+						<span class="setting "></span>
+					</a>
+					<div class="ibar_login_box status_login " style="height: 150px">
+						<div class="avatar_box ">
+							<p class="avatar_imgbox ">
+								<img v-show="userIsLogin" :src="userInfo.face"/>
+								<img v-show="!userIsLogin" src="img/default-face.png"/>
+							</p>
+							<ul class="user_info ">
+								<li v-show="!userIsLogin">用户未登录</li>
+								<li v-show="userIsLogin">用户昵称：{{userInfo.nickname}}</li>
+								<li v-show="userIsLogin" @click="logout">退出登录</li>
+							</ul>
+						</div>
+						<i class="icon_arrow_white "></i>
+					</div>
+
+				</div>
+				<div id="shopCart " class="item " @click="goToShopcart">
+					<a href="# ">
+						<span class="message "></span>
+					</a>
+					<p>购物车</p>
+					<p class="cart_num ">{{shopcartItemCounts}}</p>
+				</div>
+
+				<div class="quick_toggle ">
+
+					<li class="qtitem ">
+						<a href="#top " class="return_top "><span class="top "></span></a>
+					</li>
+				</div>
+
+				<!--回到顶部 -->
+				<div id="quick_links_pop " class="quick_links_pop hide "></div>
+
+			</div>
+
+		</div>
+		<div id="prof-content " class="nav-content ">
+			<div class="nav-con-close ">
+				<i class="am-icon-angle-right am-icon-fw "></i>
+			</div>
+			<div>
+				我
+			</div>
+		</div>
+		<div id="shopCart-content " class="nav-content ">
+			<div class="nav-con-close ">
+				<i class="am-icon-angle-right am-icon-fw "></i>
+			</div>
+			<div>
+				购物车
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- <script>
+		window.jQuery || document.write('<script src="basic/js/jquery.min.js "><\/script>');
+	</script> -->
+	<script type="text/javascript " src="basic/js/quick_links.js"></script>
+	<!-- <script type="text/javascript " src="js/jquery.blockUI.js"></script> -->
+	<!-- <script type="text/javascript " src="components/mloading/jquery.mloading.js"></script> -->
+	<script type="text/javascript " src="js/app.js"></script>
+	<script type="text/javascript">
+		function showPage(type, catOrItemId) {
+			// console.log("type:" + type);
+			// console.log("catOrItemId:" + catOrItemId);
+
+			if(type == 1) {
+				window.open("item.html?itemId=" + catOrItemId);
+			} else if (type == 2) {
+				window.open("catItems.html?searchType=catItems&catId=" + catOrItemId);
+				
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		var index = new Vue({
+			el: "#index",
+			data: {
+				carouselList: [],
+				categoryList: [],
+				sixNewItemsList: [],
+
+				userIsLogin: false,
+				userInfo: {},
+
+				keywords: null,
+				catIndex: 0,			// 用于懒加载判断每次的幅度
+				isScrolling: true,
+
+				shopcartItemCounts: 0,	// 购物车中商品的数量
+			},
+			created() {
+				// var me = this;
+				// 用户cookie操作
+				var userCookie = app.getCookie("user");
+				if (userCookie != null && userCookie != undefined && userCookie != '') {
+					var userInfoStr = decodeURIComponent(userCookie);
+					if (userInfoStr != null && userInfoStr != undefined && userInfoStr != '') {
+						var userInfo = JSON.parse(userInfoStr);
+						// 判断是否是一个对象
+						if ( typeof(userInfo)  == "object" ) {
+							this.userIsLogin = true;
+							// console.log(userInfo);
+							this.userInfo = userInfo;
+						} else {
+							this.userIsLogin = false;
+							this.userInfo = {};
+						}
+					}
+				} else {
+					this.userIsLogin = false;
+					this.userInfo = {};
+				}
+
+				// 渲染轮播图
+				this.renderCarousel();
+				// 渲染分类
+				this.renderCategorys();
+				// 渲染分类下最新商品
+				// this.renderSixNewItems();
+
+				// 从购物车中拿到商品的数量
+				this.shopcartItemCounts = app.getShopcartItemCounts();
+			},
+			methods: {
+				goUserCenter() {
+					// 判断用户是否登录
+					var userIsLogin = this.userIsLogin;
+					if (!userIsLogin) {
+						// 用户未登录，则跳转
+						window.location.href = "login.html?returnUrl=" + app.centerServerUrl;
+					} else {
+						window.location.href = app.centerServerUrl;
+					}
+				},
+				goToShopcart() {
+					window.location.href = "shopcart.html";
+				},
+				doSearch() {
+					var keywords = this.keywords;
+					// console.log(keywords);
+					if (keywords == null || keywords == undefined || keywords == '') {
+						alert("搜索内容不能为空");
+						return;
+					}
+					// window.location.href = "search.html?keywords=" + keywords;
+					window.open("catItems.html?searchType=searchItems&keywords=" + keywords);
+					// window.open("search.html?searchType=searchItems&keywords=" + keywords);
+				},
+				renderSixNewItems() {
+
+					var serverUrl = app.serverUrl;
+					var categoryList = this.categoryList;
+					var catIndex = this.catIndex;
+					
+					var rootCat = categoryList[catIndex];
+					if (rootCat == undefined || rootCat == null || rootCat == '') {
+						return;
+					}
+					var rootCatId = rootCat.id;
+
+					catIndex++;
+					this.catIndex = catIndex;
+
+					// 获得各个分类下的最新6个商品
+					axios.get(
+							serverUrl + '/index/sixNewItems/' + rootCatId, {})
+						.then(res => {
+							if (res.data.status == 200) {
+								var sixNewItemsListTemp = res.data.data
+								var sixNewItemsList = this.sixNewItemsList;
+								sixNewItemsList.push(sixNewItemsListTemp[0]);
+								this.sixNewItemsList = sixNewItemsList;
+								// console.log(sixNewItemsList);
+								this.isScrolling = false;	// 加载完毕以后表示下次可以继续滚动加载
+							}
+						});
+				},
+				
+				renderCarousel() {
+					var serverUrl = app.serverUrl;
+					// 获得轮播图
+					axios.get(
+							serverUrl + '/index/carousel', {})
+						.then(res => {
+							if (res.data.status == 200) {
+								var carouselList = res.data.data
+								this.carouselList = carouselList;
+
+							
+								// 循环渲染轮播图
+								var $slider = $('#demo-slider-0');
+								for (var i = 0; i < carouselList.length; i++) {
+
+									var type = carouselList[i].type;
+									var catId = carouselList[i].catId;
+									var itemId = carouselList[i].itemId;
+									var catOrItemId = "";
+
+									if (type == 1) {
+										catOrItemId = itemId;
+									}
+									if (type == 2) {
+										catOrItemId = catId;
+									}
+									
+									catOrItemId = encodeURI(catOrItemId);
+
+									var cal = '<li class="" style="background: ' + carouselList[i].backgroundColor +
+										';">' +
+										'<a href=javascript:showPage(' + type + ',\"'+catOrItemId+'\");><img src="' + carouselList[i].imageUrl + '" /></a>' +
+										+'</li>';
+									$slider.flexslider('addSlide', cal);
+								}
+								// <li class="banner4"><a><img src="images/ad4.jpg" /></a></li>
+
+								// console.log($slider.flexslider('count'));
+								$slider.flexslider('removeSlide', 0);
+
+								// var img1 = '<li><img src="http://122.152.205.72:88/group1/M00/00/02/CpoxxFvJanCAMgx0AAU6szwbghI657.png" />';
+								// $slider.flexslider('addSlide', img1);
+							}
+						});
+				},
+				renderCategorys() {
+					var serverUrl = app.serverUrl;
+
+					// 获得商品分类 - 大分类
+					axios.get(
+							serverUrl + '/index/cats', {})
+						.then(res => {
+							
+							if (res.data.status == 200) {
+								var categoryList = res.data.data
+								this.categoryList = categoryList;
+
+								var rootCatHtml = "";
+								for (var i = 0; i < categoryList.length; i++) {
+
+									var cat = categoryList[i];
+									rootCatHtml += '' +
+										'<li class="appliance js_toggle relative">' +
+										'<div class="category-info">' +
+										'<h3 class="category-name b-category-name">' +
+										'<i><img src="' + cat.logo + '"></i>' +
+										'<a class="ml-22" title="' + cat.name + '">' + cat.name + '</a>' +
+										'</h3>' +
+										'<em>&gt;</em></div>' +
+										'<div class="menu-item menu-in top">' +
+										'<div class="area-in">' +
+										'<div class="area-bg">' +
+										'<div class="menu-srot">' +
+										'<div class="sort-side" rootCatId="' + cat.id + '"></div>' +
+										'</div>' +
+										'</div>' +
+										'</div>' +
+										'</div>' +
+										'<b class="arrow"></b>' +
+										'</li>';
+								}
+								var $leftNav = $('#js_climit_li');
+								$leftNav.html(rootCatHtml);
+
+								$("li").hover(function () {
+									// debugger;
+									$(".category-content .category-list li.first .menu-in").css("display",
+										"none");
+									$(".category-content .category-list li.first").removeClass("hover");
+
+									var meLi = $(this);
+
+									var subWapper = $(this).children("div.menu-in").children("div.area-in")
+										.children("div.area-bg").children("div.menu-srot").children(
+											"div.sort-side");
+									// console.log(subWapper.html());
+									var subCatHtml = subWapper.html();
+									var rootCatId = subWapper.attr("rootCatId");
+									// console.log(rootCatId);
+									// 如果该节点下没有内容，则发起请求查询子分类并且渲染到页面，如果有的话就不查询了（懒加载模式）
+									if (subCatHtml == null || subCatHtml == '' || subCatHtml == undefined) {
+										if (rootCatId != undefined && rootCatId != null && rootCatId != '') {
+											// 根据root分类id查询该分类下的所有子分类
+											axios.get(
+													serverUrl + '/index/subCat/' + rootCatId, {})
+												.then(res => {
+													if (res.data.status == 200) {
+														var catList = res.data.data
+														// this.catList = catList;
+														// debugger;
+														var subRenderHtml = '';
+														for (var i = 0; i < catList.length; i++) {
+															var cat = catList[i];
+															subRenderHtml += '' +
+																'<dl class="dl-sort">' +
+																'<dt><span title="' + cat.name + '">' +
+																cat.name + '</span></dt>';
+
+															// 拼接第三级分类
+															var subCatList = cat.subCatList;
+															for (var j = 0; j < subCatList.length; j++) {
+																var subCat = subCatList[j];
+																subRenderHtml += '<dd><a title="' + subCat
+																	.subName + '" href="catItems.html?searchType=catItems&catId='+ subCat.subId +'" target="_blank"><span>' +
+																	subCat.subName + '</span></a></dd>'
+															}
+
+															subRenderHtml += '</dl>';
+														}
+														subWapper.html(subRenderHtml);
+														meLi.addClass("hover");
+														meLi.children("div.menu-in").css("display",
+															"block");
+													}
+												});
+										}
+										// var renderHtml = '' 
+										// 	+ '<dl class="dl-sort">'
+										// 		+ '<dt><span title="大包装">大包装</span></dt>'
+										// 		+ '<dd><a title="蒸蛋糕" href="#"><span>蒸蛋糕</span></a></dd>'
+										// 		+ '<dd><a title="脱水蛋糕" href="#"><span>脱水蛋糕</span></a></dd>'
+										// 		+ '<dd><a title="瑞士卷" href="#"><span>瑞士卷</span></a></dd>'
+										// 		+ '<dd><a title="软面包" href="#"><span>软面包</span></a></dd>'
+										// 		+ '<dd><a title="马卡龙" href="#"><span>马卡龙</span></a></dd>'
+										// 		+ '<dd><a title="千层饼" href="#"><span>千层饼</span></a></dd>'
+										// 		+ '<dd><a title="甜甜圈" href="#"><span>甜甜圈</span></a></dd>'
+										// 		+ '<dd><a title="蒸三明治" href="#"><span>蒸三明治</span></a></dd>'
+										// 		+ '<dd><a title="铜锣烧" href="#"><span>铜锣烧</span></a></dd>'
+										// 	+ '</dl>'
+										// 	+ '<dl class="dl-sort">'
+										// 		+ '<dt><span title="两件套">两件套</span></dt>'
+										// 		+ '<dd><a title="蒸蛋糕" href="#"><span>蒸蛋糕</span></a></dd>'
+										// 		+ '<dd><a title="脱水蛋糕" href="#"><span>脱水蛋糕</span></a></dd>'
+										// 		+ '<dd><a title="瑞士卷" href="#"><span>瑞士卷</span></a></dd>'
+										// 		+ '<dd><a title="软面包" href="#"><span>软面包</span></a></dd>'
+										// 		+ '<dd><a title="马卡龙" href="#"><span>马卡龙</span></a></dd>'
+										// 		+ '<dd><a title="千层饼" href="#"><span>千层饼</span></a></dd>'
+										// 		+ '<dd><a title="甜甜圈" href="#"><span>甜甜圈</span></a></dd>'
+										// 		+ '<dd><a title="蒸三明治" href="#"><span>蒸三明治</span></a></dd>'
+										// 		+ '<dd><a title="铜锣烧" href="#"><span>铜锣烧</span></a></dd>'
+										// 	+ '</dl>';
+										// 	$(this)
+										// 		.children("div.menu-in")
+										// 		.children("div.area-in")
+										// 		.children("div.area-bg")
+										// 		.children("div.menu-srot")
+										// 		.children("div.sort-side")
+										// 		.html(renderHtml);
+									} else {
+										$(this).addClass("hover");
+										$(this).children("div.menu-in").css("display", "block");
+									}
+
+									// $(this).addClass("hover");
+									// $(this).children("div.menu-in").css("display", "block")
+								}, function () {
+									$(this).removeClass("hover")
+									$(this).children("div.menu-in").css("display", "none")
+								});
+								this.renderSixNewItems();
+							}
+						});
+				},
+				getRequest() {},
+				postRequest() {},
+				logout() {
+					var userId = this.userInfo.id;
+					var serverUrl = app.serverUrl;
+
+					axios.defaults.withCredentials = true;
+					axios.post(serverUrl + '/passport/logout?userId=' + userId, {})
+						.then(res => {
+							if (res.data.status == 200) {
+								window.location.href = "index.html";
+							} else if (res.data.status == 500) {
+								alert(res.data.msg);
+								return;
+							}
+						});
+				}
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		
+		$(window).scroll(
+			function() {
+				// scrollTop为滚动条在Y轴上的滚动距离。
+				// clientHeight为内容可视区域的高度。
+				// scrollHeight为内容可视区域的高度加上溢出（滚动）的距离。
+				var scrollTop = $(this).scrollTop();
+				var scrollHeight = $(document).height();
+				var windowHeight = $(this).height();
+				if (scrollTop + windowHeight > (scrollHeight - 50) ) {
+				// 此处是滚动条到底部时候触发的事件，在这里写要加载的数据，或者是拉动滚动条的操作
+				// console.log("123");
+				index.renderSixNewItems();
+			}
+		});
+
+	</script>
+
+</body>
+
+</html>

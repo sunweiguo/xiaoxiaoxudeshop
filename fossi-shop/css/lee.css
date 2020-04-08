@@ -1,0 +1,42 @@
+.attention {
+    border: 1px solid #EEE;
+    padding: 4px 8px;
+    position: relative;
+    background-color: #FFE;
+    border-color: #FC7;
+    font: 16px/1.5 tahoma,arial,"Hiragino Sans GB",宋体,sans-serif;
+    text-align: center;
+}
+
+.cart-attention {
+    border: 1px solid #EEE;
+    padding: 10px 8px;
+    position: relative;
+    background-color: #fffdee;
+    border-color: #FC7;
+    font: 12px/1.5 tahoma,arial,"Hiragino Sans GB",宋体,sans-serif;
+    text-align: center;
+    color: #f70;
+    vertical-align: middle;
+}
+
+.img-ico {
+    width: 20px;
+    height: 20px;
+}
+
+.login-quick {
+    background-color: #e74649;
+    height: 25px;
+    line-height: 25px;
+    font-family: arial,"Microsoft YaHei";
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0;
+    float: none;
+}
