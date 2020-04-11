@@ -15,6 +15,6 @@
 1. 单体项目代码：dmaster-single这个分支
   
 2. 我将详细记录针对单体项目从0到1的笔记，达到看看我的笔记即可进行完整功能开发和上线部署的效果。敬请期待。
-	- [1、商城项目本地预览](http://note.youdao.com/noteshare?id=e6b4757288b117ea5336f0297805ea89&sub=D614DA7716D04274A5E10A1941B5D641)
+	- [1、天天吃货商城项目本地预览](http://note.youdao.com/noteshare?id=e6b4757288b117ea5336f0297805ea89&sub=D614DA7716D04274A5E10A1941B5D641)
 	- [2、天天吃货商城后端工程初始化](http://note.youdao.com/noteshare?id=c3bbc66c0608e976acc6dcd38c6bd198&sub=B5D5FA2B291F48908FCC5CF533B55257)
-	- [3、商城的数据库表分析和业务逻辑简单梳理](http://note.youdao.com/noteshare?id=ce5b84c8942dac62eb78fe50c0ac8fa1&sub=01F7EB278687446993E2C7F2BAF0F23E)
+	- [3、天天吃货商城的数据库表分析和业务逻辑简单梳理](http://note.youdao.com/noteshare?id=ce5b84c8942dac62eb78fe50c0ac8fa1&sub=01F7EB278687446993E2C7F2BAF0F23E)
