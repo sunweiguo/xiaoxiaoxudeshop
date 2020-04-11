@@ -1,72 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce95c6f0-826e-4c05-8871-69013cfe66f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/YummyFoodApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/my/mapper/MyMapper/MyMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/CarouselMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/CategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/ItemsCommentsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/ItemsImgMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/ItemsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/ItemsParamMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/ItemsSpecMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/OrderItemsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/OrderStatusMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/OrdersMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/UserAddressMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/UsersMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/CarouselMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/CategoryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/ItemsCommentsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/ItemsImgMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/ItemsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/ItemsParamMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/ItemsSpecMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/OrderItemsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/OrderStatusMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/OrdersMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/UserAddressMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/UsersMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/Carousel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/Items.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/ItemsComments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/ItemsImg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/ItemsParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/ItemsSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/OrderItems.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/Orders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/UserAddress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/ITestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/TestServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/target/yummyfood-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/target/yummyfood-api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-common/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-common/target/yummyfood-common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/target/yummyfood-common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/target/yummyfood-mapper-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/target/yummyfood-mapper-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-pojo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-pojo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-pojo/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-pojo/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-pojo/target/yummyfood-pojo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-pojo/target/yummyfood-pojo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/target/yummyfood-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/target/yummyfood-service-1.0-SNAPSHOT.jar" afterDir="false" />
-    </list>
+    <list default="true" id="ce95c6f0-826e-4c05-8871-69013cfe66f9" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/yummyfood-api/target/" />
@@ -81,7 +16,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -155,7 +100,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-1928" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -290,7 +235,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586621121315" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586621673911" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../test" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -402,7 +347,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586586894636</updated>
-      <workItem from="1586586899413" duration="8887000" />
+      <workItem from="1586586899413" duration="9910000" />
     </task>
     <task id="LOCAL-00001" summary="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化">
       <created>1586590009215</created>
@@ -411,16 +356,24 @@
       <option name="project" value="LOCAL" />
       <updated>1586590009215</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="提交人：fossi&#10;提交内容：&#10;1、mybatis逆向工程初始化pojo等基础类&#10;2、实现一个最简单的接口，调用到数据库">
+      <created>1586621185129</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586621185129</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8887000" />
+    <option name="totallyTimeSpent" value="9910000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25159913" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25159913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Nl-Palette" order="2" />
       <window_info id="Designer" order="3" />
@@ -434,7 +387,7 @@
       <window_info anchor="bottom" id="Statistic" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32849163" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4914712" visible="true" weight="0.9023861" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4914712" visible="true" weight="0.17462039" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49573562" weight="0.35418993" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -466,7 +419,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化" />
+    <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、mybatis逆向工程初始化pojo等基础类&#10;2、实现一个最简单的接口，调用到数据库" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交人：fossi&#10;提交内容：&#10;1、mybatis逆向工程初始化pojo等基础类&#10;2、实现一个最简单的接口，调用到数据库" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://D:/Repositories/Maven/org/springframework/boot/spring-boot-starter-parent/2.1.5.RELEASE/spring-boot-starter-parent-2.1.5.RELEASE.pom">
@@ -674,13 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -726,6 +673,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="14" column="60" lean-forward="true" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
         </state>
       </provider>
     </entry>
