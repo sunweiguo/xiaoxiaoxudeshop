@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce95c6f0-826e-4c05-8871-69013cfe66f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -87,7 +88,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -103,6 +108,7 @@
         <option value="$PROJECT_DIR$/yummyfood-mapper/pom.xml" />
         <option value="$PROJECT_DIR$/yummyfood-service/pom.xml" />
         <option value="$PROJECT_DIR$/yummyfood-api/pom.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -169,19 +175,7 @@
             <path>
               <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
               <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
               <item name="yummyfood-common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-common" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
@@ -196,19 +190,7 @@
             <path>
               <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
               <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-pojo" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
               <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -219,9 +201,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586589895418" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586590193893" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../test" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -290,18 +273,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586586894636</updated>
-      <workItem from="1586586899413" duration="2670000" />
+      <workItem from="1586586899413" duration="2994000" />
     </task>
+    <task id="LOCAL-00001" summary="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化">
+      <created>1586590009215</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586590009215</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2670000" />
+    <option name="totallyTimeSpent" value="2994000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1705757" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1705757" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Nl-Palette" order="2" />
       <window_info id="Designer" order="3" />
@@ -315,7 +305,7 @@
       <window_info anchor="bottom" id="Statistic" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32849163" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4914712" visible="true" weight="0.21475054" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4914712" visible="true" weight="0.21475054" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49573562" weight="0.35418993" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -344,6 +334,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://D:/Repositories/Maven/org/springframework/boot/spring-boot-starter-parent/2.1.5.RELEASE/spring-boot-starter-parent-2.1.5.RELEASE.pom">
@@ -392,7 +386,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
