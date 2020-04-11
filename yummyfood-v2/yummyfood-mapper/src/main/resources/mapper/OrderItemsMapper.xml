@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njupt.swg.mapper.OrderItemsMapper">
+  <resultMap id="BaseResultMap" type="com.njupt.swg.pojo.OrderItems">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="order_id" jdbcType="VARCHAR" property="orderId" />
+    <result column="item_id" jdbcType="VARCHAR" property="itemId" />
+    <result column="item_img" jdbcType="VARCHAR" property="itemImg" />
+    <result column="item_name" jdbcType="VARCHAR" property="itemName" />
+    <result column="item_spec_id" jdbcType="VARCHAR" property="itemSpecId" />
+    <result column="item_spec_name" jdbcType="VARCHAR" property="itemSpecName" />
+    <result column="price" jdbcType="INTEGER" property="price" />
+    <result column="buy_counts" jdbcType="INTEGER" property="buyCounts" />
+  </resultMap>
+</mapper>
