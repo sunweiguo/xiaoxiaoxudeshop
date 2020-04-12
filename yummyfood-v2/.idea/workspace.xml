@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce95c6f0-826e-4c05-8871-69013cfe66f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,17 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -104,7 +93,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -117,7 +106,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -125,108 +113,11 @@
               <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
               <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="swg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="swg" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -352,6 +243,7 @@
       <updated>1586586894636</updated>
       <workItem from="1586586899413" duration="9910000" />
       <workItem from="1586678140346" duration="599000" />
+      <workItem from="1586680079967" duration="81000" />
     </task>
     <task id="LOCAL-00001" summary="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化">
       <created>1586590009215</created>
@@ -371,13 +263,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10509000" />
+    <option name="totallyTimeSpent" value="10590000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25426438" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15618336" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Nl-Palette" order="2" />
       <window_info id="Designer" order="3" />
@@ -558,16 +449,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/Application.java" />
-    <entry file="jar://D:/Repositories/Maven/com/njupt/swg/yummyfood-service/1.0-SNAPSHOT/yummyfood-service-1.0-SNAPSHOT.jar!/com/njupt/swg/service/impl/AddressServiceImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1300">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/Repositories/Maven/com/njupt/swg/yummyfood-service/1.0-SNAPSHOT/yummyfood-service-1.0-SNAPSHOT.jar!/com/njupt/swg/service/impl/AddressServiceImpl.class" />
     <entry file="jar://D:/Repositories/Maven/com/njupt/swg/yummyfood-mapper/1.0-SNAPSHOT/yummyfood-mapper-1.0-SNAPSHOT.jar!/com/njupt/my/mapper/MyMapper/MyMapper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -672,8 +554,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        <state relative-caret-position="225">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
