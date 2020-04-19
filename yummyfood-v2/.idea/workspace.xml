@@ -1,54 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce95c6f0-826e-4c05-8871-69013cfe66f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/BaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PassportController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/constants/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/enums/CommentLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/enums/OrderStatusEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/enums/PayMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/enums/Sex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/enums/YesOrNo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/CommonJsonResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/CookieUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/DateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/DesensitizationUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/JsonUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/MD5Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/MobileEmailUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/PagedGridResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/Code.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/DayCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/Id.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/IdWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/InvalidSystemClock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/RandomCodeStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/Sid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/WorkerIdStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/strategy/DayPrefixRandomCodeStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/strategy/DefaultRandomCodeStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/strategy/DefaultWorkerIdStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/strategy/FileLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/utils/HttpReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/utils/IPv4Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/utils/Ip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/utils/Props.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/utils/Serializes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/org/n3r/idworker/utils/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/bo/UserBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/YummyFoodApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/YummyFoodApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/target/yummyfood-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/target/yummyfood-api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-common/target/yummyfood-common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/target/yummyfood-common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-pojo/target/yummyfood-pojo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-pojo/target/yummyfood-pojo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/target/yummyfood-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/target/yummyfood-service-1.0-SNAPSHOT.jar" afterDir="false" />
-    </list>
+    <list default="true" id="ce95c6f0-826e-4c05-8871-69013cfe66f9" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/yummyfood-api/target/" />
@@ -73,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PassportController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1175">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="150">
+              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="52" column="11" lean-forward="true" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+            <state relative-caret-position="205">
+              <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -169,7 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/OrderItems.java" />
         <option value="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/ItemsSpecMapper.java" />
         <option value="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/imooc/my/mapper/MyMapper.java" />
@@ -192,6 +144,7 @@
         <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/BaseController.java" />
         <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PassportController.java" />
         <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/CorsConfig.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -316,18 +269,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="njupt" type="462c0819:PsiDirectoryNode" />
               <item name="swg" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-              <item name="swg" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -393,12 +334,6 @@
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="n3r" type="462c0819:PsiDirectoryNode" />
               <item name="idworker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-common" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
@@ -629,7 +564,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587293226330" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587293366291" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../test" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -747,7 +682,7 @@
       <workItem from="1586586899413" duration="9910000" />
       <workItem from="1586678140346" duration="599000" />
       <workItem from="1586680079967" duration="81000" />
-      <workItem from="1587201711337" duration="6913000" />
+      <workItem from="1587201711337" duration="7223000" />
     </task>
     <task id="LOCAL-00001" summary="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化">
       <created>1586590009215</created>
@@ -763,11 +698,18 @@
       <option name="project" value="LOCAL" />
       <updated>1586621185129</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="提交人：fossi&#10;提交内容：&#10;1、用户注册">
+      <created>1587293280453</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587293280453</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17503000" />
+    <option name="totallyTimeSpent" value="17813000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -783,14 +725,14 @@
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32849163" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4914712" visible="true" weight="0.28850326" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4914712" weight="0.3329718" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49573562" weight="0.35418993" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50852877" side_tool="true" weight="0.3385475" />
       <window_info anchor="bottom" id="Java Enterprise" order="8" weight="0.32994923" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49573562" weight="0.17136659" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49573562" visible="true" weight="0.13340564" />
       <window_info anchor="bottom" id="Spring" order="10" weight="0.32994923" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.26789588" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.11062907" />
@@ -819,16 +761,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化" />
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、mybatis逆向工程初始化pojo等基础类&#10;2、实现一个最简单的接口，调用到数据库" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交人：fossi&#10;提交内容：&#10;1、mybatis逆向工程初始化pojo等基础类&#10;2、实现一个最简单的接口，调用到数据库" />
+    <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、用户注册" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交人：fossi&#10;提交内容：&#10;1、用户注册" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/CarouselMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Repositories/Maven/tk/mybatis/mapper-base/1.1.5/mapper-base-1.1.5.jar!/tk/mybatis/mapper/common/Mapper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1080,16 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PassportController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1175">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/CorsConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -1097,10 +1023,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="52" column="11" lean-forward="true" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+        <state relative-caret-position="205">
+          <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PassportController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
