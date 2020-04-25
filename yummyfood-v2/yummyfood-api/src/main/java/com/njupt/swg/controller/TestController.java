@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * @Author swg.
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @CONTACT 317758022@qq.com
  * @DESC
  */
+//@ApiIgnore              //（swagger文档忽略这个接口显示）
 @RestController
 @RequestMapping("/test")
 public class TestController {

@@ -10,7 +10,12 @@ import com.njupt.swg.bo.UserBO;
  * @DESC
  */
 public interface IUserService {
+    //判断用户名是否存在，存在则为true
     boolean queryUsernameIsExist(String username);
 
+    //注册新用户
     Users registNewUser(UserBO userBO);
+
+    //根据用户名密码查询用户是否存在
+    Users queryUserForLogin(String username, String password);
 }
