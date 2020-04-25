@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+说明：
+1、日志级别及文件 日志记录采用分级记录，级别与日志文件名相对应，不同级别的日志信息记录到不同的日志文件中
+    例如：error级别记录到log_error_xxx.log或log_error.log（该文件为当前记录的日志文件），而log_error_xxx.log为归档日志，
+	日志文件按日期记录，同一天内，若日志文件大小等于或大于2M，则按0、1、2...顺序分别命名 例如log-level-2013-12-21.0.log
+	其它级别的日志也是如此。
+2、文件路径 若开发、测试用，在Eclipse中运行项目，则到Eclipse的安装路径查找logs文件夹，以相对路径../logs。
+	若部署到Tomcat下，则在Tomcat下的logs文件中
+3、Appender FILEERROR对应error级别，文件名以log-error-xxx.log形式命名
+	FILEWARN对应warn级别，文件名以log-warn-xxx.log形式命名 FILEINFO对应info级别，文件名以log-info-xxx.log形式命名
+	FILEDEBUG对应debug级别，文件名以log-debug-xxx.log形式命名 stdout将日志信息输出到控制上，为方便开发测试使用
+-->
+<configuration>
+    <springProperty scope="context" name="LOG_HOME" source="spring.application.name"/>
+
+    <property name="maxSaveDays" value="365"/><!-- 日志最大保存天数 -->
+    <property name="maxFileSize" value="200MB"/><!-- 单个文件最大大小 -->
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) %green([${LOG_HOME}]) %magenta(${PID:-}) %white(---) %-20(%yellow([%20.20thread])) %-55(%cyan(%.32logger{30}:%L)) %highlight(- %msg%n)</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+<!--    <appender name="rollingFileConsole" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>C:\Users\swg\Desktop\xiaoxuxushop\yummyfoodlogs/yummyfood-console-%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
+            <maxHistory>${maxSaveDays}</maxHistory> &lt;!&ndash;max save days &ndash;&gt;
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>${maxFileSize}</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) %green([${LOG_HOME},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-Span-Export:-}]) %magenta(${PID:-}) %white(-&#45;&#45;) %-20(%yellow([%20.20thread])) %-55(%cyan(%.32logger{30}:%L)) %highlight(- %msg%n)</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>-->
+
+    <appender name="rollingFileInfo" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>D:\yummyfoodlog/yummyfood-info-%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
+            <maxHistory>${maxSaveDays}</maxHistory> <!--max save days -->
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>${maxFileSize}</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{"yyyy-MM-dd HH:mm:ss,SSS"}[%X{userId}|%X{sessionId}][%p][%c{0}-%M]-%m%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>DENY</onMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="rollingFileError" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>D:\yummyfoodlog/yummyfood-error-%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
+            <maxHistory>${maxSaveDays}</maxHistory> <!--max save days -->
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>${maxFileSize}</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{"yyyy-MM-dd HH:mm:ss,SSS"}[%X{userId}|%X{sessionId}][%p][%c{0}-%M]-%m%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- 生产环境，将此级别配置为适合的级别，以名日志文件太多或影响程序性能 -->
+    <root level="INFO">
+        <!--<appender-ref ref="rollingFileConsole"/>-->
+        <appender-ref ref="rollingFileInfo"/>
+        <appender-ref ref="rollingFileError"/>
+        <appender-ref ref="stdout"/>
+    </root>
+</configuration>

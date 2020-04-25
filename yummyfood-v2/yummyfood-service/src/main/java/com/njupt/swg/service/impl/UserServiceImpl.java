@@ -11,6 +11,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
@@ -29,6 +31,7 @@ public class UserServiceImpl implements IUserService {
     @Autowired
     private Sid sid;
 
+    @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public boolean queryUsernameIsExist(String username) {
         Example example = new Example(Users.class);
@@ -38,6 +41,7 @@ public class UserServiceImpl implements IUserService {
         return resUser != null;
     }
 
+    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public Users registNewUser(UserBO userBO) {
         Users user = new Users();
