@@ -14,22 +14,20 @@ import java.util.List;
 
 /**
  * @Author swg.
- * @Date 2020/3/23 21:17
+ * @Date 2020/5/1 17:04
  * @CONTACT 317758022@qq.com
  * @DESC
  */
 @Service
-    @Slf4j
-    public class CarouselServiceImpl implements ICarouselService {
-        @Autowired
-        private CarouselMapper carouselMapper;
+@Slf4j
+public class CarouselServiceImpl implements ICarouselService {
+    @Autowired
+    private CarouselMapper carouselMapper;
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public List<Carousel> queryAll(Integer isShow) {
-        log.info("查询轮播图数据列表开始，传入的参数isShow为：{}",isShow);
         Example example = new Example(Carousel.class);
-        //按照sort字段排序
         example.orderBy("sort").asc();
         Example.Criteria criteria = example.createCriteria();
         criteria.andEqualTo("isShow",isShow);

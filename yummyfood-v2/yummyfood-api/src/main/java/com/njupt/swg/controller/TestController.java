@@ -13,7 +13,7 @@ import springfox.documentation.annotations.ApiIgnore;
  * @CONTACT 317758022@qq.com
  * @DESC
  */
-//@ApiIgnore              //（swagger文档忽略这个接口显示）
+@ApiIgnore              //（swagger文档忽略这个接口显示）
 @RestController
 @RequestMapping("/test")
 public class TestController {
