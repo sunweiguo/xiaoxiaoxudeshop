@@ -23,3 +23,4 @@
 		- [4-2、【单体YummyFood商城补充知识2】-对于开闭原则、IOC、DI的理解](http://note.youdao.com/noteshare?id=ea3595daea99c8826f952e0409c60642&sub=4D376B8C0E9B495EA0D67542ECE361B0)
 	- [5、【单体YummyFood商城】-实现用户的注册、日志配置、Spring事务](http://note.youdao.com/noteshare?id=b0c409090514ae4df7be19a6b9ac4f00&sub=E9AADF78128642979543D22FBAFF5F40)
 	- [6、【单体YummyFood商城】-实现用户的登录和注销逻辑以及整合swagger2](http://note.youdao.com/noteshare?id=f8be880d71f4c72b48247affc22c37e2&sub=AD944B0310A3446F891D4109BE9B071F)
+	- [7、【单体YummyFood商城】-实现商品分类展示+轮播图展示](http://note.youdao.com/noteshare?id=ad7ff6a8cc5ac3e759569bfa248ee938&sub=11A4B9262C4F49EB9469EF2C17B2B8F8)
