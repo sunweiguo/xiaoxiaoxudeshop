@@ -52,4 +52,32 @@ public class ItemsController {
         itemInfoVO.setItemParams(itemsParam);
         return CommonJsonResult.ok(itemInfoVO);
     }
+
+    @ApiOperation(value = "查看商品评价等级",notes = "查看商品评价等级",httpMethod = "GET")
+    @GetMapping("/commentLevel")
+    public CommonJsonResult commentLevel(
+            @ApiParam(name = "itemId",value = "商品ID",required = true)
+            @RequestParam String itemId){
+        if(StringUtils.isBlank(itemId)){
+            return CommonJsonResult.errorMsg("");
+        }
+        return CommonJsonResult.ok(itemService.queryCommentCounts(itemId));
+    }
+
+    @ApiOperation(value = "商品的评价分页列表",notes = "商品的评价分页列表",httpMethod = "GET")
+    @GetMapping("/comments")
+    public CommonJsonResult comments(
+            @ApiParam(name = "itemId",value = "商品ID",required = true)
+            @RequestParam String itemId,
+            @ApiParam(name = "level",value = "评级的等级",required = false)
+            @RequestParam Integer level,
+            @ApiParam(name = "page",value = "当前页",required = true)
+            @RequestParam(name = "page",defaultValue = "0") Integer page,
+            @ApiParam(name = "pageSize",value = "每页显示的数量",required = true)
+            @RequestParam(name = "pageSize",defaultValue = "10") Integer pageSize){
+        if(StringUtils.isBlank(itemId)){
+            return CommonJsonResult.errorMsg("");
+        }
+        return CommonJsonResult.ok(itemService.queryPagedComments(itemId,level,page,pageSize));
+    }
 }
