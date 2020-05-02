@@ -3,6 +3,7 @@ package com.njupt.swg.mapper;
 import com.njupt.my.mapper.MyMapper.MyMapper;
 import com.njupt.swg.pojo.Category;
 import com.njupt.swg.vo.CategoryVO;
+import com.njupt.swg.vo.NewItemsVO;
 
 import java.util.List;
 
@@ -14,4 +15,5 @@ import java.util.List;
  */
 public interface CategoryMapperCustom extends MyMapper<Category> {
     List<CategoryVO> getSubCatList(Integer rootCatId);
+    List<NewItemsVO> getSixNewItemsLazy(Integer rootCatId);
 }
