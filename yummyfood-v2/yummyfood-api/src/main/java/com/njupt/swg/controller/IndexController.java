@@ -53,4 +53,15 @@ public class IndexController {
         return CommonJsonResult.ok(carouselService.queryAll(YesOrNo.YES.type));
     }
 
+    @ApiOperation(value = "获取每个一级分类下的最新6条商品数据",notes = "获取每个一级分类下的最新6条商品数据",httpMethod = "GET")
+    @GetMapping("sixNewItems/{rootCatId}")
+    public CommonJsonResult sixNewItems(
+            @ApiParam(name = "rootCatId",value = "一级分类ID",required = true)
+            @PathVariable Integer rootCatId){
+        if(rootCatId == null){
+            return CommonJsonResult.errorMsg("");
+        }
+        return CommonJsonResult.ok(categroyService.getSixNewItemsLazy(rootCatId));
+    }
+
 }
