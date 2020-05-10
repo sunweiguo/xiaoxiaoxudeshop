@@ -10,6 +10,7 @@ import com.njupt.swg.utils.DesensitizationUtil;
 import com.njupt.swg.utils.PagedGridResult;
 import com.njupt.swg.vo.CommentLevelCountsVO;
 import com.njupt.swg.vo.ItemCommentVO;
+import com.njupt.swg.vo.SearchItemsVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -126,5 +127,14 @@ public class ItemServiceImpl implements IItemService {
         //总页数
         grid.setTotal(pageList.getPages());
         return grid;
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public PagedGridResult searchItems(String keywords, String sort, Integer page, Integer pageSize) {
+        PageHelper.startPage(page, pageSize);
+        List<SearchItemsVO> list = itemsMapperCustom.searchItems(keywords,sort);
+        log.info("根据关键字：{}和排序规则：{}搜索到的商品列表分页数据为：{}",keywords,sort,list);
+        return setterPagedGrid(list,page);
     }
 }

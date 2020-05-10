@@ -80,4 +80,22 @@ public class ItemsController {
         }
         return CommonJsonResult.ok(itemService.queryPagedComments(itemId,level,page,pageSize));
     }
+
+
+    @ApiOperation(value = "商品搜索展示分页列表",notes = "商品搜索展示分页列表",httpMethod = "GET")
+    @GetMapping("/search")
+    public CommonJsonResult search(
+            @ApiParam(name = "keywords",value = "搜索关键字",required = false)
+            @RequestParam String keywords,
+            @ApiParam(name = "sort",value = "搜索的排序规则",required = false)
+            @RequestParam String sort,
+            @ApiParam(name = "page",value = "当前页",required = true)
+            @RequestParam(name = "page",defaultValue = "0") Integer page,
+            @ApiParam(name = "pageSize",value = "每页显示的数量",required = true)
+            @RequestParam(name = "pageSize",defaultValue = "20") Integer pageSize){
+        if(StringUtils.isBlank(keywords)){
+            return CommonJsonResult.errorMsg("");
+        }
+        return CommonJsonResult.ok(itemService.searchItems(keywords,sort,page,pageSize));
+    }
 }
