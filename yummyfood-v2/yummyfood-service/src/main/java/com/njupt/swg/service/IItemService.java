@@ -31,4 +31,7 @@ public interface IItemService {
     PagedGridResult queryPagedComments(String itemId, Integer level, Integer page, Integer pageSize);
     //搜索商品列表
     PagedGridResult searchItems(String keywords, String sort, Integer page, Integer pageSize);
+
+    //携带三级分类搜索商品列表
+    PagedGridResult searchCatItems(Integer catId, String sort, Integer page, Integer pageSize);
 }

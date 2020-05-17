@@ -54,4 +54,45 @@
     </select>
 
 
+    <select id="searchCatItems" parameterType="map" resultType="com.njupt.swg.vo.SearchItemsVO">
+        SELECT
+        i.item_name AS itemName,
+        i.id AS itemId,
+        i.sell_counts as sellCounts,
+        ii.url AS imgUrl,
+        tempSpec.price_discount as price
+        from items i
+        LEFT JOIN items_img ii
+        ON i.id = ii.item_id
+        LEFT JOIN
+        (
+        SELECT
+        item_id,MIN(price_discount) as price_discount
+        FROM
+        items_spec
+        GROUP BY
+        item_id
+        )tempSpec
+        ON i.id = tempSpec.item_id
+        LEFT JOIN category c
+        ON i.cat_id = c.id
+        where ii.is_main = 1
+        <if test="catId != null  and catId != ''">
+            and c.id=#{catId}
+        </if>
+        order by
+        <choose>
+            <when test="sort == &quot;c&quot;">
+                i.sell_counts desc
+            </when>
+            <when test="sort == &quot;p&quot;">
+                tempSpec.price_discount asc
+            </when>
+            <otherwise>
+                i.item_name asc
+            </otherwise>
+        </choose>
+    </select>
+
+
 </mapper>
