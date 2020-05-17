@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ce95c6f0-826e-4c05-8871-69013cfe66f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/ItemsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/ItemsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/ItemsMapperCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/ItemsMapperCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/ItemsMapperCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/ItemsMapperCustom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/ItemServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/ItemsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="104" column="35" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="35" />
+            <state relative-caret-position="317">
+              <caret line="44" column="75" lean-forward="true" selection-start-line="44" selection-start-column="75" selection-end-line="44" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -235,7 +230,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -705,7 +700,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589691057511" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589691336354" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../test" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -831,7 +826,7 @@
       <workItem from="1588399949320" duration="3935000" />
       <workItem from="1588403901854" duration="10032000" />
       <workItem from="1589095169050" duration="3100000" />
-      <workItem from="1589681107683" duration="1432000" />
+      <workItem from="1589681107683" duration="1796000" />
     </task>
     <task id="LOCAL-00001" summary="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化">
       <created>1586590009215</created>
@@ -896,14 +891,21 @@
       <option name="project" value="LOCAL" />
       <updated>1589097675782</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="提交人：fossi&#10;提交内容：&#10;1、根据商品三级分类搜索">
+      <created>1589691157817</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1589691157817</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52108000" />
+    <option name="totallyTimeSpent" value="52472000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17377399" />
@@ -1001,7 +1003,8 @@
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、首页分类最新六条商品数据展示&#10;2、商品详情页展示" />
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、商品评价列表分页展示" />
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、根据商品名称搜索" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交人：fossi&#10;提交内容：&#10;1、根据商品名称搜索" />
+    <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、根据商品三级分类搜索" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交人：fossi&#10;提交内容：&#10;1、根据商品三级分类搜索" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1414,8 +1417,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/ItemsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="104" column="35" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="35" />
+        <state relative-caret-position="317">
+          <caret line="44" column="75" lean-forward="true" selection-start-line="44" selection-start-column="75" selection-end-line="44" selection-end-column="75" />
         </state>
       </provider>
     </entry>
