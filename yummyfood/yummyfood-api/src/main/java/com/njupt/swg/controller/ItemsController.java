@@ -119,6 +119,7 @@ public class ItemsController {
             @ApiParam(name = "itemSpecIds",value = "购物车中的商品规格ID",required = false)
             @RequestParam String itemSpecIds){
         log.info("传入进来的商品规格ID为：{}",itemSpecIds);
+        //TODO 从redis中获取数据
         String[] specIdStrArr = itemSpecIds.split(",");
         List<String> itemSpecIdList = new ArrayList<>(Arrays.asList(specIdStrArr));
         return CommonJsonResult.ok(itemService.refreshCartItems(itemSpecIdList));
