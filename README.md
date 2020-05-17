@@ -23,17 +23,17 @@
 1. 单体项目代码：master-single这个分支,yummyfood这个文件夹是初步完成的单体项目后端源码、fossi-center和fossi-shop分别为前端代码，本地如何运行可先看我做的第一个笔记哦~
   
 2. 我将详细记录针对单体项目从0到1的笔记，达到看看我的笔记即可进行完整功能开发和上线部署的效果。敬请期待。
-	- [1、【单体YummyFood商城】-项目本地预览](http://note.youdao.com/noteshare?id=e6b4757288b117ea5336f0297805ea89&sub=D614DA7716D04274A5E10A1941B5D641)
-	- [2、【单体YummyFood商城】-后端工程初始化](http://note.youdao.com/noteshare?id=c3bbc66c0608e976acc6dcd38c6bd198&sub=B5D5FA2B291F48908FCC5CF533B55257)
-	- [3、【单体YummyFood商城】-数据库表分析和业务逻辑简单梳理](http://note.youdao.com/noteshare?id=ce5b84c8942dac62eb78fe50c0ac8fa1&sub=01F7EB278687446993E2C7F2BAF0F23E)
-	- [4、【单体YummyFood商城】-从写一个最简单的接口开始](http://note.youdao.com/noteshare?id=34f0b0dd5feaa073d8dc806a143fd944&sub=48B78AF12E80488CAE3C221286343A29)
-		- [4-1、【单体YummyFood商城补充知识1】-SpringBoot通用知识深入（切面、异常、单元测试）](http://note.youdao.com/noteshare?id=ee7298b0e4bf0d8a7034e1fff8b19192&sub=9951BF15DC994202A18D9C9D9E332D42)
-		- [4-2、【单体YummyFood商城补充知识2】-对于开闭原则、IOC、DI的理解](http://note.youdao.com/noteshare?id=ea3595daea99c8826f952e0409c60642&sub=4D376B8C0E9B495EA0D67542ECE361B0)
-	- [5、【单体YummyFood商城】-实现用户的注册、日志配置、Spring事务](http://note.youdao.com/noteshare?id=b0c409090514ae4df7be19a6b9ac4f00&sub=E9AADF78128642979543D22FBAFF5F40)
-	- [6、【单体YummyFood商城】-实现用户的登录和注销逻辑以及整合swagger2](http://note.youdao.com/noteshare?id=f8be880d71f4c72b48247affc22c37e2&sub=AD944B0310A3446F891D4109BE9B071F)
-	- [7、【单体YummyFood商城】-实现商品分类展示+轮播图展示](http://note.youdao.com/noteshare?id=ad7ff6a8cc5ac3e759569bfa248ee938&sub=11A4B9262C4F49EB9469EF2C17B2B8F8)
-	- [8、【单体YummyFood商城】-实现推荐商品列表展示和商品详情页](http://note.youdao.com/noteshare?id=f0ba9c23473d032ae5b80d8584bbf04e&sub=54E42DBC431448219E5906CEB1F936A7)
-	- [9、【单体YummyFood商城】-实现商品评价列表展示功能](http://note.youdao.com/noteshare?id=fc1067b4bf98708fd10736a2bef74277&sub=FA0F906C84C7450997B41199D5375008)
+	- [01、【单体YummyFood商城】-项目本地预览](http://note.youdao.com/noteshare?id=e6b4757288b117ea5336f0297805ea89&sub=D614DA7716D04274A5E10A1941B5D641)
+	- [02、【单体YummyFood商城】-后端工程初始化](http://note.youdao.com/noteshare?id=c3bbc66c0608e976acc6dcd38c6bd198&sub=B5D5FA2B291F48908FCC5CF533B55257)
+	- [03、【单体YummyFood商城】-数据库表分析和业务逻辑简单梳理](http://note.youdao.com/noteshare?id=ce5b84c8942dac62eb78fe50c0ac8fa1&sub=01F7EB278687446993E2C7F2BAF0F23E)
+	- [04、【单体YummyFood商城】-从写一个最简单的接口开始](http://note.youdao.com/noteshare?id=34f0b0dd5feaa073d8dc806a143fd944&sub=48B78AF12E80488CAE3C221286343A29)
+		- [04-1、【单体YummyFood商城补充知识1】-SpringBoot通用知识深入（切面、异常、单元测试）](http://note.youdao.com/noteshare?id=ee7298b0e4bf0d8a7034e1fff8b19192&sub=9951BF15DC994202A18D9C9D9E332D42)
+		- [04-2、【单体YummyFood商城补充知识2】-对于开闭原则、IOC、DI的理解](http://note.youdao.com/noteshare?id=ea3595daea99c8826f952e0409c60642&sub=4D376B8C0E9B495EA0D67542ECE361B0)
+	- [05、【单体YummyFood商城】-实现用户的注册、日志配置、Spring事务](http://note.youdao.com/noteshare?id=b0c409090514ae4df7be19a6b9ac4f00&sub=E9AADF78128642979543D22FBAFF5F40)
+	- [06、【单体YummyFood商城】-实现用户的登录和注销逻辑以及整合swagger2](http://note.youdao.com/noteshare?id=f8be880d71f4c72b48247affc22c37e2&sub=AD944B0310A3446F891D4109BE9B071F)
+	- [07、【单体YummyFood商城】-实现商品分类展示+轮播图展示](http://note.youdao.com/noteshare?id=ad7ff6a8cc5ac3e759569bfa248ee938&sub=11A4B9262C4F49EB9469EF2C17B2B8F8)
+	- [08、【单体YummyFood商城】-实现推荐商品列表展示和商品详情页](http://note.youdao.com/noteshare?id=f0ba9c23473d032ae5b80d8584bbf04e&sub=54E42DBC431448219E5906CEB1F936A7)
+	- [09、【单体YummyFood商城】-实现商品评价列表展示功能](http://note.youdao.com/noteshare?id=fc1067b4bf98708fd10736a2bef74277&sub=FA0F906C84C7450997B41199D5375008)
 	- [10、【单体YummyFood商城】-实现商品搜索](http://note.youdao.com/noteshare?id=57a0119dbdd54087c56e2c06c104ff5f&sub=8AA3AC5719304582A094D684F229253E)
 
 3. 关于git tag 老是忘记，tag就是一个标签，帮助我们回退到某个版本的代码，我们通过tag的名称即可回退，而不需要根据某个提冗长的commit ID来回退，算是版本记录的补充吧。这里记录下：

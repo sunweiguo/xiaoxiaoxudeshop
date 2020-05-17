@@ -8,6 +8,7 @@ import com.njupt.swg.pojo.*;
 import com.njupt.swg.service.IItemService;
 import com.njupt.swg.utils.DesensitizationUtil;
 import com.njupt.swg.utils.PagedGridResult;
+import com.njupt.swg.vo.CartItemVO;
 import com.njupt.swg.vo.CommentLevelCountsVO;
 import com.njupt.swg.vo.ItemCommentVO;
 import com.njupt.swg.vo.SearchItemsVO;
@@ -144,5 +145,11 @@ public class ItemServiceImpl implements IItemService {
         PageHelper.startPage(page, pageSize);
         List<SearchItemsVO> list = itemsMapperCustom.searchCatItems(catId,sort);
         return setterPagedGrid(list,page);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public List<CartItemVO> refreshCartItems(List<String> itemSpecIdList) {
+        return itemsMapperCustom.getAllNewCartItems(itemSpecIdList);
     }
 }

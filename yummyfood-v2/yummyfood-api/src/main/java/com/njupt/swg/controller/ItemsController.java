@@ -112,4 +112,15 @@ public class ItemsController {
             @RequestParam(name = "pageSize",defaultValue = "20") Integer pageSize){
         return CommonJsonResult.ok(itemService.searchCatItems(catId,sort,page,pageSize));
     }
+
+    @ApiOperation(value = "刷新购物车的内容",notes = "刷新购物车的内容",httpMethod = "GET")
+    @GetMapping("/refresh")
+    public CommonJsonResult refresh(
+            @ApiParam(name = "itemSpecIds",value = "购物车中的商品规格ID",required = false)
+            @RequestParam String itemSpecIds){
+        log.info("传入进来的商品规格ID为：{}",itemSpecIds);
+        String[] specIdStrArr = itemSpecIds.split(",");
+        List<String> itemSpecIdList = new ArrayList<>(Arrays.asList(specIdStrArr));
+        return CommonJsonResult.ok(itemService.refreshCartItems(itemSpecIdList));
+    }
 }

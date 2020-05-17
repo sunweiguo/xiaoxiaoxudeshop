@@ -1,5 +1,6 @@
 package com.njupt.swg.mapper;
 
+import com.njupt.swg.vo.CartItemVO;
 import com.njupt.swg.vo.ItemCommentVO;
 import com.njupt.swg.vo.SearchItemsVO;
 import org.apache.ibatis.annotations.Param;
@@ -18,4 +19,6 @@ public interface ItemsMapperCustom {
     List<SearchItemsVO> searchItems(@Param("keywords") String keywords, @Param("sort") String sort);
 
     List<SearchItemsVO> searchCatItems(@Param("catId")Integer catId,@Param("sort") String sort);
+
+    List<CartItemVO> getAllNewCartItems(@Param("itemSpecIdList")List<String> itemSpecIdList);
 }
