@@ -137,4 +137,12 @@ public class ItemServiceImpl implements IItemService {
         log.info("根据关键字：{}和排序规则：{}搜索到的商品列表分页数据为：{}",keywords,sort,list);
         return setterPagedGrid(list,page);
     }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public PagedGridResult searchCatItems(Integer catId, String sort, Integer page, Integer pageSize) {
+        PageHelper.startPage(page, pageSize);
+        List<SearchItemsVO> list = itemsMapperCustom.searchCatItems(catId,sort);
+        return setterPagedGrid(list,page);
+    }
 }
