@@ -37,7 +37,8 @@
 	- [08、【单体YummyFood商城】-实现推荐商品列表展示和商品详情页](http://note.youdao.com/noteshare?id=f0ba9c23473d032ae5b80d8584bbf04e&sub=54E42DBC431448219E5906CEB1F936A7)
 	- [09、【单体YummyFood商城】-实现商品评价列表展示功能](http://note.youdao.com/noteshare?id=fc1067b4bf98708fd10736a2bef74277&sub=FA0F906C84C7450997B41199D5375008)
 	- [10、【单体YummyFood商城】-实现商品搜索功能](http://note.youdao.com/noteshare?id=57a0119dbdd54087c56e2c06c104ff5f&sub=8AA3AC5719304582A094D684F229253E)
-	- [11、【单体YummyFood商城】-购物车相关逻辑实现](http://note.youdao.com/noteshare?id=fcf52b4f3482e81221c438358fe7b7c6&sub=50B743FDF2124056BF11FC92869C75B7)
+	- [11、【单体YummyFood商城】-实现购物车相关逻辑](http://note.youdao.com/noteshare?id=fcf52b4f3482e81221c438358fe7b7c6&sub=50B743FDF2124056BF11FC92869C75B7)
+	- [12、【单体YummyFood商城】-实现收货地址管理](http://note.youdao.com/noteshare?id=6dcd10a68fe0abcfe113b5990b25c75a&sub=CF29DA0E1A944EABAFFA572ED55E5BFD)
 
 3. 关于git tag 老是忘记，tag就是一个标签，帮助我们回退到某个版本的代码，我们通过tag的名称即可回退，而不需要根据某个提冗长的commit ID来回退，算是版本记录的补充吧。这里记录下：
 	- 查看本地tag：git tag 
