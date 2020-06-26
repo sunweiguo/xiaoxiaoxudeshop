@@ -32,6 +32,7 @@
 		- [04-1、【单体YummyFood商城补充知识1】-SpringBoot通用知识深入（切面、异常、单元测试）](http://note.youdao.com/noteshare?id=ee7298b0e4bf0d8a7034e1fff8b19192&sub=9951BF15DC994202A18D9C9D9E332D42)
 		- [04-2、【单体YummyFood商城补充知识2】-对于开闭原则、IOC、DI的理解](http://note.youdao.com/noteshare?id=ea3595daea99c8826f952e0409c60642&sub=4D376B8C0E9B495EA0D67542ECE361B0)
 		- [04-3、【单体YummyFood商城补充知识3】-Spring与SpringBoot基础注解学习](http://note.youdao.com/noteshare?id=d5a16905f73731a4dfe06d9736ed6c75&sub=1A7C8F3ED6414290A3CBD1403779A7C1)
+		- [04-4、【单体YummyFood商城补充知识4】-SpringBoot的条件注解与配置](http://note.youdao.com/noteshare?id=6b89ccaac0a489dd2d9c0cdf9463bcd1&sub=967CF31C4EE948619D81485DC6D65A7A)
 	- [05、【单体YummyFood商城】-实现用户的注册、日志配置、Spring事务](http://note.youdao.com/noteshare?id=b0c409090514ae4df7be19a6b9ac4f00&sub=E9AADF78128642979543D22FBAFF5F40)
 	- [06、【单体YummyFood商城】-实现用户的登录和注销逻辑以及整合swagger2](http://note.youdao.com/noteshare?id=f8be880d71f4c72b48247affc22c37e2&sub=AD944B0310A3446F891D4109BE9B071F)
 	- [07、【单体YummyFood商城】-实现商品分类展示+轮播图展示](http://note.youdao.com/noteshare?id=ad7ff6a8cc5ac3e759569bfa248ee938&sub=11A4B9262C4F49EB9469EF2C17B2B8F8)
