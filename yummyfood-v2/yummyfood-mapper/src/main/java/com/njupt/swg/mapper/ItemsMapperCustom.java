@@ -21,4 +21,6 @@ public interface ItemsMapperCustom {
     List<SearchItemsVO> searchCatItems(@Param("catId")Integer catId,@Param("sort") String sort);
 
     List<CartItemVO> getAllNewCartItems(@Param("itemSpecIdList")List<String> itemSpecIdList);
+
+    Integer decreaseItemsSpecStock(@Param("buyCounts") Integer buyCounts, @Param("specId") String specId);
 }

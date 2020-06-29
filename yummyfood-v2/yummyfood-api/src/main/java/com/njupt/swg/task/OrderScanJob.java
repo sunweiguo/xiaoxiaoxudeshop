@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 
 /**
  * @Author swg.
- * @Date 2020/3/29 20:14
+ * @Date 2020/6/29 22:18
  * @CONTACT 317758022@qq.com
- * @DESC 定时扫描超时未支付的订单
+ * @DESC
  */
 @Component
 @Slf4j
