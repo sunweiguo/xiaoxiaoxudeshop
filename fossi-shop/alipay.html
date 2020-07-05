@@ -48,10 +48,17 @@
                                     <span>支付金额：<em class="rmb"><i>¥</i>{{paymentInfo.amount / 100}}</em></span>
                                 </div>
                             </div> -->
-                            <div>
+                            <!-- <div>
                                 <img src="img/loading.gif" style="height:90px;"/>
                                 <span class="hit-words">订单[<em style="color: #0ac265">{{orderId}}</em>]正在支付中，请耐心等待...</span>
+                            </div> -->
+                            <!-- <div>
+                                <img :src="img_src" style="width:100px;height:130px">
+                            </div> -->
+                            <div class="filePic">
+                                <img class="am-circle am-img-thumbnail" :src="img_src" alt="" />
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -81,6 +88,7 @@
                 amount: 0,
 
                 alipayForm: "",
+                img_src:"",
             },
             created() {
                 // var me = this;
@@ -98,11 +106,43 @@
                 this.amount = amount;
 
                 this.orderId = orderId;
+                this.getAliPayForm(orderId);
 
                 // 每个3秒调用后台方法，查看订单是否已经支付成功
                 this.setTimer();
             },
             methods: {
+                // 获得支付宝构建的支付提交form 
+                getAliPayForm(orderId) {
+                    var userInfo = this.userInfo;
+
+                    // 发起请求获得微信支付扫描二维码
+                    var paymentServerUrl = app.paymentServerUrl;
+                    axios.defaults.withCredentials = true;
+                    axios.post(
+                            paymentServerUrl + '/payment/goAlipay?userId=' + userInfo.id + "&orderId=" + orderId, 
+                            {},
+                            {
+                                headers: {
+                                    'imoocUserId': "6213108-909734628",
+                                    'password': "3a6e-wo0f-19tg-pk0a"
+                                }
+                            })
+                            .then(res => {
+                                if (res.data.status == 200) {
+                                    img_src = res.data.data;
+                                    console.log(img_src);
+                                    this.img_src = img_src;
+                                    // payQrUrl: require(payQrUrl);
+
+                                    // this.alipayForm = alipayForm;
+
+                                    // document.write(payQrUrl);
+                                } else {
+                                    alert(res.data.msg);
+                                }
+                            });
+                },
                 setTimer() {
                     return setInterval(()=>{
                         this.checkPayResult()

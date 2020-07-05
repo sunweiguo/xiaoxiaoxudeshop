@@ -554,7 +554,7 @@
 					this.buyCounts = tmpCounts;
 				},
 				addToCart() {
-					// 由于cookie大小限制为4k，另外第一阶段是没有redis的，所以相关暂存性内容会存入到cookie中
+					// 由于cookie大小限制为4k，另外课程第一阶段是没有redis的，所以相关暂存性内容会存入到cookie中
 					var shopcartCounts = app.getShopcartItemCounts();
 					if (shopcartCounts >= 8) {
 						alert("您购物车中的食物太多啦~请把它们带回家吧~！");
@@ -613,7 +613,16 @@
 							});
 					}
 
-					alert("亲，商品添加至购物车成功！");
+					alert("商品添加至购物车成功！");
+
+					// 以下仅供测试观察数据
+					// var foodieShopcartCookie = app.getCookie("shopcart");
+					// var foodieShopcart = [];
+					// if (foodieShopcartCookie != null && foodieShopcartCookie != "" && foodieShopcartCookie != undefined) {
+					// 	var foodieShopcartStr = decodeURIComponent(foodieShopcartCookie);
+					// 	foodieShopcart = JSON.parse(foodieShopcartStr);
+					// }
+					// console.log(foodieShopcart);
 
 					// 刷新购物车数量
 					this.shopcartItemCounts = app.getShopcartItemCounts();

@@ -17,7 +17,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @MapperScan(basePackages = "com.njupt.swg.mapper")
 @ComponentScan(basePackages = {"com.njupt.swg","org.n3r.idworker"})
 //开启定时任务
-@EnableScheduling
+//@EnableScheduling
 public class YummyFoodApplication {
     public static void main(String[] args) {
         SpringApplication.run(YummyFoodApplication.class,args);
