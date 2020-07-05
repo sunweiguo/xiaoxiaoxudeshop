@@ -132,7 +132,7 @@
 				<div class="logistics">
 					<h3>选择支付方式</h3>
 					<ul class="pay-list">
-						<li class="" @click="choosePayMethod(1)" style="width: 180px;height:40px;padding:3px;"><img src="img/wxpay.png"/><span></span></li>
+						<!-- <li class="" @click="choosePayMethod(1)" style="width: 180px;height:40px;padding:3px;"><img src="img/wxpay.png"/><span></span></li> -->
 						<!-- <li class="pay qq" @click="choosePayMethod(1)"><img src="images/weizhifu.jpg"/>微信<span></span></li> -->
 						<!-- <li class="pay taobao" @click="choosePayMethod(2)"><img src="images/zhifubao.jpg"/>支付宝<span></span></li> -->
 						<li class="" @click="choosePayMethod(2)" style="width: 180px;height:40px;padding:3px;"><img src="img/alipay.png"/><span></span></li>
@@ -551,7 +551,7 @@
 
 										// 支付宝支付直接跳转
 										window.location.href = "alipay.html?orderId=" + orderId + "&amount="+this.totalAmount;
-										window.open("alipayTempTransit.html?orderId=" + orderId);
+										// window.open("alipayTempTransit.html?orderId=" + orderId);
 										// const newWindow = window.open();
 										// 弹出的新窗口进行支付
 										// newWindow.location = "alipayTempTransit.html?orderId=" + orderId;
