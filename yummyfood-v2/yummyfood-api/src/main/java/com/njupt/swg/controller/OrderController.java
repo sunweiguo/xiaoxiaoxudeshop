@@ -1,6 +1,8 @@
 package com.njupt.swg.controller;
 
+import com.njupt.swg.enums.OrderStatusEnum;
 import com.njupt.swg.enums.PayMethod;
+import com.njupt.swg.pojo.OrderStatus;
 import com.njupt.swg.service.IOrderService;
 import com.njupt.swg.utils.CommonJsonResult;
 import com.njupt.swg.utils.CookieUtils;
@@ -10,10 +12,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -59,6 +58,15 @@ public class OrderController {
         CookieUtils.setCookie(request,response,"shopcart","",true);
         //3. TODO 支付
         return CommonJsonResult.ok(orderid);
+    }
+
+
+    @PostMapping("getPaidOrderInfo")
+    public CommonJsonResult pay(@RequestParam("orderId") String orderId){
+        log.info("传递进来的orderId为：{}",orderId);
+        OrderStatus orderStatus = new OrderStatus();
+        orderStatus.setOrderStatus(OrderStatusEnum.WAIT_DELIVER.type);
+        return CommonJsonResult.ok(orderStatus);
     }
 
 }
