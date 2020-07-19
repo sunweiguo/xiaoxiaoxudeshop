@@ -44,7 +44,7 @@ public class CommonJsonResult {
     public static CommonJsonResult build(Integer status, String msg, Object data, String ok) {
         return new CommonJsonResult(status, msg, data, ok);
     }
-    
+
     public static CommonJsonResult ok(Object data) {
         return new CommonJsonResult(data);
     }
