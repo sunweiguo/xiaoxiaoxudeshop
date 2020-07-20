@@ -1,0 +1,8 @@
+*~
+*.swp
+target/
+.idea/
+.DS_Store
+*.iml
+*.class
+bin/
