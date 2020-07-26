@@ -1,12 +1,16 @@
 package com.njupt.swg.controller;
 
+import com.njupt.swg.service.IPayService;
 import com.njupt.swg.utils.CommonJsonResult;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @Author swg.
@@ -20,11 +24,15 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class PayController {
 
+    @Autowired
+    private IPayService paySerivce;
+
     @PostMapping("goAlipay")
     public CommonJsonResult pay(@RequestParam("userId") String userId, @RequestParam("orderId") String orderId){
         log.info("传递进来的userID为：{}，orderId为：{}",userId,orderId);
-
-        return CommonJsonResult.ok("http://xiaozhao.oursnail.cn/1442902-66a45c92a322d462.gif");
+//        TODO：1、横向越权判断
+//    2、预下单，生成支付二维码图片
+        return paySerivce.pay(userId,orderId);
     }
 
 

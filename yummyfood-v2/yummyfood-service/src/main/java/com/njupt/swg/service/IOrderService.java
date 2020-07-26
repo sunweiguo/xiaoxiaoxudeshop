@@ -1,6 +1,10 @@
 package com.njupt.swg.service;
 
+import com.njupt.swg.pojo.OrderItems;
+import com.njupt.swg.pojo.Orders;
 import com.njupt.swg.vo.SubmitOrderVO;
+
+import java.util.List;
 
 /**
  * @Author swg.
@@ -13,4 +17,9 @@ public interface IOrderService {
     String createOrder(SubmitOrderVO submitOrderVO);
 
     int closeOrder();
+
+    //根据工单号查询工单主表记录
+    Orders selectByOrderNo(String orderNo);
+
+    List<OrderItems> getByOrderNoUserId(String orderNo);
 }

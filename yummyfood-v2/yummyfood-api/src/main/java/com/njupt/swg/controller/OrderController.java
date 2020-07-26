@@ -61,12 +61,12 @@ public class OrderController {
     }
 
 
-    @PostMapping("getPaidOrderInfo")
-    public CommonJsonResult pay(@RequestParam("orderId") String orderId){
-        log.info("传递进来的orderId为：{}",orderId);
-        OrderStatus orderStatus = new OrderStatus();
-        orderStatus.setOrderStatus(OrderStatusEnum.WAIT_DELIVER.type);
-        return CommonJsonResult.ok(orderStatus);
-    }
+//    @PostMapping("getPaidOrderInfo")
+//    public CommonJsonResult pay(@RequestParam("orderId") String orderId){
+//        log.info("传递进来的orderId为：{}",orderId);
+//        OrderStatus orderStatus = new OrderStatus();
+//        orderStatus.setOrderStatus(OrderStatusEnum.WAIT_DELIVER.type);
+//        return CommonJsonResult.ok(orderStatus);
+//    }
 
 }

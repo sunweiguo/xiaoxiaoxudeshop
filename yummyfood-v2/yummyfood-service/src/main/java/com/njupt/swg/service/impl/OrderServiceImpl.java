@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
 import java.util.List;
@@ -150,5 +151,21 @@ public class OrderServiceImpl implements IOrderService {
         orderStatus.setOrderId(orderId);
         orderStatus.setCloseTime(new Date());
         orderStatusMapper.updateByPrimaryKeySelective(orderStatus);
+    }
+
+
+    @Override
+    public Orders selectByOrderNo(String orderNo) {
+        Orders orders = new Orders();
+        orders.setId(orderNo);
+        return ordersMapper.selectByPrimaryKey(orders);
+    }
+
+    @Override
+    public List<OrderItems> getByOrderNoUserId(String orderNo) {
+        Example example = new Example(OrderItems.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("orderId",orderNo);
+        return orderItemsMapper.selectByExample(example);
     }
 }
