@@ -2,135 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce95c6f0-826e-4c05-8871-69013cfe66f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/BigDecimalUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/QRCodeUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/QiniuFileUploadUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IPayService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/PayServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yummyfood-service/src/main/resources/parameter.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yummyfood-service/src/main/resources/zfbinfo.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/CommonJsonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/CommonJsonResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-api/target/yummyfood-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/target/yummyfood-api-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-common/target/yummyfood-common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/target/yummyfood-common-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/target/yummyfood-mapper-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/target/yummyfood-mapper-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-pojo/target/yummyfood-pojo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-pojo/target/yummyfood-pojo-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-service/target/yummyfood-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/target/yummyfood-service-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/yummyfood-api/target/" />
-    <ignored path="$PROJECT_DIR$/yummyfood-service/target/" />
-    <ignored path="$PROJECT_DIR$/yummyfood-mapper/target/" />
-    <ignored path="$PROJECT_DIR$/yummyfood-pojo/target/" />
-    <ignored path="$PROJECT_DIR$/yummyfood-common/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/OrderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/enums/OrderStatusEnum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/OrderStatus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PayController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/CommonJsonResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-              <folding>
-                <element signature="e#1147#1148#0" expanded="true" />
-                <element signature="e#1196#1197#0" expanded="true" />
-                <element signature="e#1239#1240#0" expanded="true" />
-                <element signature="e#1288#1289#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2875">
-              <caret line="115" column="21" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IOrderService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/OrderServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="138" column="24" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/task/OrderScanJob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/YummyFoodApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -140,71 +42,8 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>service</find>
-      <find>log</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IUserService.java" />
-        <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/Swagger2.java" />
-        <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PassportController.java" />
-        <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/Category.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/Carousel.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/Items.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/ItemsComments.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/ItemsImg.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/ItemsParam.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/ItemsSpec.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/OrderItems.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/Orders.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/OrderStatus.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/UserAddress.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/Users.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/vo/CategoryVO.java" />
-        <option value="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/ICarouselService.java" />
-        <option value="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/CarouselServiceImpl.java" />
-        <option value="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/ICategroyService.java" />
-        <option value="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/CategoryMapperCustom.java" />
-        <option value="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/CategoryMapperCustom.xml" />
-        <option value="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/CategroyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/vo/ItemInfoVO.java" />
-        <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/vo/CommentLevelCountsVO.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/vo/ItemCommentVO.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/vo/SearchItemsVO.java" />
-        <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/ShopcartController.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/bo/ShopcartBO.java" />
-        <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/ItemsController.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/vo/CartItemVO.java" />
-        <option value="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IAddressService.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/bo/AddressNewAddBO.java" />
-        <option value="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/AddressServiceImpl.java" />
-        <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/AddressController.java" />
-        <option value="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/vo/SubmitOrderVO.java" />
-        <option value="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IItemService.java" />
-        <option value="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/ItemServiceImpl.java" />
-        <option value="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/ItemsMapperCustom.java" />
-        <option value="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/ItemsMapperCustom.xml" />
-        <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/task/OrderScanJob.java" />
-        <option value="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IOrderService.java" />
-        <option value="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/YummyFoodApplication.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PayController.java" />
-        <option value="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/CommonJsonResult.java" />
-        <option value="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/OrderController.java" />
-      </list>
-    </option>
   </component>
   <component name="JsFlowSettings">
     <service-enabled>false</service-enabled>
@@ -218,371 +57,16 @@
         <option name="userSettingsFile" value="D:\apache-maven-3.5.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="yummyfood-v2" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="yummyfood-v2" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1" />
-    <option name="y" value="-8" />
-    <option name="width" value="1932" />
-    <option name="height" value="1053" />
-  </component>
+  <component name="ProjectId" id="1fCwS1uJyFPdjT530GbE4gtrVA8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-              <item name="swg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-              <item name="swg" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-              <item name="swg" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-              <item name="swg" type="462c0819:PsiDirectoryNode" />
-              <item name="task" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-              <item name="swg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-              <item name="swg" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-pojo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-pojo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-pojo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-pojo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-pojo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-pojo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-pojo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-              <item name="swg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-pojo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-              <item name="swg" type="462c0819:PsiDirectoryNode" />
-              <item name="vo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-              <item name="swg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-              <item name="swg" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yummyfood-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="yummyfood-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="njupt" type="462c0819:PsiDirectoryNode" />
-              <item name="swg" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yummyfood-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="GO_FMT" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -593,15 +77,19 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593953786624" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../mailtest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/yummyfood-service/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-service\src\main\resources" />
+      <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-api\src\main\resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.njupt.swg.service" />
       <recent name="com.njupt.swg.bo" />
@@ -610,24 +98,12 @@
       <recent name="com.njupt.swg.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-service\src\main\resources" />
       <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-mapper\src\main\resources\mapper" />
       <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-api\src\main\resources" />
       <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-api" />
       <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-common" />
-      <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-mapper" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.YummyFoodApplication">
     <configuration default="true" type="Applet">
@@ -643,6 +119,7 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -675,6 +152,7 @@
       </method>
     </configuration>
     <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <properties />
       <listeners />
@@ -722,6 +200,9 @@
       <workItem from="1593435568187" duration="13167000" />
       <workItem from="1595077423491" duration="102000" />
       <workItem from="1595147469754" duration="3532000" />
+      <workItem from="1595733671900" duration="238000" />
+      <workItem from="1595735400856" duration="714000" />
+      <workItem from="1595754785015" duration="12743000" />
     </task>
     <task id="LOCAL-00001" summary="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化">
       <created>1586590009215</created>
@@ -824,97 +305,8 @@
     <option name="localTasksCounter" value="15" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77963000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19083156" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Nl-Palette" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Web" order="6" side_tool="true" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32849163" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4914712" visible="true" weight="0.3546638" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49573562" weight="0.32104123" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50852877" side_tool="true" weight="0.3385475" />
-      <window_info anchor="bottom" id="Java Enterprise" order="8" weight="0.32994923" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49573562" weight="0.10303687" />
-      <window_info anchor="bottom" id="Spring" order="10" weight="0.32994923" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.14859003" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.24295011" />
-      <window_info anchor="bottom" id="Application Servers" order="13" weight="0.32960895" />
-      <window_info anchor="bottom" id="Statistic" order="14" />
-      <window_info anchor="bottom" id="Database Changes" order="15" />
-      <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Properties" order="4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.32995737" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Bean Validation" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Maven Projects" order="10" weight="0.1609808" />
-      <window_info anchor="right" id="BPMNPalette" order="11" />
-      <window_info anchor="right" id="Maven" order="12" weight="0.10501066" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17697228" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Nl-Palette" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Web" order="6" side_tool="true" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32849163" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4914712" weight="0.22342733" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49573562" visible="true" weight="0.29175705" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50852877" side_tool="true" weight="0.3385475" />
-      <window_info anchor="bottom" id="Java Enterprise" order="8" weight="0.32994923" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49573562" weight="0.10303687" />
-      <window_info anchor="bottom" id="Spring" order="10" weight="0.32994923" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.14859003" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.24295011" />
-      <window_info anchor="bottom" id="Application Servers" order="13" weight="0.32960895" />
-      <window_info anchor="bottom" id="Statistic" order="14" />
-      <window_info anchor="bottom" id="Database Changes" order="15" />
-      <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Properties" order="4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.32995737" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Bean Validation" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Maven Projects" order="10" weight="0.1609808" />
-      <window_info anchor="right" id="BPMNPalette" order="11" />
-      <window_info anchor="right" id="Maven" order="12" visible="true" weight="0.10501066" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化" />
@@ -932,453 +324,111 @@
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、订单创建&#10;2、定时任务扫描超时订单" />
     <option name="LAST_COMMIT_MESSAGE" value="提交人：fossi&#10;提交内容：&#10;1、订单创建&#10;2、定时任务扫描超时订单" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1595759099808">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595759099808" />
+    <state x="384" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595765865668">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="384" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595765865668" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1595744174474">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595744174474" />
+    <state width="1877" height="158" key="GridCell.Tab.0.bottom" timestamp="1595772549127">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549127" />
+    <state width="1877" height="158" key="GridCell.Tab.0.center" timestamp="1595772549127">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549127" />
+    <state width="1877" height="158" key="GridCell.Tab.0.left" timestamp="1595772549127">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549127" />
+    <state width="1877" height="158" key="GridCell.Tab.0.right" timestamp="1595772549127">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549127" />
+    <state width="1877" height="158" key="GridCell.Tab.1.bottom" timestamp="1595772549128">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549128" />
+    <state width="1877" height="158" key="GridCell.Tab.1.center" timestamp="1595772549128">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549128" />
+    <state width="1877" height="158" key="GridCell.Tab.1.left" timestamp="1595772549127">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549127" />
+    <state width="1877" height="158" key="GridCell.Tab.1.right" timestamp="1595772549128">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549128" />
+    <state width="1877" height="262" key="GridCell.Tab.2.bottom" timestamp="1595771951869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="262" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595771951869" />
+    <state width="1877" height="262" key="GridCell.Tab.2.center" timestamp="1595771951869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="262" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595771951869" />
+    <state width="1877" height="262" key="GridCell.Tab.2.left" timestamp="1595771951869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="262" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595771951869" />
+    <state width="1877" height="262" key="GridCell.Tab.2.right" timestamp="1595771951869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="262" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595771951869" />
+    <state x="633" y="191" key="SettingsEditor" timestamp="1595735429736">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="633" y="191" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595735429736" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1595772670399">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772670399" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/ItemServiceImpl.java</url>
           <line>73</line>
-          <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://D:/Repositories/Maven/org/mybatis/mybatis/3.5.2/mybatis-3.5.2.jar!/org/apache/ibatis/binding/MapperMethod.class</url>
           <line>40</line>
-          <properties />
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/PayServiceImpl.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/QRCodeUtil.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/QRCodeUtil.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/QiniuFileUploadUtil.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/security/Provider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="698" column="8" selection-start-line="698" selection-start-column="8" selection-end-line="698" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Properties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2082">
-          <caret line="164" column="31" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
-          <folding>
-            <element signature="e#5711#5712#0" expanded="true" />
-            <element signature="e#5749#5750#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Repositories/Maven/com/github/pagehelper/pagehelper-spring-boot-autoconfigure/1.2.12/pagehelper-spring-boot-autoconfigure-1.2.12.jar!/com/github/pagehelper/autoconfigure/PageHelperProperties.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-197">
-          <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
-          <folding>
-            <element signature="e#2234#2235#0" expanded="true" />
-            <element signature="e#2309#2310#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/PagedGridResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Repositories/Maven/com/github/pagehelper/pagehelper/5.1.10/pagehelper-5.1.10.jar!/com/github/pagehelper/Page.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Repositories/Maven/com/github/pagehelper/pagehelper/5.1.10/pagehelper-5.1.10.jar!/com/github/pagehelper/page/PageMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1821">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding>
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Repositories/Maven/com/github/pagehelper/pagehelper/5.1.10/pagehelper-5.1.10.jar!/com/github/pagehelper/PageHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="61" column="96" lean-forward="true" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Repositories/Maven/org/mybatis/mybatis/3.5.2/mybatis-3.5.2.jar!/org/apache/ibatis/binding/MapperProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Repositories/Maven/com/github/pagehelper/pagehelper/5.1.10/pagehelper-5.1.10.jar!/com/github/pagehelper/PageInfo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="46" column="35" lean-forward="true" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
-          <folding>
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Repositories/Maven/org/mybatis/mybatis/3.5.2/mybatis-3.5.2.jar!/org/apache/ibatis/binding/MapperMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="129" column="38" lean-forward="true" selection-start-line="129" selection-start-column="38" selection-end-line="129" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Repositories/Maven/org/mybatis/mybatis/3.5.2/mybatis-3.5.2.jar!/org/apache/ibatis/session/SqlSessionManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="171" column="41" selection-start-line="171" selection-start-column="41" selection-end-line="171" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Repositories/Maven/org/mybatis/mybatis-spring/2.0.2/mybatis-spring-2.0.2.jar!/org/mybatis/spring/SqlSessionTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="103" column="40" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Repositories/Maven/org/mybatis/mybatis/3.5.2/mybatis-3.5.2.jar!/org/apache/ibatis/session/SqlSession.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Repositories/Maven/org/mybatis/mybatis/3.5.2/mybatis-3.5.2.jar!/org/apache/ibatis/session/defaults/DefaultSqlSession.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="123" column="34" selection-start-line="123" selection-start-column="34" selection-end-line="123" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Repositories/Maven/org/mybatis/mybatis/3.5.2/mybatis-3.5.2.jar!/org/apache/ibatis/executor/Executor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Repositories/Maven/org/mybatis/mybatis/3.5.2/mybatis-3.5.2.jar!/org/apache/ibatis/executor/BaseExecutor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="206" column="17" lean-forward="true" selection-start-line="206" selection-start-column="17" selection-end-line="206" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/vo/SearchItemsVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="63" column="59" lean-forward="true" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1789#1790#0" expanded="true" />
-            <element signature="e#1875#1876#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/ICategroyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/CategoryMapperCustom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/CategoryMapperCustom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PassportController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/bo/ShopcartBO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/CategroyServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="54" column="60" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/vo/CartItemVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Repositories/Maven/tk/mybatis/mapper-base/1.1.5/mapper-base-1.1.5.jar!/tk/mybatis/mapper/common/base/select/SelectCountMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/AddressController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3100">
-          <caret line="133" column="36" selection-start-line="133" selection-start-column="36" selection-end-line="133" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/Swagger2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IAddressService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="23" column="52" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/bo/AddressNewAddBO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" selection-start-line="12" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/AddressServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="120" column="45" selection-start-line="120" selection-start-column="45" selection-end-line="120" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/enums/PayMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/vo/SubmitOrderVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/enums/YesOrNo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/ItemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="178" column="46" selection-start-line="178" selection-start-column="46" selection-end-line="178" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5962#5963#0" expanded="true" />
-            <element signature="e#5989#5990#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/ItemsMapperCustom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/ItemsMapperCustom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="125" selection-start-line="125" selection-end-line="134" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/ItemsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1625">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/ShopcartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2875">
-          <caret line="115" column="21" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IOrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/YummyFoodApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/task/OrderScanJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="138" column="24" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/CommonJsonResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#1147#1148#0" expanded="true" />
-            <element signature="e#1196#1197#0" expanded="true" />
-            <element signature="e#1239#1240#0" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/pojo/OrderStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/enums/OrderStatusEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PayController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

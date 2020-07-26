@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="yummyfood-api" />
-        <module name="yummyfood-common" />
         <module name="yummyfood-mapper" />
-        <module name="yummyfood-pojo" />
+        <module name="yummyfood-api" />
         <module name="yummyfood-service" />
+        <module name="yummyfood-pojo" />
+        <module name="yummyfood-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8" />
