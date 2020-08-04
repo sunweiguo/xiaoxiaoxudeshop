@@ -38,7 +38,7 @@ public class QiniuFileUploadUtil {
         String bucket = Constants.QINIU_HEAD_IMG_BUCKET_NAME;
         try {
             Auth auth = Auth.create(accessKey, secretKey);
-            String upToken = auth.uploadToken(bucket);
+            String upToken = auth.uploadToken(bucket,name);
             try {
                 Response response = uploadManager.put(stream, name, upToken, null, null);
                 // 解析上传成功的结果
