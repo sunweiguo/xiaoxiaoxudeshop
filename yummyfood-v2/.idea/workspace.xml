@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce95c6f0-826e-4c05-8871-69013cfe66f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/BigDecimalUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/QRCodeUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/QiniuFileUploadUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IPayService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/PayServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-service/src/main/resources/parameter.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-service/src/main/resources/zfbinfo.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/target/yummyfood-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/target/yummyfood-api-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-common/target/yummyfood-common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/target/yummyfood-common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/target/yummyfood-mapper-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/target/yummyfood-mapper-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-pojo/target/yummyfood-pojo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-pojo/target/yummyfood-pojo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/IOrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/target/yummyfood-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/target/yummyfood-service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/QiniuFileUploadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/QiniuFileUploadUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +180,9 @@
       <workItem from="1595147469754" duration="3532000" />
       <workItem from="1595733671900" duration="238000" />
       <workItem from="1595735400856" duration="714000" />
-      <workItem from="1595754785015" duration="12743000" />
+      <workItem from="1595754785015" duration="13320000" />
+      <workItem from="1595857363721" duration="3015000" />
+      <workItem from="1595943912026" duration="2013000" />
     </task>
     <task id="LOCAL-00001" summary="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化">
       <created>1586590009215</created>
@@ -302,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593519769916</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="提交人：fossi&#10;提交内容：&#10;1、请求支付宝预下单&#10;2、生成二维码&#10;3、二维码上传至七牛云并回显在页面等待扫码&#10;4、彩色二维码">
+      <created>1595773001571</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1595773001571</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +309,8 @@
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、购物车商品的添加、删除和列表展示" />
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、收货地址的增删改查" />
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、订单创建&#10;2、定时任务扫描超时订单" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交人：fossi&#10;提交内容：&#10;1、订单创建&#10;2、定时任务扫描超时订单" />
+    <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、请求支付宝预下单&#10;2、生成二维码&#10;3、二维码上传至七牛云并回显在页面等待扫码&#10;4、彩色二维码" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交人：fossi&#10;提交内容：&#10;1、请求支付宝预下单&#10;2、生成二维码&#10;3、二维码上传至七牛云并回显在页面等待扫码&#10;4、彩色二维码" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1595759099808">
@@ -333,62 +321,82 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="384" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595765865668" />
+    <state x="379" y="47" key="CommitChangelistDialog2" timestamp="1595772999745">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="379" y="47" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772999745" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1595744174474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595744174474" />
-    <state width="1877" height="158" key="GridCell.Tab.0.bottom" timestamp="1595772549127">
+    <state width="1877" height="400" key="GridCell.Tab.0.bottom" timestamp="1595948723076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="158" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549127" />
-    <state width="1877" height="158" key="GridCell.Tab.0.center" timestamp="1595772549127">
+    <state width="1877" height="230" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595947438287" />
+    <state width="1877" height="400" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595948723076" />
+    <state width="1877" height="400" key="GridCell.Tab.0.center" timestamp="1595948723076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="158" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549127" />
-    <state width="1877" height="158" key="GridCell.Tab.0.left" timestamp="1595772549127">
+    <state width="1877" height="230" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595947438287" />
+    <state width="1877" height="400" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595948723076" />
+    <state width="1877" height="400" key="GridCell.Tab.0.left" timestamp="1595948723075">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="158" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549127" />
-    <state width="1877" height="158" key="GridCell.Tab.0.right" timestamp="1595772549127">
+    <state width="1877" height="230" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595947438287" />
+    <state width="1877" height="400" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595948723075" />
+    <state width="1877" height="400" key="GridCell.Tab.0.right" timestamp="1595948723076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="158" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549127" />
-    <state width="1877" height="158" key="GridCell.Tab.1.bottom" timestamp="1595772549128">
+    <state width="1877" height="230" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595947438287" />
+    <state width="1877" height="400" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595948723076" />
+    <state width="1877" height="400" key="GridCell.Tab.1.bottom" timestamp="1595948723076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="158" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549128" />
-    <state width="1877" height="158" key="GridCell.Tab.1.center" timestamp="1595772549128">
+    <state width="1877" height="230" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595947438920" />
+    <state width="1877" height="400" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595948723076" />
+    <state width="1877" height="400" key="GridCell.Tab.1.center" timestamp="1595948723076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="158" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549128" />
-    <state width="1877" height="158" key="GridCell.Tab.1.left" timestamp="1595772549127">
+    <state width="1877" height="230" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595947438919" />
+    <state width="1877" height="400" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595948723076" />
+    <state width="1877" height="400" key="GridCell.Tab.1.left" timestamp="1595948723076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="158" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549127" />
-    <state width="1877" height="158" key="GridCell.Tab.1.right" timestamp="1595772549128">
+    <state width="1877" height="230" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595947438919" />
+    <state width="1877" height="400" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595948723076" />
+    <state width="1877" height="400" key="GridCell.Tab.1.right" timestamp="1595948723076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="158" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772549128" />
-    <state width="1877" height="262" key="GridCell.Tab.2.bottom" timestamp="1595771951869">
+    <state width="1877" height="230" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595947438920" />
+    <state width="1877" height="400" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595948723076" />
+    <state width="1877" height="400" key="GridCell.Tab.2.bottom" timestamp="1595948723077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="262" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595771951869" />
-    <state width="1877" height="262" key="GridCell.Tab.2.center" timestamp="1595771951869">
+    <state width="1877" height="230" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595947438289" />
+    <state width="1877" height="400" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595948723077" />
+    <state width="1877" height="400" key="GridCell.Tab.2.center" timestamp="1595948723077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="262" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595771951869" />
-    <state width="1877" height="262" key="GridCell.Tab.2.left" timestamp="1595771951869">
+    <state width="1877" height="230" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595947438288" />
+    <state width="1877" height="400" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595948723077" />
+    <state width="1877" height="400" key="GridCell.Tab.2.left" timestamp="1595948723076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="262" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595771951869" />
-    <state width="1877" height="262" key="GridCell.Tab.2.right" timestamp="1595771951869">
+    <state width="1877" height="230" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595947438288" />
+    <state width="1877" height="400" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595948723076" />
+    <state width="1877" height="400" key="GridCell.Tab.2.right" timestamp="1595948723077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="262" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595771951869" />
+    <state width="1877" height="230" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595947438288" />
+    <state width="1877" height="400" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595948723077" />
     <state x="633" y="191" key="SettingsEditor" timestamp="1595735429736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="633" y="191" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595735429736" />
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1595773005025">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595773005025" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1595772670399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -409,23 +417,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/PayServiceImpl.java</url>
-          <line>145</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/QRCodeUtil.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/QRCodeUtil.java</url>
-          <line>100</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/QiniuFileUploadUtil.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="12" />
+          <line>70</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

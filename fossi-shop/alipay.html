@@ -37,25 +37,21 @@
                 <div class="ep-wrapper">
                     <div class="ep-pay-step ep-step-channel bd-main-container" style="padding: 30px 270px 30px 250px;display: block;">
                         <div class="ep-order-detail">
-                            <!-- <div>
-                                <div class="ep-order-tit">
+                            <div>
+                                
+                            </div>
+                            <div>
+                                <span class="ep-order-tit">
                                     <dl>
                                         <dt>商品订单：</dt>
                                         <dd>{{orderId}}</dd>
                                     </dl>
-                                </div>
-                                <div class="ep-order-tit">
-                                    <span>支付金额：<em class="rmb"><i>¥</i>{{paymentInfo.amount / 100}}</em></span>
-                                </div>
-                            </div> -->
-                            <!-- <div>
-                                <img src="img/loading.gif" style="height:90px;"/>
-                                <span class="hit-words">订单[<em style="color: #0ac265">{{orderId}}</em>]正在支付中，请耐心等待...</span>
-                            </div> -->
-                            <!-- <div>
-                                <img :src="img_src" style="width:100px;height:130px">
-                            </div> -->
-                            <div class="filePic">
+                                </span>
+                                <span class="ep-order-tit">
+                                    <span>支付金额：<em class="rmb"><i>¥</i>{{amount / 100}}</em></span>
+                                </span>
+                            </div>
+                            <div class="filePic" style="text-align: center;" >
                                 <img class="am-circle am-img-thumbnail" :src="img_src" alt="" />
                             </div>
                         </div>
