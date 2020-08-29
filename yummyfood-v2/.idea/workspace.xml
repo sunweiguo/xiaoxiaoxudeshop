@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce95c6f0-826e-4c05-8871-69013cfe66f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/PayController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/QiniuFileUploadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/utils/QiniuFileUploadUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +180,7 @@
       <workItem from="1595754785015" duration="13320000" />
       <workItem from="1595857363721" duration="3015000" />
       <workItem from="1595943912026" duration="2013000" />
+      <workItem from="1596545936563" duration="824000" />
     </task>
     <task id="LOCAL-00001" summary="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化">
       <created>1586590009215</created>
@@ -289,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595773001571</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="提交人：fossi&#10;提交内容：&#10;1、sql文件">
+      <created>1596546024383</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1596546024383</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +315,8 @@
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、收货地址的增删改查" />
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、订单创建&#10;2、定时任务扫描超时订单" />
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、请求支付宝预下单&#10;2、生成二维码&#10;3、二维码上传至七牛云并回显在页面等待扫码&#10;4、彩色二维码" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交人：fossi&#10;提交内容：&#10;1、请求支付宝预下单&#10;2、生成二维码&#10;3、二维码上传至七牛云并回显在页面等待扫码&#10;4、彩色二维码" />
+    <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、sql文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交人：fossi&#10;提交内容：&#10;1、sql文件" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1595759099808">
@@ -321,10 +327,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="384" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595765865668" />
-    <state x="379" y="47" key="CommitChangelistDialog2" timestamp="1595772999745">
+    <state x="379" y="45" key="CommitChangelistDialog2" timestamp="1596546011864">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="379" y="47" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595772999745" />
+    <state x="379" y="45" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1596546011864" />
+    <state x="184" y="108" key="DiffContextDialog" timestamp="1596545978692">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="108" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1596545978692" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1595744174474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -393,10 +403,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="633" y="191" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595735429736" />
-    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1595773005025">
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1596546027654">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595773005025" />
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1596546027654" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1595772670399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
