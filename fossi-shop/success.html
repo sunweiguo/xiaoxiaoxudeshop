@@ -46,7 +46,8 @@
 						<p class="order-words gray-words">客服邮箱：317758022@qq.com</p>
 					</div>
 					<div class="third-line">
-						<button class="go-center" @click="goUserCenter">查看我的订单</button>
+						<button class="go-center" @click="goUserCenter">查看我的订单</button>&nbsp;&nbsp;&nbsp;&nbsp;
+						<button class="go-center2" @click="goUserCenter">继续购物^_^</button>
 					</div>
 
 				</div>
@@ -97,6 +98,10 @@
 					} else {
 						window.location.href = app.centerServerUrl;
 					}
+				},
+				goUserCenter() {
+					// 判断用户是否登录
+					window.location.href = app.shopServerUrl;
 				},
 				// 通过cookie判断用户是否登录
 				judgeUserLoginStatus() {
