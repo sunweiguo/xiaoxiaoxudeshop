@@ -1,5 +1,6 @@
 package com.njupt.swg.controller;
 
+import com.njupt.swg.constants.Constants;
 import com.njupt.swg.enums.OrderStatusEnum;
 import com.njupt.swg.enums.PayMethod;
 import com.njupt.swg.pojo.OrderStatus;
@@ -11,6 +12,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -61,12 +63,14 @@ public class OrderController {
     }
 
 
-//    @PostMapping("getPaidOrderInfo")
-//    public CommonJsonResult pay(@RequestParam("orderId") String orderId){
-//        log.info("传递进来的orderId为：{}",orderId);
-//        OrderStatus orderStatus = new OrderStatus();
-//        orderStatus.setOrderStatus(OrderStatusEnum.WAIT_DELIVER.type);
-//        return CommonJsonResult.ok(orderStatus);
-//    }
+    @PostMapping("getPaidOrderInfo")
+    public CommonJsonResult pay(@RequestParam("orderId") String orderId){
+        log.info("传递进来的orderId为：{}",orderId);
+        //TODO 获取用户
+        if(StringUtils.isBlank(orderId)){
+            return CommonJsonResult.errorMsg("传递进来的工单号为空");
+        }
+        return orderService.getOrderPayStatus(orderId);
+    }
 
 }

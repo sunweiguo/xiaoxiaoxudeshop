@@ -2,6 +2,7 @@ package com.njupt.swg.utils;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.njupt.swg.constants.Constants;
 import lombok.Data;
 
 /**
@@ -96,4 +97,7 @@ public class CommonJsonResult {
         this.data = data;
     }
 
+    public boolean isSuccess() {
+        return this.status == 200;
+    }
 }

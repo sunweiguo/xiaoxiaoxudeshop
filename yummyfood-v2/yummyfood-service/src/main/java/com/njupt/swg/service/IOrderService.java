@@ -2,6 +2,7 @@ package com.njupt.swg.service;
 
 import com.njupt.swg.pojo.OrderItems;
 import com.njupt.swg.pojo.Orders;
+import com.njupt.swg.utils.CommonJsonResult;
 import com.njupt.swg.vo.SubmitOrderVO;
 
 import java.util.List;
@@ -22,4 +23,6 @@ public interface IOrderService {
     Orders selectByOrderNo(String orderNo);
 
     List<OrderItems> getByOrderNoUserId(String orderNo);
+
+    CommonJsonResult getOrderPayStatus(String orderId);
 }
