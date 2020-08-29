@@ -1,5 +1,6 @@
 package com.njupt.swg.service.impl;
 
+import com.njupt.swg.constants.Constants;
 import com.njupt.swg.enums.OrderStatusEnum;
 import com.njupt.swg.enums.YesOrNo;
 import com.njupt.swg.mapper.OrderItemsMapper;
@@ -8,6 +9,7 @@ import com.njupt.swg.mapper.OrdersMapper;
 import com.njupt.swg.pojo.*;
 import com.njupt.swg.service.IAddressService;
 import com.njupt.swg.service.IOrderService;
+import com.njupt.swg.utils.CommonJsonResult;
 import com.njupt.swg.utils.DateUtil;
 import com.njupt.swg.vo.SubmitOrderVO;
 import lombok.extern.slf4j.Slf4j;
@@ -116,7 +118,7 @@ public class OrderServiceImpl implements IOrderService {
         //3.保存订单状态表
         OrderStatus orderStatus = new OrderStatus();
         orderStatus.setOrderId(orderId);
-        orderStatus.setOrderStatus(OrderStatusEnum.WAIT_PAY.type);
+        orderStatus.setOrderStatus(Constants.OrderStatusEnum.NO_PAY.getCode());
         orderStatus.setCreatedTime(new Date());
         orderStatusMapper.insert(orderStatus);
 
@@ -129,7 +131,7 @@ public class OrderServiceImpl implements IOrderService {
     public int closeOrder() {
         //查询所有未付款订单，判断时间是否超时
         OrderStatus orderStatus = new OrderStatus();
-        orderStatus.setOrderStatus(OrderStatusEnum.WAIT_PAY.type);
+        orderStatus.setOrderStatus(Constants.OrderStatusEnum.NO_PAY.getCode());
         List<OrderStatus> orderStatusList = orderStatusMapper.select(orderStatus);
         int count = 0;
         for(OrderStatus os:orderStatusList){
@@ -147,7 +149,7 @@ public class OrderServiceImpl implements IOrderService {
     @Transactional(propagation = Propagation.REQUIRED)
     void doCloseOrder(String orderId) {
         OrderStatus orderStatus = new OrderStatus();
-        orderStatus.setOrderStatus(OrderStatusEnum.CLOSE.type);
+        orderStatus.setOrderStatus(Constants.OrderStatusEnum.ORDER_CLOSE.getCode());
         orderStatus.setOrderId(orderId);
         orderStatus.setCloseTime(new Date());
         orderStatusMapper.updateByPrimaryKeySelective(orderStatus);
@@ -168,4 +170,19 @@ public class OrderServiceImpl implements IOrderService {
         criteria.andEqualTo("orderId",orderNo);
         return orderItemsMapper.selectByExample(example);
     }
+
+    @Override
+    public CommonJsonResult getOrderPayStatus(String orderId) {
+        Orders orders = ordersMapper.selectByPrimaryKey(orderId);
+        if(orders == null){
+            return CommonJsonResult.errorMsg("该用户没有此订单");
+        }
+        OrderStatus orderStatus = orderStatusMapper.selectByPrimaryKey(orderId);
+        if(orderStatus.getOrderStatus() >= Constants.OrderStatusEnum.PAID.getCode()){
+            return CommonJsonResult.ok(orderStatus);
+        }
+        return CommonJsonResult.errorMsg("此订单还未支付");
+    }
+
+
 }

@@ -175,6 +175,11 @@
             <artifactId>trade-sdk</artifactId>
             <version>20161215</version>
         </dependency>
+        <!--joda time-->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
 
         <!--七牛云-->
         <dependency>

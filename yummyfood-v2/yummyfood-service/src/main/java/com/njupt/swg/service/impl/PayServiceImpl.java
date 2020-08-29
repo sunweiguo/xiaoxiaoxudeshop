@@ -9,26 +9,27 @@ import com.alipay.demo.trade.model.builder.AlipayTradePrecreateRequestBuilder;
 import com.alipay.demo.trade.model.result.AlipayF2FPrecreateResult;
 import com.alipay.demo.trade.service.AlipayTradeService;
 import com.alipay.demo.trade.service.impl.AlipayTradeServiceImpl;
-import com.alipay.demo.trade.utils.ZxingUtils;
-import com.google.common.collect.Collections2;
-import com.google.common.collect.Maps;
+import com.njupt.swg.constants.Constants;
+import com.njupt.swg.mapper.OrderStatusMapper;
+import com.njupt.swg.mapper.PayInfoMapper;
 import com.njupt.swg.pojo.OrderItems;
+import com.njupt.swg.pojo.OrderStatus;
 import com.njupt.swg.pojo.Orders;
+import com.njupt.swg.pojo.PayInfo;
 import com.njupt.swg.service.IOrderService;
 import com.njupt.swg.service.IPayService;
 import com.njupt.swg.utils.BigDecimalUtil;
 import com.njupt.swg.utils.CommonJsonResult;
+import com.njupt.swg.utils.DateTimeUtil;
 import com.njupt.swg.utils.QRCodeUtil;
-import com.njupt.swg.utils.QiniuFileUploadUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -50,6 +51,12 @@ public class PayServiceImpl implements IPayService {
 
     @Autowired
     private IOrderService orderService;
+    @Autowired
+    private OrderStatusMapper orderStatusMapper;
+    @Autowired
+    private PayInfoMapper payInfoMapper;
+    @Autowired
+    private Sid sid;
 
     private static AlipayTradeService tradeService;
     static {
@@ -85,7 +92,7 @@ public class PayServiceImpl implements IPayService {
 
         // (必填) 订单总金额，单位为元，不能超过1亿元
         // 如果同时传入了【打折金额】,【不可打折金额】,【订单总金额】三者,则必须满足如下条件:【订单总金额】=【打折金额】+【不可打折金额】
-        String totalAmount = order.getRealPayAmount().toString();
+        String totalAmount = BigDecimalUtil.div(order.getRealPayAmount(),100).toString();
 
 
         // (可选) 订单不可打折金额，可以配合商家平台配置折扣活动，如果酒水不参与打折，则将对应金额填写至此字段
@@ -171,6 +178,7 @@ public class PayServiceImpl implements IPayService {
         }
     }
 
+
     // 简单打印应答
     private void dumpResponse(AlipayResponse response) {
         if (response != null) {
@@ -181,5 +189,43 @@ public class PayServiceImpl implements IPayService {
             }
             log.info("body:" + response.getBody());
         }
+    }
+
+
+
+    @Override
+    public CommonJsonResult aliCallback(Map<String, String> params) {
+        String orderNo = String.valueOf(params.get("out_trade_no"));
+        String tradeNo = params.get("trade_no");
+        String tradeStatus = params.get("trade_status");
+        //从数据库获取订单和订单状态表
+        Orders order = orderService.selectByOrderNo(orderNo);
+        OrderStatus orderStatus = orderStatusMapper.selectByPrimaryKey(orderNo);
+        if(order == null){
+            return CommonJsonResult.errorMsg("非快乐蜗牛商城的订单,回调忽略");
+        }
+        //判断订单的状态是否大于已支付的状态，如果大于，说明是支付宝的重复通知，直接返回success即可
+        if(orderStatus.getOrderStatus() >= Constants.OrderStatusEnum.PAID.getCode()){
+            return CommonJsonResult.ok("支付宝重复调用");
+        }
+        //根据支付宝的回调状态来更新订单的状态
+        if(Constants.AlipayCallback.TRADE_STATUS_TRADE_SUCCESS.equals(tradeStatus)){
+            orderStatus.setPayTime(DateTimeUtil.strToDate(params.get("gmt_payment")));
+            orderStatus.setOrderStatus(Constants.OrderStatusEnum.PAID.getCode());
+            orderStatusMapper.updateByPrimaryKeySelective(orderStatus);
+        }
+        //插入支付信息
+        PayInfo payInfo = new PayInfo();
+        payInfo.setId(sid.nextShort());
+        payInfo.setUserId(order.getUserId());
+        payInfo.setOrderNo(order.getId());
+        payInfo.setPayPlatform(Constants.PayPlatformEnum.ALIPAY.getCode());
+        payInfo.setPlatformNumber(tradeNo);//支付宝流水号
+        payInfo.setPlatformStatus(tradeStatus);
+        int res = payInfoMapper.insert(payInfo);
+        if(res <= 0){
+            return CommonJsonResult.errorMsg("操作支付表失败");
+        }
+        return CommonJsonResult.ok();
     }
 }
