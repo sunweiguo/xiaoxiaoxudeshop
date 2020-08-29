@@ -30,7 +30,7 @@
         <javaClientGenerator targetPackage="com.njupt.swg.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
 
         <!-- 数据库表，有多少表就配置多少表 -->
-		<table tableName="carousel"></table>
+<!--		<table tableName="carousel"></table>
         <table tableName="category"></table>
         <table tableName="items"></table>
         <table tableName="items_comments"></table>
@@ -43,6 +43,8 @@
         <table tableName="order_status"></table>
         <table tableName="orders"></table>
         <table tableName="user_address"></table>
-        <table tableName="users"></table>
+        <table tableName="users"></table>-->
+
+        <table tableName="pay_info"></table>
     </context>
 </generatorConfiguration>

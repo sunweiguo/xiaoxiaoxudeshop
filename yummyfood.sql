@@ -198,3 +198,17 @@ CREATE TABLE order_status(
 退货/退货，此分支流程不做，所以不加入';
 
 ALTER TABLE order_status COMMENT '订单状态表';
+
+/*2020年8月30日新增-支付状态表*/
+DROP TABLE IF EXISTS `pay_info`;
+CREATE TABLE `pay_info` (
+  `id` varchar(64) NOT NULL,
+  `user_id` varchar(64) DEFAULT NULL COMMENT '用户id',
+  `order_no` varchar(64) DEFAULT NULL COMMENT '订单号',
+  `pay_platform` int(10) DEFAULT NULL COMMENT '支付平台:1-支付宝,2-微信',
+  `platform_number` varchar(200) DEFAULT NULL COMMENT '支付宝支付流水号',
+  `platform_status` varchar(20) DEFAULT NULL COMMENT '支付宝支付状态',
+  `create_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `update_time` datetime DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
