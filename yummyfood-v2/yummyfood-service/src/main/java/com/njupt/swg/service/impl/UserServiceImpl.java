@@ -4,6 +4,7 @@ import com.njupt.swg.enums.Sex;
 import com.njupt.swg.mapper.UsersMapper;
 import com.njupt.swg.pojo.Users;
 import com.njupt.swg.service.IUserService;
+import com.njupt.swg.utils.CommonJsonResult;
 import com.njupt.swg.utils.DateUtil;
 import com.njupt.swg.utils.MD5Utils;
 import com.njupt.swg.bo.UserBO;
@@ -78,4 +79,16 @@ public class UserServiceImpl implements IUserService {
         Users result = usersMapper.selectOneByExample(userExample);
         return result;
     }
+
+    @Override
+    public CommonJsonResult queryUserById(String userId) {
+        Users users = usersMapper.selectByPrimaryKey(userId);
+        if(users != null){
+            users.setPassword("");
+            return CommonJsonResult.ok(users);
+        }
+        return CommonJsonResult.errorMsg("查询用户信息失败");
+    }
+
+
 }
