@@ -2,6 +2,7 @@ package com.njupt.swg.service;
 
 import com.njupt.swg.pojo.Users;
 import com.njupt.swg.bo.UserBO;
+import com.njupt.swg.utils.CommonJsonResult;
 
 /**
  * @Author swg.
@@ -18,4 +19,6 @@ public interface IUserService {
 
     //根据用户名密码查询用户是否存在
     Users queryUserForLogin(String username, String password);
+
+    CommonJsonResult queryUserById(String userId);
 }

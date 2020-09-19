@@ -24,3 +24,5 @@ target/
 /nbdist/
 /.nb-gradle/
 src/test/
+/yummyfood-api/target/
+/yummyfood-api/target/

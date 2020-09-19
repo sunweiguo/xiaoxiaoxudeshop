@@ -56,25 +56,25 @@
 									<li style="width: 25%;">
 										<a href="order.html"><i>
 											<img src="images/pay.png" /></i>
-											<span>待付款<em class="m-num" v-show="orderStatusCounts.waitPayCounts > 0">{{orderStatusCounts.waitPayCounts}}</em></span>
+											<span>待付款<em class="m-num" v-show="orderStatusCounts.waitPayCounts >= 0">{{orderStatusCounts.waitPayCounts}}</em></span>
 										</a>
 									</li>
 									<li style="width: 25%;">
 										<a href="order.html"><i>
 											<img src="images/send.png" /></i>
-											<span>待发货<em class="m-num" v-show="orderStatusCounts.waitDeliverCounts > 0">{{orderStatusCounts.waitDeliverCounts}}</em></span>
+											<span>待发货<em class="m-num" v-show="orderStatusCounts.waitDeliverCounts >= 0">{{orderStatusCounts.waitDeliverCounts}}</em></span>
 										</a>
 									</li>
 									<li style="width: 25%;">
 										<a href="order.html"><i>
 											<img src="images/receive.png" /></i>
-											<span>待收货<em class="m-num" v-show="orderStatusCounts.waitReceiveCounts > 0">{{orderStatusCounts.waitReceiveCounts}}</em></span>
+											<span>待收货<em class="m-num" v-show="orderStatusCounts.waitReceiveCounts >= 0">{{orderStatusCounts.waitReceiveCounts}}</em></span>
 										</a>
 									</li>
 									<li style="width: 25%;">
 										<a href="order.html"><i>
 											<img src="images/comment.png" /></i>
-											<span>待评价<em class="m-num" v-show="orderStatusCounts.waitCommentCounts > 0">{{orderStatusCounts.waitCommentCounts}}</em></span>
+											<span>待评价<em class="m-num" v-show="orderStatusCounts.waitCommentCounts >= 0">{{orderStatusCounts.waitCommentCounts}}</em></span>
 										</a>
 									</li>
 								</ul>
