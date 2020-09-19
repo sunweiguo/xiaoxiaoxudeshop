@@ -46,8 +46,24 @@
 	- [14、【单体YummyFood商城】-实现支付宝当面付-上](http://note.youdao.com/noteshare?id=40ce46b3ddbeda998192c0aedf7aced7&sub=0533978877CD4E49897EBB39BA1F6333)
 	- [15、【单体YummyFood商城】-实现支付宝当面付-中](http://note.youdao.com/noteshare?id=46048457b741098798ea2e431ffd6ceb&sub=56E3A6C22FB646B9B023A6F0880352C4)
 	- [16、【单体YummyFood商城】-实现支付宝当面付-下](http://note.youdao.com/noteshare?id=769135863f294d18d5e8c7527d33c424&sub=52DC3D797F8D4CE593AF6ABCAA9E7820)
+	- [17、【单体YummyFood商城】-用户中心功能实现-上](http://note.youdao.com/noteshare?id=326331a161a528e2f19ff68d8399b45f&sub=F1E368722B97436DA68FCAF132FC021B)
+	- [18、【单体YummyFood商城】-用户中心功能实现-下-未完成]()
 
-3. 关于git tag 老是忘记，tag就是一个标签，帮助我们回退到某个版本的代码，我们通过tag的名称即可回退，而不需要根据某个提冗长的commit ID来回退，算是版本记录的补充吧。这里记录下：
+3. 同步分享我的计算机网络相关学习笔记^^，大家一起加油，或者直接关注微信公众号~
+	- [1、从下到上看五层模型-概览](http://note.youdao.com/noteshare?id=a556ce1d8943b26cce8f41f30040e559&sub=3323DBDEE47A497D926BF7E831D3CCAD)
+	- [2、从上到下看五层模型-概览](http://note.youdao.com/noteshare?id=20ce02f3db9910fed2b7ba7b451ea79c&sub=944EB6FF5EC24512B89968DCEAEC987B)
+	- [3、互联网的历史](http://note.youdao.com/noteshare?id=f30db70413ae10cffb738cc91dabde42&sub=1BE606BD797B4879BB081EB430AF7D44)
+	- [4、OSI七层模型简介](http://note.youdao.com/noteshare?id=2f2785867a27ed2a9f27c246c5432f24&sub=131E6B4E2D484A74AF88B2F175EAA0D5)
+	- [5、物理层](http://note.youdao.com/noteshare?id=888b3309e9fb948059718303643db196&sub=DC0CA4AC17E3477E90EE4D7F3E21F8A9)
+	- [6、数据链路层上-MAC地址和以太网协议](http://note.youdao.com/noteshare?id=00b3b877c1f0a845e0437d04de7cceb9&sub=77785241FE3E40198E75E51B08CFCA74)
+	- [7、数据链路层下-神奇的交换机](http://note.youdao.com/noteshare?id=d50933f1b09f464a33d5981ad576fd4b&sub=8EF848F241EE45BF9F64FE2BA3DB911A)
+	- [8、网络层-IP地址和子网掩码](http://note.youdao.com/noteshare?id=36fd2762627d0375c3b3165eebb36945&sub=9CC276C156424BD1B38DB7F31C410023)
+	- [9、网络层-划分IP地址范围](http://note.youdao.com/noteshare?id=bed184089be427ff710f1bef5bf0a5d8&sub=E859D24B0D3A4FE5AE57A242856B8A92)
+	- [10、网络层-IP报文首部结构分析](http://note.youdao.com/noteshare?id=39cf63458a8e653a34e6e82a1e97c1a1&sub=E49F4DEC887545A88DEB9F8AC428DB7B)
+	- [11、网络层-路由器](http://note.youdao.com/noteshare?id=423134726c61d4ee6b251e0759a0f38b&sub=F0EDE31149B64E3D871765580F306F57)
+
+
+4. 关于git tag 老是忘记，tag就是一个标签，帮助我们回退到某个版本的代码，我们通过tag的名称即可回退，而不需要根据某个提冗长的commit ID来回退，算是版本记录的补充吧。这里记录下：
 	- 查看本地tag：git tag 
 	- 新建tag：git tag -a v2.0 -m '完成首页展示和商品详情展示'
 	- 推送指定tag至远程：git push origin v2.0
