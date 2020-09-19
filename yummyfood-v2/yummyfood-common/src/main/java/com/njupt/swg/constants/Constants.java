@@ -9,9 +9,9 @@ package com.njupt.swg.constants;
  */
 public class Constants {
     /***七牛keys start****/
-    public static final String QINIU_ACCESS_KEY="05_VNsHU-yyHYaIeyliGKSca09v1T8xmWgBTixsC";
+    public static final String QINIU_ACCESS_KEY="**";
 
-    public static final String QINIU_SECRET_KEY="o2nwHXb0vaiitZTfdJM-JvArnNcpjSWXfgB3RBCf";
+    public static final String QINIU_SECRET_KEY="**";
 
     public static final String QINIU_HEAD_IMG_BUCKET_NAME="blog";
 
