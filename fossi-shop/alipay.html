@@ -8,6 +8,7 @@
     <title>天天吃货 - 支付宝支付</title>
     <link rel="shortcut icon" href="img/foodie.ico" />
     <link rel="stylesheet" href="css/wxpay.css" />
+    <link rel="stylesheet" href="css/paysuccess.css" />
 
     <script src="AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
@@ -52,8 +53,12 @@
                                 </span>
                             </div>
                             <div class="filePic" style="text-align: center;" >
-                                <img class="am-circle am-img-thumbnail" :src="img_src" alt="" />
+                                <img class="am-circle am-img-thumbnail" :src="img_src" alt="" /><br>
+                                <span class="ep-order-tit" style="align-items:right">
+                                    <button class="go-center3" @click="goUserCenter">/(ㄒoㄒ)/~~放弃支付，返回个人主页</button>
+                                </span>
                             </div>
+                    
                         </div>
                         </div>
                     </div>
@@ -206,6 +211,16 @@
                     } else {
                         this.userIsLogin = false;
                         this.userInfo = {};
+                    }
+                },
+                goUserCenter() {
+                    // 判断用户是否登录
+                    var userIsLogin = this.userIsLogin;
+                    if (!userIsLogin) {
+                        // 用户未登录，则跳转
+                        window.location.href = "login.html?returnUrl=" + app.centerServerUrl;
+                    } else {
+                        window.location.href = app.orderCenterUrl;
                     }
                 }
             }
