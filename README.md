@@ -47,7 +47,8 @@
 	- [15、【单体YummyFood商城】-实现支付宝当面付-中](http://note.youdao.com/noteshare?id=46048457b741098798ea2e431ffd6ceb&sub=56E3A6C22FB646B9B023A6F0880352C4)
 	- [16、【单体YummyFood商城】-实现支付宝当面付-下](http://note.youdao.com/noteshare?id=769135863f294d18d5e8c7527d33c424&sub=52DC3D797F8D4CE593AF6ABCAA9E7820)
 	- [17、【单体YummyFood商城】-用户中心功能实现-上](http://note.youdao.com/noteshare?id=326331a161a528e2f19ff68d8399b45f&sub=F1E368722B97436DA68FCAF132FC021B)
-	- [18、【单体YummyFood商城】-用户中心功能实现-下-未完成]()
+	- [18、【单体YummyFood商城】-最后两个小功能模块](http://note.youdao.com/noteshare?id=a7b2df668f597d59629b2dbd2c8966fe&sub=E42F4DD5326C404D819A61175F4F67A9)
+	- [19、【单体YummyFood商城】-发布至云服务器上线-未完成]()
 
 3. 同步分享我的计算机网络相关学习笔记^^，大家一起加油，或者直接关注微信公众号~
 	- [1、从下到上看五层模型-概览](http://note.youdao.com/noteshare?id=a556ce1d8943b26cce8f41f30040e559&sub=3323DBDEE47A497D926BF7E831D3CCAD)
@@ -61,6 +62,12 @@
 	- [9、网络层-划分IP地址范围](http://note.youdao.com/noteshare?id=bed184089be427ff710f1bef5bf0a5d8&sub=E859D24B0D3A4FE5AE57A242856B8A92)
 	- [10、网络层-IP报文首部结构分析](http://note.youdao.com/noteshare?id=39cf63458a8e653a34e6e82a1e97c1a1&sub=E49F4DEC887545A88DEB9F8AC428DB7B)
 	- [11、网络层-路由器](http://note.youdao.com/noteshare?id=423134726c61d4ee6b251e0759a0f38b&sub=F0EDE31149B64E3D871765580F306F57)
+	- [12、处于第2.5层的协议-ARP协议](http://note.youdao.com/noteshare?id=de2e31efa1d136bf2adf627e86c8d877&sub=6CCBB3D34DBD42409FA14191508B5081)
+	- [13、网络侦察机-ICMP协议](http://note.youdao.com/noteshare?id=6f5735fa4337e81453c9383766917f6a&sub=042698C064044E22A5990004228BA797)
+	- [14、传输层-端口](http://note.youdao.com/noteshare?id=c2e86caf83745feb722e3e180e26977b&sub=BDFA5BAB5B764663B9E47E639FB0CF89)
+	- [15、简单快速但不可靠的UDP协议](http://note.youdao.com/noteshare?id=8df9f07436f02a31cae2d59751b5a863&sub=BA9D3382AC7E4F4E821A36D1EAB34895)
+	- [16、可靠的TCP协议-未完成]()
+
 
 
 4. 关于git tag 老是忘记，tag就是一个标签，帮助我们回退到某个版本的代码，我们通过tag的名称即可回退，而不需要根据某个提冗长的commit ID来回退，算是版本记录的补充吧。这里记录下：

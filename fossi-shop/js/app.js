@@ -5,6 +5,7 @@ window.app = {
     shopServerUrl: "http://localhost:8080/fossi-shop/",                  // 门户网站地址
     centerServerUrl: "http://localhost:8080/fossi-center/",              // 用户中心地址
     cookieDomain: "",                                                       // cookie 域
+    orderCenterUrl: "http://localhost:8080/fossi-center/order.html",
 
     /* 生产环境 */
     // serverUrl: "http://api.z.mukewang.com:8088/foodie-dev-api",                      // 接口服务接口地址
