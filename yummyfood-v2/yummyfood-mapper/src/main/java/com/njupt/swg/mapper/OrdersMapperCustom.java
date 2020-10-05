@@ -20,4 +20,6 @@ public interface OrdersMapperCustom {
 
     //首页的订单去向
     List<OrderStatus> getMyOrderTrend(@Param("paramsMap") Map<String, Object> map);
+
+    List<MyOrdersVO> queryMyOrders(@Param("userId")String userId, @Param("orderStatus") Integer orderStatus);
 }

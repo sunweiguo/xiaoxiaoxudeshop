@@ -15,4 +15,11 @@
     <result column="price" jdbcType="INTEGER" property="price" />
     <result column="buy_counts" jdbcType="INTEGER" property="buyCounts" />
   </resultMap>
+
+
+  <select id="getOrderItemsByOrderId" parameterType="string" resultType="com.njupt.swg.vo.MySubOrderItemVO">
+    select order_id as orderId, item_id as itemId, item_img as itemImg, item_name as itemName,
+    item_spec_id as itemSpecId, item_spec_name as itemSpecName, price,buy_counts as buyCounts
+    from order_items where order_id = #{orderNo}
+  </select>
 </mapper>

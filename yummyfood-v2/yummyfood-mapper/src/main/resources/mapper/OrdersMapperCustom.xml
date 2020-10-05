@@ -40,4 +40,38 @@
         DESC
     </select>
 
+    <resultMap id="myOrdersVO" type="com.njupt.swg.vo.MyOrdersVO">
+        <id column="orderId" property="orderId" />
+        <result column="createdTime" property="createdTime" />
+        <result column="payMethod" property="payMethod" />
+        <result column="realPayAmount" property="realPayAmount" />
+        <result column="postAmount" property="postAmount" />
+        <result column="orderStatus" property="orderStatus" />
+        <result column="isComment" property="isComment" />
+    </resultMap>
+
+    <select id="queryMyOrders" parameterType="map" resultMap="myOrdersVO">
+        SELECT
+        od.id as orderId,
+        od.created_time as createdTime,
+        od.pay_method as payMethod,
+        od.real_pay_amount as realPayAmount,
+        od.post_amount as postAmount,
+        od.is_comment as isComment,
+        os.order_status as orderStatus
+        FROM
+        orders od
+        LEFT JOIN
+        order_status os
+        on od.id = os.order_id
+        WHERE
+        od.is_delete = 0
+        AND
+        od.user_id = #{userId}
+        <if test="orderStatus != null">
+            and os.order_status = #{orderStatus}
+        </if>
+        ORDER BY od.updated_time desc
+    </select>
+
 </mapper>
