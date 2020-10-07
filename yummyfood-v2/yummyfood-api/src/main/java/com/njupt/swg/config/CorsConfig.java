@@ -23,6 +23,12 @@ public class CorsConfig {
 //        1、添加cors配置信息
         CorsConfiguration config = new CorsConfiguration();
         config.addAllowedOrigin("http://localhost:8080");
+        config.addAllowedOrigin("http://111.231.119.253:8080");
+        config.addAllowedOrigin("http://111.231.119.253:80");
+        config.addAllowedOrigin("http://www.oursnail.cn:8080");
+        config.addAllowedOrigin("http://www.oursnail.cn:80");
+        config.addAllowedOrigin("http://oursnail.cn:8080");
+        config.addAllowedOrigin("http://oursnail.cn:80");
 //      设置允许客户端携带一些cookie等信息过来
         config.setAllowCredentials(true);
 //        设置允许请求的方式

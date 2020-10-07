@@ -1,4 +1,4 @@
-## 又一个电商项目
+## 一个电商项目
 
  考量了下，发现微信公众号平台挺好的，是一个可以长久维持的平台，并且平台比较方便未来的互动等。所以觉得我写的还不错的话可以关注下，我考虑会将系统学习的知识体系如计算机网络、数据库、redis等都迁移到公众号上，比较清晰，利于管理：
 
@@ -17,8 +17,6 @@
 而且很重要的一点是，这个前端项目不会浪费我额外的精力，代码直接拷贝，放在tomcat即可跑起来，实在是太简单了，看了下前端代码，理解起来也很简单，我打算改改前端代码，去掉原来的一些风格比如广告友链。
 
 并且最重要的一点是，对于这个电商项目，从单体应用到分布式应用再到最后的容器化、性能调优阶段，我都尽量保留下笔记，方便你我他。笔记我会将我认为重要的地方单独拎出来讨论，初期的单体项目如果只是记录如何增删改查，是完全没有意义的，我想穿插自己的理解、知识点的汇总在里面，成体系地记录，最后形成的是一个免费的、完整的电商项目的搭建和知识框架。
-
-前端项目我将打磨一段时间，等符合我的要求后一起上传上来。
 
 ## 项目记录
   
@@ -47,8 +45,9 @@
 	- [15、【单体YummyFood商城】-实现支付宝当面付-中](http://note.youdao.com/noteshare?id=46048457b741098798ea2e431ffd6ceb&sub=56E3A6C22FB646B9B023A6F0880352C4)
 	- [16、【单体YummyFood商城】-实现支付宝当面付-下](http://note.youdao.com/noteshare?id=769135863f294d18d5e8c7527d33c424&sub=52DC3D797F8D4CE593AF6ABCAA9E7820)
 	- [17、【单体YummyFood商城】-用户中心功能实现-上](http://note.youdao.com/noteshare?id=326331a161a528e2f19ff68d8399b45f&sub=F1E368722B97436DA68FCAF132FC021B)
-	- [18、【单体YummyFood商城】-最后两个小功能模块](http://note.youdao.com/noteshare?id=a7b2df668f597d59629b2dbd2c8966fe&sub=E42F4DD5326C404D819A61175F4F67A9)
-	- [19、【单体YummyFood商城】-发布至云服务器上线-未完成]()
+	- [18、【单体YummyFood商城】-用户中心功能实现-下](http://note.youdao.com/noteshare?id=a7b2df668f597d59629b2dbd2c8966fe&sub=E42F4DD5326C404D819A61175F4F67A9)
+	- [19、【单体YummyFood商城】-云服务器部署上线-软件安装部分](http://note.youdao.com/noteshare?id=80ca7e89e8b56cb93c489e94f9184374&sub=9C5DABE39C7B44DC88CB04CEB5DD4327)
+	- [20、【单体YummyFood商城】-云服务器部署上线-项目部署部分](http://note.youdao.com/noteshare?id=d9427e43df776b9e1f662c101fe9ef96&sub=74AA9A9E83CA4C60BECC63CF54BD88CB)
 
 3. 同步分享我的计算机网络相关学习笔记^^，大家一起加油，或者直接关注微信公众号~
 	- [1、从下到上看五层模型-概览](http://note.youdao.com/noteshare?id=a556ce1d8943b26cce8f41f30040e559&sub=3323DBDEE47A497D926BF7E831D3CCAD)
@@ -62,12 +61,10 @@
 	- [9、网络层-划分IP地址范围](http://note.youdao.com/noteshare?id=bed184089be427ff710f1bef5bf0a5d8&sub=E859D24B0D3A4FE5AE57A242856B8A92)
 	- [10、网络层-IP报文首部结构分析](http://note.youdao.com/noteshare?id=39cf63458a8e653a34e6e82a1e97c1a1&sub=E49F4DEC887545A88DEB9F8AC428DB7B)
 	- [11、网络层-路由器](http://note.youdao.com/noteshare?id=423134726c61d4ee6b251e0759a0f38b&sub=F0EDE31149B64E3D871765580F306F57)
-	- [12、处于第2.5层的协议-ARP协议](http://note.youdao.com/noteshare?id=de2e31efa1d136bf2adf627e86c8d877&sub=6CCBB3D34DBD42409FA14191508B5081)
+	- [12、处于第2.5层的协议-ARP协议]()
 	- [13、网络侦察机-ICMP协议](http://note.youdao.com/noteshare?id=6f5735fa4337e81453c9383766917f6a&sub=042698C064044E22A5990004228BA797)
 	- [14、传输层-端口](http://note.youdao.com/noteshare?id=c2e86caf83745feb722e3e180e26977b&sub=BDFA5BAB5B764663B9E47E639FB0CF89)
 	- [15、简单快速但不可靠的UDP协议](http://note.youdao.com/noteshare?id=8df9f07436f02a31cae2d59751b5a863&sub=BA9D3382AC7E4F4E821A36D1EAB34895)
-	- [16、可靠的TCP协议-未完成]()
-
 
 
 4. 关于git tag 老是忘记，tag就是一个标签，帮助我们回退到某个版本的代码，我们通过tag的名称即可回退，而不需要根据某个提冗长的commit ID来回退，算是版本记录的补充吧。这里记录下：

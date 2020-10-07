@@ -38,6 +38,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!--读取其他类型的配置文件比如xml文件等需要用到-->
         <dependency>
@@ -187,6 +193,16 @@
             <artifactId>qiniu-java-sdk</artifactId>
             <version>[7.2.0, 7.2.99]</version>
         </dependency>
+
+        <!--打war包第三步：添加依赖-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>
     </dependencies>
 
+
+    <build>
+        <finalName>yummyfood-api</finalName>
+    </build>
 </project>

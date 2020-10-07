@@ -19,6 +19,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/**")
 //                .addResourceLocations("classpath:/static/")
                 .addResourceLocations("classpath:/META-INF/resources/")//映射swagger2，否则会导致404
-                .addResourceLocations("file:C:\\Users\\swg\\Desktop\\xiaoxuxushop\\images\\");//这个就是映射的路径，下面的文件就可以通过localhost:8088/xxx.png来访问了
+                .addResourceLocations("file:/home/picture/faces/");//这个就是映射的路径，下面的文件就可以通过localhost:8088/xxx.png来访问了
     }
 }

@@ -19,35 +19,41 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce95c6f0-826e-4c05-8871-69013cfe66f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/center/MyCommentsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/ItemsCommentsMapperCustom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/ItemsCommentsMapperCustom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/bo/OrderItemsCommentBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-pojo/src/main/java/com/njupt/swg/vo/MyCommentVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/center/IMyCommentsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/center/MyCommentsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fossi-shop/alipay.html" beforeDir="false" afterPath="$PROJECT_DIR$/../fossi-shop/alipay.html" afterDir="false" />
+    <list default="true" id="ce95c6f0-826e-4c05-8871-69013cfe66f9" name="Default Changelist" comment="提交人：fossi&#10;提交内容：发布上线版本&#10;1、增加多环境配置文件&#10;2、根据线上环境做相关修改&#10;3、">
+      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/WarStarterYummyFoodApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/config-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/config-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fossi-center/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../fossi-center/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fossi-center/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fossi-center/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fossi-center/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/../fossi-center/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fossi-shop/css/paysuccess.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fossi-shop/css/paysuccess.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fossi-shop/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fossi-shop/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/center/CenterMyOrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/controller/center/CenterMyOrdersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/FileConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/FileConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-api/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/target/yummyfood-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/target/yummyfood-api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-common/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-api/target/yummyfood-api-1.0-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-common/target/yummyfood-common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/target/yummyfood-common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/OrderItemsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/OrderItemsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/OrdersMapperCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/java/com/njupt/swg/mapper/OrdersMapperCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/OrderItemsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/OrderItemsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/OrdersMapperCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper/OrdersMapperCustom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-common/target/yummyfood-common-1.0-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/target/yummyfood-mapper-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/target/yummyfood-mapper-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/target/yummyfood-mapper-1.0-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-pojo/target/yummyfood-pojo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-pojo/target/yummyfood-pojo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/center/IMyOrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/center/IMyOrdersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/center/MyOrdersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/src/main/java/com/njupt/swg/service/impl/center/MyOrdersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-pojo/target/yummyfood-pojo-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-service/src/main/resources/parameter.properties" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/src/main/resources/parameter.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-service/src/main/resources/zfbinfo.properties" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/src/main/resources/zfbinfo.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/target/yummyfood-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/target/yummyfood-service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-service/target/yummyfood-service-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummyfood.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../yummyfood.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yummyfood带数据.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +103,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593953786624" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/yummyfood-mapper/src/main/resources/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/yummyfood-api/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -106,12 +112,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-mapper\src\main\resources\mapper" />
-      <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-mapper\src\main\resources\static" />
-      <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-service\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-api\src\main\resources" />
-      <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-api" />
+      <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-service\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.njupt.swg.exception" />
@@ -120,9 +123,12 @@
       <recent name="com.njupt.swg.service" />
       <recent name="com.njupt.swg.bo" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-api\src\main\resources" />
+      <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-mapper\src\main\resources\mapper" />
+      <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-mapper\src\main\resources\static" />
       <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-service\src\main\resources" />
+      <recent name="C:\Users\swg\Desktop\xiaoxuxushop\xiaoxiaoxudeshop\yummyfood-v2\yummyfood-api" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -477,6 +483,11 @@
             </State>
           </value>
         </entry>
+        <entry key="2">
+          <value>
+            <State />
+          </value>
+        </entry>
       </map>
     </option>
     <option name="OPEN_GENERIC_TABS">
@@ -527,10 +538,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="384" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595765865668" />
-    <state x="379" y="45" key="CommitChangelistDialog2" timestamp="1600529068496">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1541" y="45" key="CommitChangelistDialog2" timestamp="1602058350621">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1541" y="45" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598718842092" />
+    <state x="-1541" y="45" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602058350621" />
     <state x="379" y="45" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600529068496" />
     <state x="184" y="108" key="DiffContextDialog" timestamp="1600529078318">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -541,25 +552,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595744174474" />
-    <state width="1877" height="189" key="GridCell.Tab.0.bottom" timestamp="1601903652570">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1703" height="308" key="GridCell.Tab.0.bottom" timestamp="1602059330724">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="360" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601900286364" />
+    <state width="1703" height="308" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602059330724" />
     <state width="1877" height="189" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652570" />
-    <state width="1877" height="189" key="GridCell.Tab.0.center" timestamp="1601903652570">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1703" height="308" key="GridCell.Tab.0.center" timestamp="1602059330724">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="360" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601900286364" />
+    <state width="1703" height="308" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602059330724" />
     <state width="1877" height="189" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652570" />
-    <state width="1877" height="189" key="GridCell.Tab.0.left" timestamp="1601903652569">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1703" height="308" key="GridCell.Tab.0.left" timestamp="1602059330724">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="360" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601900286363" />
+    <state width="1703" height="308" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602059330724" />
     <state width="1877" height="189" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652569" />
-    <state width="1877" height="189" key="GridCell.Tab.0.right" timestamp="1601903652570">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1703" height="308" key="GridCell.Tab.0.right" timestamp="1602059330724">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="360" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601900286364" />
+    <state width="1703" height="308" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602059330724" />
     <state width="1877" height="189" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652570" />
     <state width="1877" height="181" key="GridCell.Tab.1.bottom" timestamp="1601903652891">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -610,15 +621,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="681" y="261" width="564" height="524" key="StructurePopup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601896253624" />
-    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1600529080784">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1368" y="239" key="Vcs.Push.Dialog.v2" timestamp="1602058127383">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598718847644" />
+    <state x="-1368" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602058127383" />
     <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600529080784" />
     <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598691505898">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598691505898" />
+    <state x="-1258" y="252" width="596" height="536" key="find.popup" timestamp="1602058553191">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1258" y="252" width="596" height="536" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602058553191" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598714479589">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
