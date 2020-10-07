@@ -427,3 +427,11 @@ i, cite, em, var, address, dfn {
     color: white;
     background-color: #FFA07A;
 }
+
+.go-center3 {
+    width: 300px;
+    height: 50px;
+    font-size: 14px;
+    color: white;
+    background-color: #FFA07A;
+}

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @DESC
  */
 @Component
-@PropertySource("classpath:config.properties")
+@PropertySource("classpath:config-prod.properties")
 @ConfigurationProperties(prefix = "file")
 @Getter
 @Setter
