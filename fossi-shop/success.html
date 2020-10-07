@@ -47,7 +47,7 @@
 					</div>
 					<div class="third-line">
 						<button class="go-center" @click="goUserCenter">查看我的订单</button>&nbsp;&nbsp;&nbsp;&nbsp;
-						<button class="go-center2" @click="goUserCenter">继续购物^_^</button>
+						<button class="go-center2" @click="goUserCenter2">继续购物^_^</button>
 					</div>
 
 				</div>
@@ -96,12 +96,18 @@
 						// 用户未登录，则跳转
 						window.location.href = "login.html?returnUrl=" + app.centerServerUrl;
 					} else {
-						window.location.href = app.centerServerUrl;
+						window.location.href = app.centerServerUrl+"order.html";
 					}
 				},
-				goUserCenter() {
+				goUserCenter2() {
 					// 判断用户是否登录
-					window.location.href = app.shopServerUrl;
+					var userIsLogin = this.userIsLogin;
+					if (!userIsLogin) {
+						// 用户未登录，则跳转
+						window.location.href = "login.html?returnUrl=" + app.centerServerUrl;
+					} else {
+						window.location.href = app.centerServerUrl;
+					}
 				},
 				// 通过cookie判断用户是否登录
 				judgeUserLoginStatus() {
