@@ -11,10 +11,13 @@ import com.njupt.swg.mapper.OrdersMapper;
 import com.njupt.swg.pojo.OrderItems;
 import com.njupt.swg.pojo.OrderStatus;
 import com.njupt.swg.pojo.Orders;
+import com.njupt.swg.pojo.Users;
+import com.njupt.swg.service.IUserService;
 import com.njupt.swg.service.center.IMyCommentsService;
 import com.njupt.swg.utils.PagedGridResult;
 import com.njupt.swg.vo.MyCommentVO;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,6 +50,9 @@ public class MyCommentsService implements IMyCommentsService {
     public ItemsCommentsMapperCustom itemsCommentsMapperCustom;
 
     @Autowired
+    public IUserService userService;
+
+    @Autowired
     private Sid sid;
 
     @Override
@@ -73,8 +79,11 @@ public class MyCommentsService implements IMyCommentsService {
         for (OrderItemsCommentBO oic : commentList) {
             oic.setCommentId(sid.nextShort());
         }
+        Users currentCommentUser = (Users) userService.queryUserById(userId).getData();
         Map<String, Object> map = new HashMap<>();
         map.put("userId", userId);
+        map.put("userFakeNickname",desensitizedName(currentCommentUser.getUsername()));
+        map.put("userFace",currentCommentUser.getFace());
         map.put("commentList", commentList);
         itemsCommentsMapperCustom.saveComments(map);
 
@@ -89,6 +98,15 @@ public class MyCommentsService implements IMyCommentsService {
         orderStatus.setOrderId(orderId);
         orderStatus.setCommentTime(new Date());
         orderStatusMapper.updateByPrimaryKeySelective(orderStatus);
+    }
+
+    private static String desensitizedName(String fullName){
+        String name = fullName;
+        if (StringUtils.isNotBlank(fullName)) {
+            name = StringUtils.left(fullName, 1);
+            return StringUtils.rightPad(name, StringUtils.length(fullName), "*");
+        }
+        return name;
     }
 
     private PagedGridResult setterPagedGrid(List<?> list, Integer page){

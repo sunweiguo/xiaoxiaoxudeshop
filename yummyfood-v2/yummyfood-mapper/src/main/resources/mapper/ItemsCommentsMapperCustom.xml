@@ -9,6 +9,8 @@
       (
         id,
         user_id,
+      user_fake_nickname,
+      user_face,
         item_id,
         item_name,
         item_spec_id,
@@ -23,6 +25,8 @@
       (
         #{item.commentId},
         #{userId},
+        #{userFakeNickname},
+        #{userFace},
         #{item.itemId},
         #{item.itemName},
         #{item.itemSpecId},
