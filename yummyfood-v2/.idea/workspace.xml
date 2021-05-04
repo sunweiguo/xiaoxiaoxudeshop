@@ -20,40 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce95c6f0-826e-4c05-8871-69013cfe66f9" name="Default Changelist" comment="提交人：fossi&#10;提交内容：发布上线版本&#10;1、增加多环境配置文件&#10;2、根据线上环境做相关修改&#10;3、">
-      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/WarStarterYummyFoodApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/application-prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/application-test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/config-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/config-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fossi-center/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../fossi-center/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fossi-center/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fossi-center/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fossi-center/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/../fossi-center/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fossi-shop/css/paysuccess.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fossi-shop/css/paysuccess.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fossi-shop/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fossi-shop/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/FileConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/FileConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/java/com/njupt/swg/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-api/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/src/main/resources/logback-spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-api/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-api/target/yummyfood-api-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/src/main/java/com/njupt/swg/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-common/target/yummyfood-common-1.0-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-mapper/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-mapper/target/yummyfood-mapper-1.0-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-pojo/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-pojo/target/yummyfood-pojo-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/src/main/resources/parameter.properties" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/src/main/resources/parameter.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yummyfood-service/src/main/resources/zfbinfo.properties" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/src/main/resources/zfbinfo.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/yummyfood-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yummyfood-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yummyfood-service/target/yummyfood-service-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../yummyfood.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../yummyfood.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../yummyfood带数据.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +67,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven_repository" />
+        <option name="mavenHome" value="D:/apache-maven-3.5.0" />
         <option name="userSettingsFile" value="D:\apache-maven-3.5.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -103,13 +92,13 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593953786624" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/yummyfood-api/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../yummyfood" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -301,6 +290,7 @@
       <workItem from="1598691428194" duration="17194000" />
       <workItem from="1600480806890" duration="21530000" />
       <workItem from="1601890575864" duration="13491000" />
+      <workItem from="1620098900265" duration="6162000" />
     </task>
     <task id="LOCAL-00001" summary="提交人：fossi&#10;提交内容：&#10;1、项目骨架初始化">
       <created>1586590009215</created>
@@ -449,7 +439,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600529069781</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="提交人：fossi&#10;提交内容：&#10;readme文件更新">
+      <created>1620106177926</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1620106177926</updated>
+    </task>
+    <task id="LOCAL-00023" summary="提交人：fossi&#10;提交内容：&#10;README.md更新">
+      <created>1620106325744</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1620106325744</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,126 +522,51 @@
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、sql文件更新&#10;2、前端代码更新&#10;3、readme文件更新" />
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、用户中心的个人资料模块功能实现，包括订单的数量查询、订单去向、用户基本信息展示和更新、用户头像上传和更新" />
     <MESSAGE value="提交人：fossi&#10;提交内容：&#10;1、关键的配置参数隐藏" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交人：fossi&#10;提交内容：&#10;1、关键的配置参数隐藏" />
+    <MESSAGE value="提交人：fossi&#10;提交内容：&#10;readme文件更新" />
+    <MESSAGE value="提交人：fossi&#10;提交内容：&#10;README.md更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交人：fossi&#10;提交内容：&#10;README.md更新" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="94" key="#Project_Structure" timestamp="1601891273296">
+    <state x="421" y="35" key="CommitChangelistDialog2" timestamp="1620106324608">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601891273296" />
-    <state x="414" y="175" width="1174" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598693939871">
+    <state x="421" y="35" key="CommitChangelistDialog2/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1620106324608" />
+    <state x="184" y="86" key="DiffContextDialog" timestamp="1620106310898">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" width="1174" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598693939871" />
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1601903533475">
+    <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1620106310898" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1620105680630">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1155" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598696278732" />
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903533475" />
-    <state x="384" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595765865668">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1620105680630" />
+    <state width="1877" height="94" key="GridCell.Tab.0.bottom" timestamp="1620107449225">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="384" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595765865668" />
-    <state x="-1541" y="45" key="CommitChangelistDialog2" timestamp="1602058350621">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1541" y="45" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602058350621" />
-    <state x="379" y="45" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600529068496" />
-    <state x="184" y="108" key="DiffContextDialog" timestamp="1600529078318">
+    <state width="1877" height="94" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1620107449225" />
+    <state width="1877" height="94" key="GridCell.Tab.0.center" timestamp="1620107449225">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1736" y="108" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598718792097" />
-    <state x="184" y="108" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600529078318" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1595744174474">
+    <state width="1877" height="94" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1620107449225" />
+    <state width="1877" height="94" key="GridCell.Tab.0.left" timestamp="1620107449225">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595744174474" />
-    <state width="1703" height="308" key="GridCell.Tab.0.bottom" timestamp="1602059330724">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1703" height="308" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602059330724" />
-    <state width="1877" height="189" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652570" />
-    <state width="1703" height="308" key="GridCell.Tab.0.center" timestamp="1602059330724">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1703" height="308" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602059330724" />
-    <state width="1877" height="189" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652570" />
-    <state width="1703" height="308" key="GridCell.Tab.0.left" timestamp="1602059330724">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1703" height="308" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602059330724" />
-    <state width="1877" height="189" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652569" />
-    <state width="1703" height="308" key="GridCell.Tab.0.right" timestamp="1602059330724">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1703" height="308" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602059330724" />
-    <state width="1877" height="189" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652570" />
-    <state width="1877" height="181" key="GridCell.Tab.1.bottom" timestamp="1601903652891">
+    <state width="1877" height="94" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1620107449225" />
+    <state width="1877" height="94" key="GridCell.Tab.0.right" timestamp="1620107449225">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="360" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601900286619" />
-    <state width="1877" height="181" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652891" />
-    <state width="1877" height="181" key="GridCell.Tab.1.center" timestamp="1601903652891">
+    <state width="1877" height="94" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1620107449225" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1620105693024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="360" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601900286619" />
-    <state width="1877" height="181" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652891" />
-    <state width="1877" height="181" key="GridCell.Tab.1.left" timestamp="1601903652891">
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1620105693024" />
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1620106328175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="360" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601900286618" />
-    <state width="1877" height="181" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652891" />
-    <state width="1877" height="181" key="GridCell.Tab.1.right" timestamp="1601903652891">
+    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1620106328175" />
+    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1620098934017">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="360" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601900286619" />
-    <state width="1877" height="181" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652891" />
-    <state width="1877" height="181" key="GridCell.Tab.2.bottom" timestamp="1601903652549">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="360" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601900286365" />
-    <state width="1877" height="181" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652549" />
-    <state width="1877" height="181" key="GridCell.Tab.2.center" timestamp="1601903652549">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="360" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601900286364" />
-    <state width="1877" height="181" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652549" />
-    <state width="1877" height="181" key="GridCell.Tab.2.left" timestamp="1601903652549">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="360" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601900286364" />
-    <state width="1877" height="181" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652549" />
-    <state width="1877" height="181" key="GridCell.Tab.2.right" timestamp="1601903652549">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="360" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601900286365" />
-    <state width="1877" height="181" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601903652549" />
-    <state x="-1287" y="191" key="SettingsEditor" timestamp="1598696515266">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1287" y="191" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598696515266" />
-    <state x="633" y="191" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595735429736" />
-    <state x="681" y="261" width="564" height="524" key="StructurePopup" timestamp="1601896253624">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="681" y="261" width="564" height="524" key="StructurePopup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601896253624" />
-    <state x="-1368" y="239" key="Vcs.Push.Dialog.v2" timestamp="1602058127383">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1368" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602058127383" />
-    <state x="552" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600529080784" />
-    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598691505898">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598691505898" />
-    <state x="-1258" y="252" width="596" height="536" key="find.popup" timestamp="1602058553191">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1258" y="252" width="596" height="536" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602058553191" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598714479589">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598714479589" />
+    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1620098934017" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
