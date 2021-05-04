@@ -43,7 +43,7 @@ mvn install:install-file -Dfile=alipay-sdk-java-3.3.0.jar -DgroupId=com.alipay -
 
   
 3. 我将详细记录针对单体项目从0到1的笔记，达到看看我的笔记即可进行完整功能开发和上线部署的效果。敬请期待。
-	- [https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI3MDc5Mjk1MA==&action=getalbum&album_id=1436607562610524160#wechat_redirect)
+	- [项目整体笔记](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI3MDc5Mjk1MA==&action=getalbum&album_id=1436607562610524160#wechat_redirect)
 
 4. 关于git tag 老是忘记，tag就是一个标签，帮助我们回退到某个版本的代码，我们通过tag的名称即可回退，而不需要根据某个提冗长的commit ID来回退，算是版本记录的补充吧。这里记录下：
 	- 查看本地tag：git tag 
