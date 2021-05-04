@@ -7,11 +7,12 @@ window.app = {
      // cookieDomain: "",                                                       // cookie 域
 
     /* 生产环境 */
-    serverUrl: "http://api.oursnail.cn:8088/yummyfood-api",                      // 接口服务接口地址
-    paymentServerUrl: "http://api.oursnail.cn:8088/yummyfood-api",                            // 支付中心服务地址
-    shopServerUrl: "http://www.oursnail.cn:8080/fossi-shop/",                            // 门户网站地址
-    centerServerUrl: "http://www.oursnail.cn:8080/fossi-center/",                        // 用户中心地址
+    serverUrl: "http://api.oursnail.cn/yummyfood-api/",                      // 接口服务接口地址
+    shopServerUrl: "http://www.oursnail.cn/",                            // 门户网站地址
+    paymentServerUrl: "http://api.oursnail.cn:8088/yummyfood-api/",                            // 支付中心服务地址
+    centerServerUrl: "http://center.oursnail.cn/",                        // 用户中心地址
     cookieDomain: ".oursnail.cn;",                                       // cookie 域
+    orderCenterUrl: "http://center.oursnail.cn/order.html
 
     ctx: "/foodie-shop",
 
